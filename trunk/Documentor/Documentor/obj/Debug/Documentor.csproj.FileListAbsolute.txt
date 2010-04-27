@@ -1,0 +1,5 @@
+D:\Documents\Development\LittleApps\Documentor\Documentor\bin\Documentor.dll
+D:\Documents\Development\LittleApps\Documentor\Documentor\bin\Documentor.pdb
+D:\Documents\Development\LittleApps\Documentor\Documentor\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Development\LittleApps\Documentor\Documentor\obj\Debug\Documentor.dll
+D:\Documents\Development\LittleApps\Documentor\Documentor\obj\Debug\Documentor.pdb

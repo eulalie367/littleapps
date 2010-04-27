@@ -1,0 +1,7 @@
+D:\Documents\Development\LittleApps\DivedendFinder\StandardExtensions\bin\Debug\StandardExtensions.dll
+D:\Documents\Development\LittleApps\DivedendFinder\StandardExtensions\bin\Debug\StandardExtensions.pdb
+D:\Documents\Development\LittleApps\DivedendFinder\StandardExtensions\bin\Debug\Stocks.dll
+D:\Documents\Development\LittleApps\DivedendFinder\StandardExtensions\bin\Debug\Stocks.pdb
+D:\Documents\Development\LittleApps\DivedendFinder\StandardExtensions\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Development\LittleApps\DivedendFinder\StandardExtensions\obj\Debug\StandardExtensions.dll
+D:\Documents\Development\LittleApps\DivedendFinder\StandardExtensions\obj\Debug\StandardExtensions.pdb

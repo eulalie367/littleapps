@@ -1,0 +1,7 @@
+D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder\obj\Debug\DivedendFinder.Form1.resources
+D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder\obj\Debug\DivedendFinder.csproj.GenerateResource.Cache
+D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder\bin\Debug\DivedendFinder.exe
+D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder\bin\Debug\DivedendFinder.pdb
+D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder\obj\Debug\DivedendFinder.exe
+D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder\obj\Debug\DivedendFinder.pdb

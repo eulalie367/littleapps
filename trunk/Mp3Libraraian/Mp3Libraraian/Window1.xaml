@@ -1,0 +1,15 @@
+﻿<Window x:Class="Mp3Libraraian.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="300" Width="605">
+    <Grid>
+        <Button Height="23" Margin="0,9.138,167,0" Name="button1" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Click="button1_Click">GET XML</Button>
+        <TextBox Margin="12,55,0,12" Name="disp" Text="" HorizontalAlignment="Left" Width="302" />
+        <TextBox Height="23" Margin="65,12,269,0" Name="dir" VerticalAlignment="Top" Text="F:\Movies" />
+        <TextBlock Height="21" Margin="11,14,0,0" Name="textBlock1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="48">Path</TextBlock>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,39,150,0" Name="label1" VerticalAlignment="Top" Width="92" Click="label1_Click">Add Delete char</Button>
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,76,12,0" Name="newDeleteChar" VerticalAlignment="Top" Width="230" />
+        <TextBox HorizontalAlignment="Right" Margin="0,105,12,12" Name="deleteChars" Width="230" />
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,39,28,0" Name="button2" VerticalAlignment="Top" Width="116" Click="button2_Click">Remove Punctuation</Button>
+    </Grid>
+</Window>

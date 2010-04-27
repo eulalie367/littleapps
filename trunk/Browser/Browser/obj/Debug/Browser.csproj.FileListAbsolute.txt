@@ -1,0 +1,8 @@
+C:\LittleApps\Browser\Browser\bin\Debug\Browser.exe
+C:\LittleApps\Browser\Browser\bin\Debug\Browser.pdb
+C:\LittleApps\Browser\Browser\obj\Debug\ResolveAssemblyReference.cache
+C:\LittleApps\Browser\Browser\obj\Debug\Browser.Form1.resources
+C:\LittleApps\Browser\Browser\obj\Debug\Browser.Properties.Resources.resources
+C:\LittleApps\Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.Cache
+C:\LittleApps\Browser\Browser\obj\Debug\Browser.exe
+C:\LittleApps\Browser\Browser\obj\Debug\Browser.pdb

@@ -1,0 +1,10 @@
+C:\LittleApps\HTMLPageScan\HTMLPageScan\bin\Debug\HTMLPageScan.exe
+C:\LittleApps\HTMLPageScan\HTMLPageScan\bin\Debug\HTMLPageScan.pdb
+C:\LittleApps\HTMLPageScan\HTMLPageScan\obj\Debug\ResolveAssemblyReference.cache
+C:\LittleApps\HTMLPageScan\HTMLPageScan\obj\Debug\HTMLPageScan.Form1.resources
+C:\LittleApps\HTMLPageScan\HTMLPageScan\obj\Debug\HTMLPageScan.Properties.Resources.resources
+C:\LittleApps\HTMLPageScan\HTMLPageScan\obj\Debug\HTMLPageScan.csproj.GenerateResource.Cache
+C:\LittleApps\HTMLPageScan\HTMLPageScan\obj\Debug\HTMLPageScan.exe
+C:\LittleApps\HTMLPageScan\HTMLPageScan\obj\Debug\HTMLPageScan.pdb
+E:\LittleApps\HTMLPageScan\HTMLPageScan\obj\Debug\HTMLPageScan.exe
+E:\LittleApps\HTMLPageScan\HTMLPageScan\obj\Debug\HTMLPageScan.pdb

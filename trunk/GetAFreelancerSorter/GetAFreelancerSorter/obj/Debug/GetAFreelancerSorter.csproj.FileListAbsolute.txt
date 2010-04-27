@@ -1,0 +1,5 @@
+E:\LittleApps\GetAFreelancerSorter\GetAFreelancerSorter\bin\GetAFreelancerSorter.dll
+E:\LittleApps\GetAFreelancerSorter\GetAFreelancerSorter\bin\GetAFreelancerSorter.pdb
+E:\LittleApps\GetAFreelancerSorter\GetAFreelancerSorter\obj\Debug\ResolveAssemblyReference.cache
+E:\LittleApps\GetAFreelancerSorter\GetAFreelancerSorter\obj\Debug\GetAFreelancerSorter.dll
+E:\LittleApps\GetAFreelancerSorter\GetAFreelancerSorter\obj\Debug\GetAFreelancerSorter.pdb

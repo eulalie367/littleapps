@@ -1,0 +1,5 @@
+C:\Recipes\GrandmasRecipes\GrandmasRecipes\bin\GrandmasRecipes.dll
+C:\Recipes\GrandmasRecipes\GrandmasRecipes\bin\GrandmasRecipes.pdb
+C:\Recipes\GrandmasRecipes\GrandmasRecipes\obj\Debug\ResolveAssemblyReference.cache
+C:\Recipes\GrandmasRecipes\GrandmasRecipes\obj\Debug\GrandmasRecipes.dll
+C:\Recipes\GrandmasRecipes\GrandmasRecipes\obj\Debug\GrandmasRecipes.pdb

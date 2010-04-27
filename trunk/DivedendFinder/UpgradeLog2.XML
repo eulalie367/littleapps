@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DivedendFinder1">
+</Property><Property Name="Solution File" Value="D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder1.sln">
+</Property><Property Name="User Options File" Value="D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder1.suo">
+</Property><Property Name="Date" Value="Thursday, May 28, 2009">
+</Property><Property Name="Time" Value="17:48 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="DivedendFinder1.sln" Description="File successfully backed up as D:\Documents\Development\LittleApps\DivedendFinder\Backup1\DivedendFinder1.sln">
+</Event><Event ErrorLevel="0" Project="" Source="DivedendFinder1.suo" Description="File successfully backed up as D:\Documents\Development\LittleApps\DivedendFinder\Backup1\DivedendFinder1.suo">
+</Event><Event ErrorLevel="0" Project="DivedendFinder" Source="DivedendFinder\DivedendFinder.csproj" Description="Project file successfully backed up as D:\Documents\Development\LittleApps\DivedendFinder\Backup1\DivedendFinder\DivedendFinder.csproj">
+</Event><Event ErrorLevel="0" Project="DivedendFinder" Source="DivedendFinder\DivedendFinder.csproj.user" Description="Project user file successfully backed up as D:\Documents\Development\LittleApps\DivedendFinder\Backup1\DivedendFinder\DivedendFinder.csproj.user">
+</Event><Event ErrorLevel="0" Project="DivedendFinder" Source="DivedendFinder\AssemblyInfo.cs" Description="File successfully backed up as D:\Documents\Development\LittleApps\DivedendFinder\Backup1\DivedendFinder\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DivedendFinder" Source="DivedendFinder\Form1.cs" Description="File successfully backed up as D:\Documents\Development\LittleApps\DivedendFinder\Backup1\DivedendFinder\Form1.cs">
+</Event><Event ErrorLevel="0" Project="DivedendFinder" Source="DivedendFinder\App.ico" Description="File successfully backed up as D:\Documents\Development\LittleApps\DivedendFinder\Backup1\DivedendFinder\App.ico">
+</Event><Event ErrorLevel="0" Project="DivedendFinder" Source="DivedendFinder\Form1.resx" Description="File successfully backed up as D:\Documents\Development\LittleApps\DivedendFinder\Backup1\DivedendFinder\Form1.resx">
+</Event><Event ErrorLevel="0" Project="DivedendFinder" Source="DivedendFinder\DivedendFinder.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DivedendFinder" Source="DivedendFinder\DivedendFinder.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="DivedendFinder1.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="DivedendFinder1.sln" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="DivedendFinder" Source="DivedendFinder\DivedendFinder.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
