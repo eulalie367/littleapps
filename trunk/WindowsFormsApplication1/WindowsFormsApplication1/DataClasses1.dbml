@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="CRUD" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DELLLAPTOP\SQLEXPRESS;Initial Catalog=CRUD;Integrated Security=True" SettingsObjectName="WindowsFormsApplication1.Properties.Settings" SettingsPropertyName="CRUDConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.baby1" Member="baby1s">
+    <Type Name="baby1">
+      <Column Name="baby1ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="varcharField" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="intField" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateTimeField" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="codeValueID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="baby1_Child1" Member="Child1s" ThisKey="baby1ID" OtherKey="baby1ID" Type="Child1" />
+      <Association Name="baby1_Child2" Member="Child2s" ThisKey="baby1ID" OtherKey="baby1ID" Type="Child2" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Parent" Member="ParentTables">
+    <Type Name="ParentTable">
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="varcharField" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="intField" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateTimeField" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Child1ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Child2ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codeValueID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Child1_Parent" Member="Child1" ThisKey="Child1ID" OtherKey="Child1ID" Type="Child1" IsForeignKey="true" />
+      <Association Name="Child2_Parent" Member="Child2" ThisKey="Child2ID" OtherKey="Child2ID" Type="Child2" IsForeignKey="true" />
+      <Association Name="codevalue_Parent" Member="codevalue" ThisKey="codeValueID" OtherKey="codevalueID" Type="codevalue" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Child1" Member="Child1s">
+    <Type Name="Child1">
+      <Column Name="Child1ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="varcharField" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="intField" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateTimeField" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="baby1ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codeValueID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Child1_Parent" Member="ParentTables" ThisKey="Child1ID" OtherKey="Child1ID" Type="ParentTable" />
+      <Association Name="baby1_Child1" Member="baby1" ThisKey="baby1ID" OtherKey="baby1ID" Type="baby1" IsForeignKey="true" />
+      <Association Name="codevalue_Child1" Member="codevalue" ThisKey="codeValueID" OtherKey="codevalueID" Type="codevalue" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Child2" Member="Child2s">
+    <Type Name="Child2">
+      <Column Name="Child2ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="varcharField" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="intField" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateTimeField" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="baby1ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codeValueID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Child2_Parent" Member="ParentTables" ThisKey="Child2ID" OtherKey="Child2ID" Type="ParentTable" />
+      <Association Name="baby1_Child2" Member="baby1" ThisKey="baby1ID" OtherKey="baby1ID" Type="baby1" IsForeignKey="true" />
+      <Association Name="codevalue_Child2" Member="codevalue" ThisKey="codeValueID" OtherKey="codevalueID" Type="codevalue" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.codevalue" Member="codevalues">
+    <Type Name="codevalue">
+      <Column Name="codevalueID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="display" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="codeSetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="codevalue_Parent" Member="ParentTables" ThisKey="codevalueID" OtherKey="codeValueID" Type="ParentTable" />
+      <Association Name="codevalue_Child1" Member="Child1s" ThisKey="codevalueID" OtherKey="codeValueID" Type="Child1" />
+      <Association Name="codevalue_Child2" Member="Child2s" ThisKey="codevalueID" OtherKey="codeValueID" Type="Child2" />
+    </Type>
+  </Table>
+</Database>
