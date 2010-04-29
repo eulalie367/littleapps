@@ -42,7 +42,11 @@ namespace MovieManager
                 {
                     using (System.IO.FileStream fs = new System.IO.FileStream(FullPath, System.IO.FileMode.OpenOrCreate))
                     {
+#if DEBUG
+                        System.Xml.Serialization.XmlSerializer bf = new System.Xml.Serialization.XmlSerializer(typeof(t));
+#else
                         System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+#endif
                         bf.Serialize(fs, ls);
                     }
                     return true;
@@ -63,7 +67,11 @@ namespace MovieManager
                     object f = null;
                     using (System.IO.FileStream fs = new System.IO.FileStream(FullPath, System.IO.FileMode.OpenOrCreate))
                     {
+#if DEBUG
+                        System.Xml.Serialization.XmlSerializer bf = new System.Xml.Serialization.XmlSerializer(typeof(t));
+#else
                         System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+#endif
                         f = bf.Deserialize(fs);
                         if (f != null)
                         {

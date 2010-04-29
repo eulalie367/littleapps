@@ -64,7 +64,12 @@ namespace MovieManager
 
         private void dgPhrases_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            dgPhrases.DataSource.Save(replacementFile);
+            if (e.RowIndex > -1 && dgPhrases.DataSource != null)
+            {
+                List<Movie.ReplaceMent> r = dgPhrases.DataSource as List<Movie.ReplaceMent>;
+                if(r.Count > 0)
+                    r.Save(replacementFile);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -140,9 +145,27 @@ namespace MovieManager
             List<Movie> fi = new List<Movie>();
             fi.GetMovies(this.Dir, newReplacements);
 
+            this.Replaces = newReplacements;
             dgPhrases.DataSource = newReplacements;
             dataGridView1.DataSource = fi;
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            List<Movie> movies = dataGridView1.DataSource as List<Movie>;
+            foreach (DataGridViewRow r in dataGridView1.Rows)
+            {
+                if (r.Selected)
+                {
+                    Movie f = r.DataBoundItem as Movie;
+                    string newFilePath = f.FullPath.Replace(f.FileName, "");
+                    newFilePath += f.SavedName.TrimEnd(null).TrimStart(null).Replace(" ", " ").Replace("  ", " ").Replace(" ", "_") + ".avi";
+                    System.IO.File.Move(f.FullPath, newFilePath);
+
+                    
+                }
+            }
         }
     }
 }

@@ -34,6 +34,10 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.fullPathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fileNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.savedNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
             this.dgPhrases = new System.Windows.Forms.DataGridView();
@@ -43,15 +47,12 @@
             this.replaceMentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAdd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.fullPathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fileNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.savedNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.movieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPhrases)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.replaceMentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDir
@@ -87,6 +88,31 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(894, 349);
             this.dataGridView1.TabIndex = 6;
+            // 
+            // fullPathDataGridViewTextBoxColumn
+            // 
+            this.fullPathDataGridViewTextBoxColumn.DataPropertyName = "FullPath";
+            this.fullPathDataGridViewTextBoxColumn.HeaderText = "FullPath";
+            this.fullPathDataGridViewTextBoxColumn.Name = "fullPathDataGridViewTextBoxColumn";
+            this.fullPathDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // fileNameDataGridViewTextBoxColumn
+            // 
+            this.fileNameDataGridViewTextBoxColumn.DataPropertyName = "FileName";
+            this.fileNameDataGridViewTextBoxColumn.HeaderText = "FileName";
+            this.fileNameDataGridViewTextBoxColumn.Name = "fileNameDataGridViewTextBoxColumn";
+            this.fileNameDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // savedNameDataGridViewTextBoxColumn
+            // 
+            this.savedNameDataGridViewTextBoxColumn.DataPropertyName = "SavedName";
+            this.savedNameDataGridViewTextBoxColumn.HeaderText = "SavedName";
+            this.savedNameDataGridViewTextBoxColumn.Name = "savedNameDataGridViewTextBoxColumn";
+            this.savedNameDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // movieBindingSource
+            // 
+            this.movieBindingSource.DataSource = typeof(MovieManager.Movie);
             // 
             // label1
             // 
@@ -168,31 +194,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // fullPathDataGridViewTextBoxColumn
-            // 
-            this.fullPathDataGridViewTextBoxColumn.DataPropertyName = "FullPath";
-            this.fullPathDataGridViewTextBoxColumn.HeaderText = "FullPath";
-            this.fullPathDataGridViewTextBoxColumn.Name = "fullPathDataGridViewTextBoxColumn";
-            this.fullPathDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // fileNameDataGridViewTextBoxColumn
-            // 
-            this.fileNameDataGridViewTextBoxColumn.DataPropertyName = "FileName";
-            this.fileNameDataGridViewTextBoxColumn.HeaderText = "FileName";
-            this.fileNameDataGridViewTextBoxColumn.Name = "fileNameDataGridViewTextBoxColumn";
-            this.fileNameDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // savedNameDataGridViewTextBoxColumn
-            // 
-            this.savedNameDataGridViewTextBoxColumn.DataPropertyName = "SavedName";
-            this.savedNameDataGridViewTextBoxColumn.HeaderText = "SavedName";
-            this.savedNameDataGridViewTextBoxColumn.Name = "savedNameDataGridViewTextBoxColumn";
-            this.savedNameDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // movieBindingSource
-            // 
-            this.movieBindingSource.DataSource = typeof(MovieManager.Movie);
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(116, 197);
@@ -203,11 +204,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(767, 57);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 562);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAdd);
@@ -222,9 +234,9 @@
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPhrases)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.replaceMentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,6 +263,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
