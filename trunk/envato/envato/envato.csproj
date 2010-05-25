@@ -110,6 +110,7 @@
     <Content Include="Zoomable\Images\LargeImage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditableControls\DropDownList.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
