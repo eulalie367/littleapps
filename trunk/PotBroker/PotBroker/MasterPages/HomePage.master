@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/Base.Master" AutoEventWireup="true" CodeBehind="HomePage.master.cs" Inherits="PotBroker.MasterPages.HomePage" %>
+
+<asp:Content ContentPlaceHolderID="headContent" runat="server">
+    <asp:ContentPlaceHolder ID="headContent" runat="server" />
+    <link type="text/css" href="/CSS/Base.css" rel="Stylesheet" />
+</asp:Content>
+<asp:Content ContentPlaceHolderID="bodyContent" runat="server">
+    <div class="top">
+        <div class="logo">
+            <a href="/" title="The Pot Broker">
+                <h1>
+                    <span><span class="bold">The</span>Pot<span class="semibold">Broker</span>.com</span>
+                </h1>
+                <h2 class="byline">
+                    Medical Marijuana Distribution
+                </h2>
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/" title="The Pot Broker">Home</a> </li>
+                <li><a href="/Listings/Search.aspx" title="Medical Marijuana Listings">Medical Marijuana</a>
+                    <ul>
+                        <li><a href="/Listings/Search.aspx" title="California Medical Marijuana Listings">California</a> </li>
+                        <li><a href="/Listings/Search.aspx" title="Colorado Medical Marijuana Listings">Colorado</a> </li>
+                        <li><a href="/Listings/Search.aspx" title="Michigan Medical Marijuana Listings">Michigan</a> </li>
+                        <li><a href="/Listings/Search.aspx" title="Montana Medical Marijuana Listings">Montana</a> </li>
+                        <li><a href="/Listings/Search.aspx" title="Nevada Medical Marijuana Listings">Nevada</a> </li>
+                        <li><a href="/Listings/Search.aspx" title="Oregon Medical Marijuana Listings">Oregon</a> </li>
+                        <li><a href="/Listings/Search.aspx" title="Washington Medical Marijuana Listings">Washington</a> </li>
+                    </ul>
+                </li>
+                <li><a href="/" title="Patient Medical Marijuana Services">Marijuana Patient Services</a>
+                    <ul>
+                        <li><a href="/" title="Medical Marijuana Dispensaries">Dispensaries</a> </li>
+                        <li><a href="/" title="Medical Marijuana Delivery Services">Delivery Services</a> </li>
+                    </ul>
+                </li>
+                <li><a href="/" title="About The Pot Broker Where Medical Marijuana Dispenseries Find Marijuana Vendors">About Us</a> </li>
+                <li><a href="/Setup/CreateAccount.aspx" title="Create an account for The Pot Broker">Sign up</a>
+                    <ul>
+                        <li><a href="/Setup/Login.aspx" title="Login to The Pot Broker">Login</a> </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="adds">
+            <h2>
+                Some adds here</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Duis nec metus elit, et suscipit sem.</li>
+                <li>Integer tristique dolor a sapien luctus lacinia.</li>
+                <li>In eu arcu id mauris molestie tincidunt.</li>
+                <li>Integer dignissim lobortis odio, eu fringilla justo luctus sit amet.</li>
+            </ul>
+            <p>
+            </p>
+            <ul>
+                <li>Vestibulum et turpis in quam pulvinar tincidunt.</li>
+                <li>Nulla lobortis arcu id nulla scelerisque sed facilisis sapien adipiscing.</li>
+                <li>Ut condimentum nisl ultrices ipsum bibendum tempus.</li>
+                <li>Morbi pharetra velit non dolor vestibulum dignissim.</li>
+                <li>Nunc quis dui tellus, at hendrerit ligula.</li>
+            </ul>
+            <p>
+            </p>
+            <ul>
+                <li>Duis a leo a lorem imperdiet molestie eget nec augue.</li>
+                <li>Morbi iaculis hendrerit enim, eget convallis libero rhoncus eu.</li>
+                <li>Praesent et erat nisi, et ornare diam.</li>
+            </ul>
+            <p>
+            </p>
+            <ul>
+                <li>Duis non purus sapien, ac mollis massa.</li>
+                <li>Donec vitae lorem nisl, quis egestas elit.</li>
+                <li>Vivamus dignissim orci laoreet nisi pretium interdum.</li>
+                <li>Nullam gravida elit non enim fermentum vel tincidunt nisl ornare.</li>
+                <li>Vestibulum ullamcorper ipsum eget est dignissim blandit.</li>
+                <li>Etiam sed elit arcu, placerat gravida neque.</li>
+            </ul>
+            <p>
+            </p>
+            <ul>
+                <li>Integer ac sem sit amet velit iaculis viverra non vitae leo.</li>
+                <li>Vivamus sed erat purus, sed laoreet nibh.</li>
+                <li>Vestibulum malesuada turpis ac dui rhoncus eget ultricies massa pretium.</li>
+                <li>Phasellus eu velit convallis nibh hendrerit elementum.</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="contentWrapper">
+                <asp:ContentPlaceHolder ID="bodyContent" runat="server" />
+            </div>
+        </div>
+        <div class="featured">
+            featured content
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="backlinks">
+            <ul>
+                <li><a href="#">some links</a> </li>
+            </ul>
+        </div>
+    </div>
+</asp:Content>
