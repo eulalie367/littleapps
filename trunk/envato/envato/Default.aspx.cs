@@ -17,7 +17,7 @@ namespace envato
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ddEditable.SelectedValue = "Hello World";
         }
     }
 }
