@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>InfoCaster.Umbraco.DataTypes.TrueColorPicker.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>InfoCaster.Umbraco.DataTypes.TrueColorPicker.dll</orgName>
+    </file>
+    <file>
+      <guid>colorpicker.css</guid>
+      <orgPath>/umbraco/css</orgPath>
+      <orgName>colorpicker.css</orgName>
+    </file>
+    <file>
+      <guid>colorpicker.js</guid>
+      <orgPath>/umbraco/js</orgPath>
+      <orgName>colorpicker.js</orgName>
+    </file>
+    <file>
+      <guid>blank.gif</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>blank.gif</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_background.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_background.png</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_hex.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_hex.png</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_hsb_b.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_hsb_b.png</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_hsb_h.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_hsb_h.png</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_hsb_s.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_hsb_s.png</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_indic.gif</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_indic.gif</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_overlay.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_overlay.png</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_rgb_b.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_rgb_b.png</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_rgb_g.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_rgb_g.png</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_rgb_r.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_rgb_r.png</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_select.gif</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_select.gif</orgName>
+    </file>
+    <file>
+      <guid>colorpicker_submit.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>colorpicker_submit.png</orgName>
+    </file>
+    <file>
+      <guid>custom_background.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>custom_background.png</orgName>
+    </file>
+    <file>
+      <guid>custom_hex.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>custom_hex.png</orgName>
+    </file>
+    <file>
+      <guid>custom_hsb_b.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>custom_hsb_b.png</orgName>
+    </file>
+    <file>
+      <guid>custom_hsb_h.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>custom_hsb_h.png</orgName>
+    </file>
+    <file>
+      <guid>custom_hsb_s.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>custom_hsb_s.png</orgName>
+    </file>
+    <file>
+      <guid>custom_indic.gif</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>custom_indic.gif</orgName>
+    </file>
+    <file>
+      <guid>custom_rgb_b.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>custom_rgb_b.png</orgName>
+    </file>
+    <file>
+      <guid>custom_rgb_g.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>custom_rgb_g.png</orgName>
+    </file>
+    <file>
+      <guid>custom_rgb_r.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>custom_rgb_r.png</orgName>
+    </file>
+    <file>
+      <guid>custom_submit.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>custom_submit.png</orgName>
+    </file>
+    <file>
+      <guid>select-transparent.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>select-transparent.png</orgName>
+    </file>
+    <file>
+      <guid>select.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>select.png</orgName>
+    </file>
+    <file>
+      <guid>select2.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>select2.png</orgName>
+    </file>
+    <file>
+      <guid>slider.png</guid>
+      <orgPath>/umbraco/images/colorpicker</orgPath>
+      <orgName>slider.png</orgName>
+    </file>
+    <file>
+      <guid>InfoCaster.TrueColorPicker.ascx</guid>
+      <orgPath>/usercontrols</orgPath>
+      <orgName>InfoCaster.TrueColorPicker.ascx</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>True Color Picker</name>
+      <version>1.2</version>
+      <license url="http://www.opensource.org/licenses/mit-license.php">MIT license</license>
+      <url>http://truecolorpicker.codeplex.com/</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Stefan Kip - InfoCaster</name>
+      <website>http://www.infocaster.net</website>
+    </author>
+    <readme><![CDATA[This package will create a DataType called "True Color Picker".
+You may be wondering, what's "True" doing in there?
+Well I was looking for a color picker without the need to provide pre-defined colors.
+I saw the built-in Color Picker, but that's not a color picker! It's an approved color picker.
+So I created a TRUE color picker.
+
+This package will create the following files / directories:
+
+/umbraco/css
+	colorpicker.css
+/umbraco/js/colorpicker
+	colorpicker.js
+/umbraco/images/colorpicker
+	*
+
+Changelog:
+- Version 1.2
+It's now possible to reset the selected color with the "Reset color" button (so the value will be empty
+
+- Version 1.1
+Fixed an issue with Umbraco 4.0.3 where in some occasions the value isn't saved correctly]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+</umbPackage>

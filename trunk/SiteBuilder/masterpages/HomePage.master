@@ -1,0 +1,8 @@
+﻿<%@ Master Language="C#" MasterPageFile="/masterpages/Neutral.master" AutoEventWireup="true" Debug="true" %>
+
+<asp:Content ContentPlaceHolderID="headContent" runat="server">
+    <!--   Add stuff to the head here -->
+</asp:Content>
+<asp:Content ContentPlaceHolderID="Content" runat="server">
+    <umbraco:Item ID="Item1" Field="MainContent" runat="server"></umbraco:Item>
+</asp:Content>

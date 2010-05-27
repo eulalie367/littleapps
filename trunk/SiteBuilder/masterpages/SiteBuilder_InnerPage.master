@@ -1,0 +1,4 @@
+﻿<%@ Master Language="C#" MasterPageFile="/masterpages/SiteBuilder.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="sideBarContent" runat="server">
+</asp:Content>

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="kansas city roofing, roofing in kansas city, roofing kansas city, roofer in kansas city, roofing in kc, roofing missouri, roofing kansas" />
+        <title>MSS Roofing</title>
+        <link type="text/css" rel="stylesheet" href="CSS/style.css" />
+        <script type="text/javascript" src="Script/jqueryCycle.js"> </script>
+        <script type="text/javascript">
+			function GetText(url) {
+				q = "?q=Roofing,Kansas,Missouri,Kansas%20City,%20Topeka,%20Window,%20Installation,%20Roofer";
+				l = window.location.search.toString();
+				if(l.indexOf(q) < 0)
+					window.location = q;
+				
+				$("div.main div.content").hide();
+				$.ajax({ url: url, cache: false, success: PrintText });
+			}
+			function PrintText(html) {
+				cntrl = $("div.main div.content");
+				cntrl.html(html);
+				cntrl.fadeIn(800);
+				PostLoad();
+			}
+			function PostLoad(){
+				if(document.all)
+					$("td").height($(window).height());
+				if($(".rotator")[0] != null)
+				{
+                    //BuildImageList('images/hail', 'jpg');
+    			    $('.rotator').cycle({ fx: 'fade' });
+    		    }
+			}
+			function BuildImageList(dir, extension){
+			    for(i = 0; i < 20; i++) {//limit to 20 pics per rotator
+			        img = new obImage();
+			        img.GetImage(dir + "/" + i, extension);
+			    }
+			}
+			obImage = function(){
+			    this.src;
+			    this.ext;
+			    this.img;
+			    this.hasImg = false;
+			    this.GetImage = function(source, extension){
+			        try{
+			            this.src = source + "." + extension;
+			            this.img = new Image();
+			            this.img.src = this.src;
+			            this.img.onload = function(){
+			                if(this.fileSize > 0)
+        			            $(".hailImages")[0].appendChild(this);
+    			        }
+			        }
+			        catch(e){
+			            this.hasImg = false;
+			        }
+			    }
+			}
+		</script>
+    </head>
+    <body onload="GetText('PremierPage.html');">
+    	<table align="center" cellpadding="0px" cellspacing="0px">
+        	<tr>
+            	<td>
+                    <div class="main">
+                        <div class="dvLogo">
+                            <div class="phone">1-877-677-6137</div>
+                            <div class="name">
+                                <span><span class="acronym">M</span>odern</span>
+                                <span><span class="acronym">S</span>torm</span>
+                                <span><span class="acronym">S</span>olutions</span>
+							</div>
+                            <div class="about">
+                                <ul>
+                                    <li>Roofing&nbsp;-&nbsp;</li>
+                                    <li>Siding&nbsp;-&nbsp;</li>
+                                    <li>Guttering&nbsp;-&nbsp;</li>
+                                    <li>Windows&nbsp;-&nbsp;</li>
+                                    <li>Decks</li>
+                                </ul>
+                            </div>
+                            <img class="logoHouse" src="images/house.png" width="300px" />
+                        </div>
+                        <div class="background">
+                                <div class="menu">
+                                    <ul>
+                                        <li>
+                                            <a href="JavaScript:GetText('PremierPage.html');"><div>Home</div></a>
+                                        </li>
+                                        <li>
+                                            <a href="JavaScript:GetText('ResRoofing.html');"><div>Roofing</div></a>
+                                        </li>
+                                        <li>
+                                            <a href="JavaScript:GetText('Gutters.html');"><div>Gutters</div></a>
+                                        </li>
+                                        <li>
+                                            <a href="JavaScript:GetText('Siding.html');"><div>Siding</div></a>
+                                        </li>
+                                        <li>
+                                            <a href="JavaScript:GetText('Hail.html');"><div>Hail Damage</div></a>
+                                        </li>
+                                        <li>
+                                            <a href="JavaScript:GetText('ContactUs.html');"><div>Contact Us</div></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content" />
+                         </div>
+                     </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+
+</html>

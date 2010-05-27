@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" MasterPageFile="/masterpages/HTMLPage.master" AutoEventWireup="true" %>
+
+<%@ Register Src="~/usercontrols/MenuControl.ascx" TagPrefix="uc" TagName="Menu" %>
+<%@ Import Namespace="umbraco.presentation.nodeFactory" %>
+
+<script language="c#" runat="server">
+    /*  
+    THIS IS TAKE CARE OF IN THE HTMLPage.master
+    
+    public string MetaKeywords { get; set; }
+    public string MetaDescription { get; set; }
+ */
+    protected override void OnLoad(EventArgs e)
+    {
+        base.OnLoad(e);
+
+        //SiteBuilder.Helpers.Umbraco.PrintProperties(this);
+        //SiteBuilder.Helpers.Umbraco.SetProperties(this);
+        //SiteBuilder.Helpers.Umbraco.SetProperty(this, "Banner");
+
+        string stylesheet = buildStyleSheet();
+        Node current = Node.GetCurrent();
+        if (current != null)
+            foreach (Property p in current.Properties)
+                stylesheet = stylesheet.Replace(p.Alias, p.Value);
+
+        dynamicStyleSheet.Text = stylesheet;
+    }
+    protected string buildStyleSheet()
+    {
+        return @"
+            <style type=""text/css"">
+            </style>
+        ";
+    }
+</script>
+
+<asp:Content ContentPlaceHolderID="headContent" runat="server">
+    <asp:Literal ID="dynamicStyleSheet" runat="server"></asp:Literal>
+    <asp:ContentPlaceHolder ID="headContent" runat="server" />
+</asp:Content>
+<asp:Content ContentPlaceHolderID="bodyContent" runat="server">
+    <div class="container">
+        <!-- header -->
+        <div class="header">
+            <div class="logo">
+                <a href="/">
+                    <umbraco:Item ID="Item2" Field="PageTitle" runat="server"></umbraco:Item>
+                </a>
+            </div>
+            <div class="mainMenu">
+                <uc:Menu ID="Menu2" Depth="1" FromCurrent="false" runat="server" />
+                <asp:ContentPlaceHolder ID="SubMenu" runat="server" />
+            </div>
+        </div>
+        <!--end header -->
+        <!-- main -->
+        <div class="main">
+            <div class="content">
+                <asp:ContentPlaceHolder ID="Content" runat="server" />
+            </div>
+        </div>
+        <!-- end main -->
+        <!-- footer -->
+        <div class="footer">
+        </div>
+        <!-- end footer -->
+    </div>
+</asp:Content>
