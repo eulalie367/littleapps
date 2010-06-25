@@ -1,0 +1,5 @@
+C:\LittleApps\DealersitesCMS\obj\Debug\ResolveAssemblyReference.cache
+C:\LittleApps\DealersitesCMS\bin\DealersitesCMS.dll
+C:\LittleApps\DealersitesCMS\bin\DealersitesCMS.pdb
+C:\LittleApps\DealersitesCMS\obj\Debug\DealersitesCMS.dll
+C:\LittleApps\DealersitesCMS\obj\Debug\DealersitesCMS.pdb
