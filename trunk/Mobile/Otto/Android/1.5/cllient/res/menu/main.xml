@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mainfunction"
+          android:title="@string/menu_mainfunction" />
+    <item android:id="@+id/quit"
+          android:title="@string/menu_quit" />
+</menu>

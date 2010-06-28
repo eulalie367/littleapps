@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">cllient</string>
+    <string name="title_main">No Alarms Set</string>
+    <string name="menu_mainfunction">Manage Alarms</string>
+    <string name="menu_quit">Quit</string>
+</resources>
