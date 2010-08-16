@@ -28,6 +28,10 @@ namespace SolutionMatchTool.Data
         }
         public static object ExecuteScalar(string sql)
         {
+            return ExecuteScalar(sql, null, CommandType.Text);
+        }
+        public static object ExecuteScalar(string sql, SqlParameter[] Params, CommandType commandType)
+        {
             object retVal = null;
             try
             {
@@ -35,6 +39,11 @@ namespace SolutionMatchTool.Data
                 {
                     using (SqlCommand com = new SqlCommand(sql, conn))
                     {
+                        com.CommandType = commandType;
+
+                        if (Params != null)
+                            com.Parameters.AddRange(Params);
+
                         conn.Open();
 
                         retVal = com.ExecuteScalar();
@@ -108,12 +117,6 @@ namespace SolutionMatchTool.Data
         /// <returns></returns>
         public static List<t> FillEntities<t>(string sql, SqlParameter[] Params, CommandType commandType) where t : new()
         {
-            //use this to make a local copy of the db, so you can at least see the schema.
-            //using (DontUseThisUnlessYouAreStupid d = new DontUseThisUnlessYouAreStupid(""))
-            //{
-            //    d.CreateDatabase();
-            //}
-
             List<t> retVal = new List<t>();
             t tmp = default(t);
             try
@@ -140,6 +143,7 @@ namespace SolutionMatchTool.Data
                                 for (int i = 0; i < reader.FieldCount; i++)
                                 {
                                     colName = reader.GetName(i);
+                                    colName = colName.Replace(" ", "");//spaces don't work in names, SqlMetal will just remove them... So will we.
                                     value = reader[i];
 
                                     if (string.IsNullOrEmpty(colName))
@@ -242,6 +246,8 @@ namespace SolutionMatchTool.Data
 
         private static void SetPropetyValue(object tmp, object value, PropertyInfo prop)
         {
+            //add logic here for any DB type that doesn't parse corretly, such as an XElement.
+
             if (!(value is DBNull) && prop != null)
             {
                 if (prop.PropertyType != typeof(System.Xml.Linq.XElement))//this really comes back as a string from the db.
