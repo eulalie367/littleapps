@@ -6,11 +6,16 @@ using System.Web;
 using System.Web.UI.WebControls;
 using System.Collections;
 using System.Web.UI.HtmlControls;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace SolutionMatchTool.Data
 {
     public static class Extensions
     {
+        /// <summary>
+        /// Parses a request string and returns it's nullable int value
+        /// </summary>
         public static int? ToInt(this HttpRequest req, string key)
         {
             int? retVal = null;
@@ -25,6 +30,9 @@ namespace SolutionMatchTool.Data
             { }
             return retVal;
         }
+        /// <summary>
+        /// Parses a string and returns it's nullable int value
+        /// </summary>
         public static int? ToInt(this string str)
         {
             int? retVal = null;
@@ -39,6 +47,9 @@ namespace SolutionMatchTool.Data
             { }
             return retVal;
         }
+        /// <summary>
+        /// Parses a string and returns it's nullable datetime value
+        /// </summary>
         public static DateTime? ToDateTime(this string str)
         {
             DateTime? retVal = null;
@@ -53,6 +64,9 @@ namespace SolutionMatchTool.Data
             { }
             return retVal;
         }
+        /// <summary>
+        /// Parses a string and returns it's nullable bool value
+        /// </summary>
         public static Boolean? ToBool(this string str)
         {
             if (!string.IsNullOrEmpty(str))
@@ -85,6 +99,13 @@ namespace SolutionMatchTool.Data
             else
                 return null;
         }
+        /// <summary>
+        /// This is a helper stub to fill a select in 1 line...
+        /// </summary>
+        /// <typeparam name="source">IEnumerable object to fill the select with</typeparam>
+        /// <param name="nameCol">The parameterName to use for the DataTextField when filling the select</param>
+        /// <param name="valCol">The parameterName to use for the DataValueField when filling the select</param>
+        /// <param name="index0">The text to display as the first option in the select</param>
         public static void FillSelect<t>(this DropDownList select, t source, string nameCol, string valCol, string index0) where t : IEnumerable
         {
             if (!string.IsNullOrEmpty(index0))
@@ -97,12 +118,36 @@ namespace SolutionMatchTool.Data
             select.DataValueField = valCol;
             select.DataBind();
         }
+        /// <summary>
+        /// This is a helper stub to fill a select in 1 line...
+        /// </summary>
+        /// <typeparam name="source">IEnumerable object to fill the select with</typeparam>
+        /// <param name="nameCol">The parameterName to use for the DataTextField when filling the select</param>
+        /// <param name="valCol">The parameterName to use for the DataValueField when filling the select</param>
         public static void FillSelect<t>(this HtmlSelect select, t source, string nameCol, string valCol) where t : IEnumerable
         {
             select.DataSource = source;
             select.DataTextField = nameCol;
             select.DataValueField = valCol;
             select.DataBind();
+        }
+
+        public static string GetItemValue(this XmlAttributeCollection attribs, string name)
+        {
+            XmlNode n = attribs.GetNamedItem(name);
+            if (n != null)
+                return n.Value;
+            else
+                return "";
+        }
+
+        public static string GetAttributeValue(this XElement elem, string name)
+        {
+            XAttribute attr = elem.Attribute(name);
+            if (attr != null && !string.IsNullOrEmpty(attr.Value))
+                return attr.Value;
+            else
+                return "";
         }
     }
 }

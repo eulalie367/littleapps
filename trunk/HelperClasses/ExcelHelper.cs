@@ -77,9 +77,21 @@ namespace SolutionMatchTool.Data
             StringBuilder sb = new StringBuilder();
             object value = null;
 
-            sb.Append("<s:Row>");
+            System.Reflection.PropertyInfo[] props = a.GetType().GetProperties();
 
-            foreach (System.Reflection.PropertyInfo p in a.GetType().GetProperties())
+            if (!useValue)
+            {
+                //add columns info
+                foreach (System.Reflection.PropertyInfo p in props)
+                {
+                    //autofit doesn't work on text, stupid MS...
+                    //So, add five to the length of the column header for the default width
+                    sb.Append("<s:Column s:AutoFitWidth=\"1\" s:Width=\"" + p.Name.Length + 5 + "\"></s:Column>");
+                }
+            }
+
+            sb.Append("<s:Row>");
+            foreach (System.Reflection.PropertyInfo p in props)
             {
 
                 string propType = "";
