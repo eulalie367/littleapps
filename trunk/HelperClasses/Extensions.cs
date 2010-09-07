@@ -8,6 +8,7 @@ using System.Collections;
 using System.Web.UI.HtmlControls;
 using System.Xml;
 using System.Xml.Linq;
+using System.Web.UI;
 
 namespace SolutionMatchTool.Data
 {
@@ -148,6 +149,17 @@ namespace SolutionMatchTool.Data
                 return attr.Value;
             else
                 return "";
+        }
+
+        public static void AppendAttribute(this System.Web.UI.HtmlControls.HtmlContainerControl cont, string name, string value)
+        {
+            string a = cont.Attributes[name];
+            if (string.IsNullOrEmpty(a))
+                cont.Attributes.Add(name, value);
+            else
+            {
+                cont.Attributes[name] += " " + value;
+            }
         }
     }
 }
