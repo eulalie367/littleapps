@@ -10,7 +10,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Web.UI;
 
-namespace SolutionMatchTool.Data
+namespace Sperian.Web
 {
     public static class Extensions
     {
@@ -160,6 +160,28 @@ namespace SolutionMatchTool.Data
             {
                 cont.Attributes[name] += " " + value;
             }
+        }
+
+        public static string ToRssDateString(this DateTime dt)
+        {
+            dt = dt.ToUniversalTime();
+            return dt.ToString("ddd, dd MMM yyyy HH:mm:ss G\\MT");
+        }
+
+        public static string TruncateWholeWordBetweenTags(this string s, int length, string closingTag)
+        {
+            if (s.Length >= length)
+            {
+                s = s.Substring(0, 250);
+                s = s.Substring(0, s.LastIndexOf(' '));
+                if (!string.IsNullOrEmpty(closingTag))
+                    s += closingTag;
+            }
+            return s;
+        }
+        public static string TruncateWholeWord(this string s, int length)
+        {
+            return TruncateWholeWordBetweenTags(s, length, "");
         }
     }
 }
