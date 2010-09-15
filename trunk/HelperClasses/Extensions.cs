@@ -10,7 +10,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Web.UI;
 
-namespace Sperian.Web
+namespace SolutionMatchTool.Data
 {
     public static class Extensions
     {
@@ -90,7 +90,7 @@ namespace Sperian.Web
                         return true;
                         break;
                     case "0":
-                        return true;
+                        return false;
                         break;
                     default:
                         return null;
@@ -162,6 +162,20 @@ namespace Sperian.Web
             }
         }
 
+        public static void AddSafely(this AttributeCollection attribs, string key, string value)
+        {
+            if (attribs != null)
+            {
+                if (!string.IsNullOrEmpty(attribs[key]))
+                {
+                    attribs[key] += " " + value;
+                }
+                else
+                {
+                    attribs.Add(key, value);
+                }
+            }
+        }
         public static string ToRssDateString(this DateTime dt)
         {
             dt = dt.ToUniversalTime();
