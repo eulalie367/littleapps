@@ -1,5 +1,0 @@
-D:\Documents\Development\LittleApps\DivedendFinder\Stocks\bin\Release\Stocks.dll
-D:\Documents\Development\LittleApps\DivedendFinder\Stocks\bin\Release\Stocks.pdb
-D:\Documents\Development\LittleApps\DivedendFinder\Stocks\obj\Release\ResolveAssemblyReference.cache
-D:\Documents\Development\LittleApps\DivedendFinder\Stocks\obj\Release\Stocks.dll
-D:\Documents\Development\LittleApps\DivedendFinder\Stocks\obj\Release\Stocks.pdb
