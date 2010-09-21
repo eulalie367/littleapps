@@ -20,7 +20,7 @@ namespace StockMarket
         public YahooQuote(string ticker)
             : base()
         {
-            if(!string.IsNullOrEmpty(ticker))
+            if (!string.IsNullOrEmpty(ticker))
                 this.Ticker = ticker.ToUpper();
         }
 
@@ -90,10 +90,6 @@ namespace StockMarket
                 HighPrice = double.Parse(props[6] ?? "0"),
                 LowPrice = double.Parse(props[7] ?? "0"),
                 Volume = int.Parse(props[8] ?? "0"),
-                //CreatedTime = DateTime.Now,
-                //IsAfterClose = DateTime.Now > new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 16, 0, 0)
-                //                || DateTime.Now.DayOfWeek.ToString().ToLower() == "sunday"
-                //                || DateTime.Now.DayOfWeek.ToString().ToLower() == "monday"
             };
         }
 
@@ -128,5 +124,16 @@ namespace StockMarket
 
 
         #endregion
+    }
+    public class HistoricalQuote
+    {
+        public string Ticker { get; set; }
+        public double LastPrice { get; set; }
+        public DateTime LastTime { get; set; }
+        public double PriceChange { get; set; }
+        public double OpenPrice { get; set; }
+        public double HighPrice { get; set; }
+        public double LowPrice { get; set; }
+        public int Volume { get; set; }
     }
 }

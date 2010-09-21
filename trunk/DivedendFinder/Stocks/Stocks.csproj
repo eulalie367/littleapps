@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{5C1159C0-B3C4-4C31-97A7-FF0564187C7B}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -41,7 +41,6 @@
   </Target>
   -->
   <ItemGroup>
-    <Compile Include="DAL\Stocks.cs" />
     <Compile Include="Google.cs" />
     <Compile Include="YahooQuote.cs" />
   </ItemGroup>
@@ -70,11 +69,5 @@
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DAL\Generate.bat" />
   </ItemGroup>
 </Project>
