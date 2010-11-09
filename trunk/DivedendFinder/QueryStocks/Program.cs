@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Extensions;
+using System.Configuration;
 
 namespace QueryStocks
 {
@@ -34,23 +35,29 @@ namespace QueryStocks
         private static List<StockMarket.Company> GetCurrentQuotes()
         {
             Dictionary<string, DateTime> files = new Dictionary<string, DateTime>();
-            foreach (System.IO.FileInfo fi in new System.IO.DirectoryInfo("C:\\LittleApps\\DivedendFinder\\MaintainXML\\bin\\Release\\Quotes").GetFiles("AllQuotes_*"))
-            { 
-                string[] nameParts = fi.FullName.Split('_');
 
-                if(nameParts != null && nameParts.Length > 1)
+            string dir = ConfigurationManager.AppSettings["QuoteDirectory"];
+            if (!string.IsNullOrEmpty(dir))
+            {
+                foreach (System.IO.FileInfo fi in new System.IO.DirectoryInfo(dir).GetFiles("AllQuotes_*"))
                 {
-                    DateTime d = DateTime.Parse(nameParts[1]);
-                    if(d!= null)
+                    string[] nameParts = fi.FullName.Split('_');
+
+                    if (nameParts != null && nameParts.Length > 1)
                     {
-                        files.Add(fi.FullName, d);
+                        DateTime d = DateTime.Parse(nameParts[1]);
+                        if (d != null)
+                        {
+                            files.Add(fi.FullName, d);
+                        }
                     }
+
                 }
+                string filename = files.OrderBy(f => f.Value).Select(f => f.Key).FirstOrDefault();
 
+                return filename.DeSerialze_Binary<StockMarket.Company>().ToList();
             }
-            string filename = files.OrderBy(f => f.Value).Select(f => f.Key).FirstOrDefault();
-
-            return filename.DeSerialze_Binary<StockMarket.Company>().ToList();
+            return new List<StockMarket.Company>();
         }
     }
 }
