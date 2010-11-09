@@ -9,10 +9,10 @@ namespace StockMarket
 {
     public class Google
     {
-        //public List<StockMarket.Company> Quotes { get; set; }
+        public List<StockMarket.Company> Quotes { get; set; }
         public Google()
         {
-            //this.Quotes = new List<StockMarket.Company>();
+            this.Quotes = new List<StockMarket.Company>();
             RawGoogle g = new RawGoogle();
             g.Load();
             XDocument xdoc = new XDocument();
@@ -22,29 +22,32 @@ namespace StockMarket
             }
             foreach (XElement company in xdoc.Element("GoogleFinance").Elements().Where(e => e.Name == "Company"))
             {
-                //StockMarket.Company q = new StockMarket.Company
-                //{
-                //    Exchange = company.Element("Exchange").Value ?? "",
-                //    Ticker = company.Element("Ticker").Value ?? "",
-                //    Title = company.Element("Title").Value ?? "",
-                //};
-                //StockMarket.CompanyStats s = new StockMarket.CompanyStats
-                //    {
-                //        CurrentRatioYear = double.Parse(company.Element("CurrentRatioYear").Value ?? "-1"),
-                //        DividendRecentQuarter = double.Parse(company.Element("DividendRecentQuarter").Value ?? "-1"),
-                //        High52Week = double.Parse(company.Element("High52Week").Value ?? "-1"),
-                //        Low52Week = double.Parse(company.Element("Low52Week").Value ?? "-1"),
-                //        MarketCap = RawGoogle.ParseLargeInt(company.Element("MarketCap").Value ?? "-1"),
-                //        PE = double.Parse(company.Element("PE").Value ?? "-1"),
-                //        PriceSales = double.Parse(company.Element("PriceSales").Value ?? "-1"),
-                //        LastPrice = double.Parse(company.Element("QuoteLast").Value ?? "-1"),
-                //        Volume = RawGoogle.ParseLargeInt(company.Element("Volume").Value ?? "-1"),
-                //        CreatedDate = DateTime.Now
-                //    };
-                //s.BookValue = (int)(double.Parse(company.Element("BookValuePerShareYear").Value ?? "-1") / (s.Volume ?? 1));
+                StockMarket.Company q = new StockMarket.Company
+                {
+                    Exchange = company.Element("Exchange").Value ?? "",
+                    Ticker = company.Element("Ticker").Value ?? "",
+                    Title = company.Element("Title").Value ?? "",
+                };
+                StockMarket.CompanyStats s = new StockMarket.CompanyStats
+                    {
+                        CurrentRatioYear = double.Parse(company.Element("CurrentRatioYear").Value ?? "-1"),
+                        DividendRecentQuarter = double.Parse(company.Element("DividendRecentQuarter").Value ?? "-1"),
+                        High52Week = double.Parse(company.Element("High52Week").Value ?? "-1"),
+                        Low52Week = double.Parse(company.Element("Low52Week").Value ?? "-1"),
+                        MarketCap = RawGoogle.ParseLargeInt(company.Element("MarketCap").Value ?? "-1"),
+                        PE = double.Parse(company.Element("PE").Value ?? "-1"),
+                        PriceSales = double.Parse(company.Element("PriceSales").Value ?? "-1"),
+                        LastPrice = double.Parse(company.Element("QuoteLast").Value ?? "-1"),
+                        Volume = RawGoogle.ParseLargeInt(company.Element("Volume").Value ?? "-1"),
+                        CreatedDate = DateTime.Now
+                    };
+                if(s.LastPrice > 0 && s.PE > 0)
+                    s.Earnings = (long)(((double)s.LastPrice / (double)s.PE) * (s.MarketCap / s.LastPrice));
+    
+                s.BookValue = (int)(double.Parse(company.Element("BookValuePerShareYear").Value ?? "-1") / (s.Volume ?? 1));
 
-                //q.CompanyStats.Add(s);
-                //this.Quotes.Add(q);
+                q.CompanyStats.Add(s);
+                this.Quotes.Add(q);
             }
         }
     }
@@ -218,5 +221,34 @@ namespace StockMarket
 
             }
         }
+    }
+
+    [Serializable]
+    public class Company
+    {
+        public string Exchange { get; set; }
+        public string Ticker { get; set; }
+        public string Title { get; set; }
+        public List<CompanyStats> CompanyStats { get; set; }
+        public Company()
+        {
+            CompanyStats = new List<CompanyStats>();
+        }
+    }
+    [Serializable]
+    public class CompanyStats
+    {
+        public double CurrentRatioYear { get; set; }
+        public double DividendRecentQuarter { get; set; }
+        public double High52Week { get; set; }
+        public double Low52Week { get; set; }
+        public double PE { get; set; }
+        public double PriceSales { get; set; }
+        public double LastPrice { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public int BookValue { get; set; }
+        public long? Volume { get; set; }
+        public long MarketCap { get; set; }
+        public long Earnings { get; set; }
     }
 }

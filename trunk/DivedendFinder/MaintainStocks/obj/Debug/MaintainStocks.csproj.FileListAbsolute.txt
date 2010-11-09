@@ -1,9 +1,0 @@
-D:\Documents\Development\LittleApps\DivedendFinder\MaintainStocks\bin\Debug\MaintainStocks.exe
-D:\Documents\Development\LittleApps\DivedendFinder\MaintainStocks\bin\Debug\MaintainStocks.pdb
-D:\Documents\Development\LittleApps\DivedendFinder\MaintainStocks\bin\Debug\StandardExtensions.dll
-D:\Documents\Development\LittleApps\DivedendFinder\MaintainStocks\bin\Debug\Stocks.dll
-D:\Documents\Development\LittleApps\DivedendFinder\MaintainStocks\bin\Debug\StandardExtensions.pdb
-D:\Documents\Development\LittleApps\DivedendFinder\MaintainStocks\bin\Debug\Stocks.pdb
-D:\Documents\Development\LittleApps\DivedendFinder\MaintainStocks\obj\Debug\ResolveAssemblyReference.cache
-D:\Documents\Development\LittleApps\DivedendFinder\MaintainStocks\obj\Debug\MaintainStocks.exe
-D:\Documents\Development\LittleApps\DivedendFinder\MaintainStocks\obj\Debug\MaintainStocks.pdb

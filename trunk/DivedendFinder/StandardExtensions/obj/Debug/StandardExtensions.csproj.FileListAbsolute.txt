@@ -5,3 +5,10 @@ D:\Documents\Development\LittleApps\DivedendFinder\StandardExtensions\bin\Debug\
 D:\Documents\Development\LittleApps\DivedendFinder\StandardExtensions\obj\Debug\ResolveAssemblyReference.cache
 D:\Documents\Development\LittleApps\DivedendFinder\StandardExtensions\obj\Debug\StandardExtensions.dll
 D:\Documents\Development\LittleApps\DivedendFinder\StandardExtensions\obj\Debug\StandardExtensions.pdb
+C:\LittleApps\DivedendFinder\StandardExtensions\bin\Debug\StandardExtensions.dll
+C:\LittleApps\DivedendFinder\StandardExtensions\bin\Debug\StandardExtensions.pdb
+C:\LittleApps\DivedendFinder\StandardExtensions\bin\Debug\Stocks.dll
+C:\LittleApps\DivedendFinder\StandardExtensions\bin\Debug\Stocks.pdb
+C:\LittleApps\DivedendFinder\StandardExtensions\obj\Debug\ResolveAssemblyReference.cache
+C:\LittleApps\DivedendFinder\StandardExtensions\obj\Debug\StandardExtensions.dll
+C:\LittleApps\DivedendFinder\StandardExtensions\obj\Debug\StandardExtensions.pdb

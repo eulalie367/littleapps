@@ -1,0 +1,8 @@
+C:\LittleApps\DivedendFinder\QueryStocks\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\LittleApps\DivedendFinder\QueryStocks\bin\Debug\QueryStocks.exe
+C:\LittleApps\DivedendFinder\QueryStocks\bin\Debug\QueryStocks.pdb
+C:\LittleApps\DivedendFinder\QueryStocks\bin\Debug\Stocks.dll
+C:\LittleApps\DivedendFinder\QueryStocks\bin\Debug\Stocks.pdb
+C:\LittleApps\DivedendFinder\QueryStocks\obj\x86\Debug\QueryStocks.exe
+C:\LittleApps\DivedendFinder\QueryStocks\obj\x86\Debug\QueryStocks.pdb
+C:\LittleApps\DivedendFinder\QueryStocks\bin\Debug\QueryStocks.exe.config

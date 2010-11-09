@@ -1,3 +1,0 @@
-D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder\obj\Release\ResolveAssemblyReference.cache
-D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder\obj\Release\DivedendFinder.Form1.resources
-D:\Documents\Development\LittleApps\DivedendFinder\DivedendFinder\obj\Release\DivedendFinder.csproj.GenerateResource.Cache

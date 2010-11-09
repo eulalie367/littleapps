@@ -1,0 +1,7 @@
+C:\LittleApps\DivedendFinder\MaintainXML\obj\Debug\ResolveAssemblyReference.cache
+C:\LittleApps\DivedendFinder\MaintainXML\bin\Debug\MaintainXML.exe
+C:\LittleApps\DivedendFinder\MaintainXML\bin\Debug\MaintainXML.pdb
+C:\LittleApps\DivedendFinder\MaintainXML\bin\Debug\Stocks.dll
+C:\LittleApps\DivedendFinder\MaintainXML\bin\Debug\Stocks.pdb
+C:\LittleApps\DivedendFinder\MaintainXML\obj\Debug\MaintainXML.exe
+C:\LittleApps\DivedendFinder\MaintainXML\obj\Debug\MaintainXML.pdb
