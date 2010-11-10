@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.Xml.Linq;
+using System.Web;
 
 namespace StockMarket
 {
@@ -36,14 +37,15 @@ namespace StockMarket
                         Low52Week = double.Parse(company.Element("Low52Week").Value ?? "-1"),
                         MarketCap = RawGoogle.ParseLargeInt(company.Element("MarketCap").Value ?? "-1"),
                         PE = double.Parse(company.Element("PE").Value ?? "-1"),
+                        EPS = double.Parse(company.Element("EPS").Value ?? "-1"),
                         PriceSales = double.Parse(company.Element("PriceSales").Value ?? "-1"),
                         LastPrice = double.Parse(company.Element("QuoteLast").Value ?? "-1"),
                         Volume = RawGoogle.ParseLargeInt(company.Element("Volume").Value ?? "-1"),
                         CreatedDate = DateTime.Now
                     };
-                if(s.LastPrice > 0 && s.PE > 0)
-                    s.Earnings = (long)(((double)s.LastPrice / (double)s.PE) * (s.MarketCap / s.LastPrice));
-    
+                if (s.LastPrice > 0 && s.EPS > 0)
+                    s.Earnings = (long)(s.EPS * ((double)s.MarketCap / s.LastPrice));
+
                 s.BookValue = (int)(double.Parse(company.Element("BookValuePerShareYear").Value ?? "-1") / (s.Volume ?? 1));
 
                 q.CompanyStats.Add(s);
@@ -53,31 +55,552 @@ namespace StockMarket
     }
     class RawGoogle
     {
-        public int? Start { get; set; }
-        public int? num_company_results { get; set; }
-        public int? num_mf_results { get; set; }
-        public int? num_all_results { get; set; }
-        public string original_query { get; set; }
-        public string query_for_display { get; set; }
-        public string results_type { get; set; }
-        public string results_display_type { get; set; }
+        public class Query
+        {
+            #region Default Constructor
+            public Query()
+            {
+                Exchange = Exchanges.AMEX | Exchanges.NASDAQ | Exchanges.NYSE;
+
+                MarketCap_Max = null;
+                MarketCap_Min = null;
+
+                PE_Max = null;
+                PE_Min = null;
+
+                DividendYield_Max = null;
+                DividendYield_Min = null;
+
+                PriceWeekPercChange_Max = null;
+                PriceWeekPercChange_Min = null;
+
+                ForwardPEYear_Max = null;
+                ForwardPEYear_Min = null;
+
+                QuotePercChange_Max = null;
+                QuotePercChange_Min = null;
+
+                PriceToBook_Max = null;
+                PriceToBook_Min = null;
+
+                PriceSales_Max = null;
+                PriceSales_Min = null;
+
+                QuoteLast_Max = null;
+                QuoteLast_Min = null;
+
+                EPS_Max = null;
+                EPS_Min = null;
+
+                High52Week_Max = null;
+                High52Week_Min = null;
+
+                Low52Week_Max = null;
+                Low52Week_Min = null;
+
+                Price50DayAverage_Max = null;
+                Price50DayAverage_Min = null;
+
+                Price150DayAverage_Max = null;
+                Price150DayAverage_Min = null;
+
+                Price200DayAverage_Max = null;
+                Price200DayAverage_Min = null;
+
+                Price13WeekPercChange_Max = null;
+                Price13WeekPercChange_Min = null;
+
+                Price26WeekPercChange_Max = null;
+                Price26WeekPercChange_Min = null;
+
+                DividendRecentQuarter_Max = null;
+                DividendRecentQuarter_Min = null;
+
+                DPSRecentYear_Max = null;
+                DPSRecentYear_Min = null;
+
+                IAD_Max = null;
+                IAD_Min = null;
+
+                DividendPerShare_Max = null;
+                DividendPerShare_Min = null;
+
+                Dividend_Max = null;
+                Dividend_Min = null;
+
+                BookValuePerShareYear_Max = null;
+                BookValuePerShareYear_Min = null;
+
+                CurrentRatioYear_Max = null;
+                CurrentRatioYear_Min = null;
+
+                LTDebtToAssetsYear_Max = null;
+                LTDebtToAssetsYear_Min = null;
+
+                LTDebtToAssetsQuarter_Max = null;
+                LTDebtToAssetsQuarter_Min = null;
+
+                TotalDebtToAssetsYear_Max = null;
+                TotalDebtToAssetsYear_Min = null;
+
+                TotalDebtToAssetsQuarter_Max = null;
+                TotalDebtToAssetsQuarter_Min = null;
+
+                LTDebtToEquityYear_Max = null;
+                LTDebtToEquityYear_Min = null;
+
+                LTDebtToEquityQuarter_Max = null;
+                LTDebtToEquityQuarter_Min = null;
+
+                TotalDebtToEquityYear_Max = null;
+                TotalDebtToEquityYear_Min = null;
+
+                TotalDebtToEquityQuarter_Max = null;
+                TotalDebtToEquityQuarter_Min = null;
+
+                AINTCOV_Max = null;
+                AINTCOV_Min = null;
+
+                ReturnOnInvestmentTTM_Max = null;
+                ReturnOnInvestmentTTM_Min = null;
+
+                ReturnOnInvestmentYears_Max = null;
+                ReturnOnInvestmentYears_Min = null;
+
+                ReturnOnInvestmentYear_Max = null;
+                ReturnOnInvestmentYear_Min = null;
+
+                ReturnOnAssetsTTM_Max = null;
+                ReturnOnAssetsTTM_Min = null;
+
+                ReturnOnAssetsYears_Max = null;
+                ReturnOnAssetsYears_Min = null;
+
+                ReturnOnAssetsYear_Max = null;
+                ReturnOnAssetsYear_Min = null;
+
+                ReturnOnEquityTTM_Max = null;
+                ReturnOnEquityTTM_Min = null;
+
+                ReturnOnEquityYears_Max = null;
+                ReturnOnEquityYears_Min = null;
+
+                ReturnOnEquityYear_Max = null;
+                ReturnOnEquityYear_Min = null;
+
+                Beta_Max = null;
+                Beta_Min = null;
+
+                Float_Max = null;
+                Float_Min = null;
+
+                Volume_Max = null;
+                Volume_Min = null;
+
+                AverageVolume_Max = null;
+                AverageVolume_Min = null;
+
+                GrossMargin_Max = null;
+                GrossMargin_Min = null;
+
+                EBITDMargin_Max = null;
+                EBITDMargin_Min = null;
+
+                OperatingMargin_Max = null;
+                OperatingMargin_Min = null;
+
+                NetProfitMarginPercent_Max = null;
+                NetProfitMarginPercent_Min = null;
+
+                NetIncomeGrowthRateYears_Max = null;
+                NetIncomeGrowthRateYears_Min = null;
+
+                RevenueGrowthRate5Years_Max = null;
+                RevenueGrowthRate5Years_Min = null;
+
+                RevenueGrowthRate10Years_Max = null;
+                RevenueGrowthRate10Years_Min = null;
+
+                EPSGrowthRate5Years_Max = null;
+                EPSGrowthRate5Years_Min = null;
+
+                EPSGrowthRate10Years_Max = null;
+                EPSGrowthRate10Years_Min = null;
+
+            }
+            #endregion
+
+            public enum Exchanges
+            {
+                NONE = 0,
+                NYSE = 1,
+                NASDAQ = 2,
+                AMEX = 3
+            }
+
+            #region Properties
+            public Exchanges Exchange { get; set; }
+
+            public long? MarketCap_Min { get; set; }
+            public long? MarketCap_Max { get; set; }
+
+            public double? PE_Min { get; set; }
+            public double? PE_Max { get; set; }
+
+            public double? DividendYield_Min { get; set; }
+            public double? DividendYield_Max { get; set; }
+
+            public double? PriceWeekPercChange_Min { get; set; }
+            public double? PriceWeekPercChange_Max { get; set; }
+
+            public double? ForwardPEYear_Min { get; set; }
+            public double? ForwardPEYear_Max { get; set; }
+
+            public double? QuotePercChange_Min { get; set; }
+            public double? QuotePercChange_Max { get; set; }
+
+            public double? PriceToBook_Min { get; set; }
+            public double? PriceToBook_Max { get; set; }
+
+            public double? PriceSales_Min { get; set; }
+            public double? PriceSales_Max { get; set; }
+
+            public double? QuoteLast_Min { get; set; }
+            public double? QuoteLast_Max { get; set; }
+
+            public double? EPS_Min { get; set; }
+            public double? EPS_Max { get; set; }
+
+            public double? High52Week_Min { get; set; }
+            public double? High52Week_Max { get; set; }
+
+            public double? Low52Week_Min { get; set; }
+            public double? Low52Week_Max { get; set; }
+
+            public double? Price50DayAverage_Min { get; set; }
+            public double? Price50DayAverage_Max { get; set; }
+
+            public double? Price150DayAverage_Min { get; set; }
+            public double? Price150DayAverage_Max { get; set; }
+
+            public double? Price200DayAverage_Min { get; set; }
+            public double? Price200DayAverage_Max { get; set; }
+
+            public double? Price13WeekPercChange_Min { get; set; }
+            public double? Price13WeekPercChange_Max { get; set; }
+
+            public double? Price26WeekPercChange_Min { get; set; }
+            public double? Price26WeekPercChange_Max { get; set; }
+
+            public double? DividendRecentQuarter_Min { get; set; }
+            public double? DividendRecentQuarter_Max { get; set; }
+
+            public double? DPSRecentYear_Min { get; set; }
+            public double? DPSRecentYear_Max { get; set; }
+
+            public double? IAD_Min { get; set; }
+            public double? IAD_Max { get; set; }
+
+            public double? DividendPerShare_Min { get; set; }
+            public double? DividendPerShare_Max { get; set; }
+
+            public double? Dividend_Min { get; set; }
+            public double? Dividend_Max { get; set; }
+
+            public double? BookValuePerShareYear_Min { get; set; }
+            public double? BookValuePerShareYear_Max { get; set; }
+
+            public double? CurrentRatioYear_Min { get; set; }
+            public double? CurrentRatioYear_Max { get; set; }
+
+            public double? LTDebtToAssetsYear_Min { get; set; }
+            public double? LTDebtToAssetsYear_Max { get; set; }
+
+            public double? LTDebtToAssetsQuarter_Min { get; set; }
+            public double? LTDebtToAssetsQuarter_Max { get; set; }
+
+            public double? TotalDebtToAssetsYear_Min { get; set; }
+            public double? TotalDebtToAssetsYear_Max { get; set; }
+
+            public double? TotalDebtToAssetsQuarter_Min { get; set; }
+            public double? TotalDebtToAssetsQuarter_Max { get; set; }
+
+            public double? LTDebtToEquityYear_Min { get; set; }
+            public double? LTDebtToEquityYear_Max { get; set; }
+
+            public double? LTDebtToEquityQuarter_Min { get; set; }
+            public double? LTDebtToEquityQuarter_Max { get; set; }
+
+            public double? TotalDebtToEquityYear_Min { get; set; }
+            public double? TotalDebtToEquityYear_Max { get; set; }
+
+            public double? TotalDebtToEquityQuarter_Min { get; set; }
+            public double? TotalDebtToEquityQuarter_Max { get; set; }
+
+            public double? AINTCOV_Min { get; set; }
+            public double? AINTCOV_Max { get; set; }
+
+            public double? ReturnOnInvestmentTTM_Min { get; set; }
+            public double? ReturnOnInvestmentTTM_Max { get; set; }
+
+            public double? ReturnOnInvestmentYears_Min { get; set; }
+            public double? ReturnOnInvestmentYears_Max { get; set; }
+
+            public double? ReturnOnInvestmentYear_Min { get; set; }
+            public double? ReturnOnInvestmentYear_Max { get; set; }
+
+            public double? ReturnOnAssetsTTM_Min { get; set; }
+            public double? ReturnOnAssetsTTM_Max { get; set; }
+
+            public double? ReturnOnAssetsYears_Min { get; set; }
+            public double? ReturnOnAssetsYears_Max { get; set; }
+
+            public double? ReturnOnAssetsYear_Min { get; set; }
+            public double? ReturnOnAssetsYear_Max { get; set; }
+
+            public double? ReturnOnEquityTTM_Min { get; set; }
+            public double? ReturnOnEquityTTM_Max { get; set; }
+
+            public double? ReturnOnEquityYears_Min { get; set; }
+            public double? ReturnOnEquityYears_Max { get; set; }
+
+            public double? ReturnOnEquityYear_Min { get; set; }
+            public double? ReturnOnEquityYear_Max { get; set; }
+
+            public double? Beta_Min { get; set; }
+            public double? Beta_Max { get; set; }
+
+            public double? Float_Min { get; set; }
+            public double? Float_Max { get; set; }
+
+            public long? Volume_Min { get; set; }
+            public long? Volume_Max { get; set; }
+
+            public long? AverageVolume_Min { get; set; }
+            public long? AverageVolume_Max { get; set; }
+
+            public long? GrossMargin_Min { get; set; }
+            public long? GrossMargin_Max { get; set; }
+
+            public long? EBITDMargin_Min { get; set; }
+            public long? EBITDMargin_Max { get; set; }
+
+            public long? OperatingMargin_Min { get; set; }
+            public long? OperatingMargin_Max { get; set; }
+
+            public double? NetProfitMarginPercent_Min { get; set; }
+            public double? NetProfitMarginPercent_Max { get; set; }
+
+            public double? NetIncomeGrowthRateYears_Min { get; set; }
+            public double? NetIncomeGrowthRateYears_Max { get; set; }
+
+            public double? RevenueGrowthRate5Years_Min { get; set; }
+            public double? RevenueGrowthRate5Years_Max { get; set; }
+
+            public double? RevenueGrowthRate10Years_Min { get; set; }
+            public double? RevenueGrowthRate10Years_Max { get; set; }
+
+            public double? EPSGrowthRate5Years_Min { get; set; }
+            public double? EPSGrowthRate5Years_Max { get; set; }
+
+            public double? EPSGrowthRate10Years_Min { get; set; }
+            public double? EPSGrowthRate10Years_Max { get; set; }
+
+            #endregion
+
+            public override string ToString()
+            {
+                StringBuilder sb = new StringBuilder();
+
+                sb.Append("(");
+                if ((this.Exchange & Exchanges.AMEX) == Exchanges.AMEX)
+                    sb.Append("(exchange:AMEX) OR ");
+                if ((this.Exchange & Exchanges.NASDAQ) == Exchanges.NASDAQ)
+                    sb.Append("(exchange:NASDAQ) OR ");
+                if ((this.Exchange & Exchanges.NYSE) == Exchanges.NYSE)
+                    sb.Append("(exchange:NYSE) OR ");
+                sb.Remove(sb.Length - 4, 4);
+                sb.Append(")");
+
+
+                sb.Append("[");
+                sb.Append(RangeToGQuery(MarketCap_Min, MarketCap_Max, "MarketCap"));
+
+                sb.Append(RangeToGQuery(PE_Min, PE_Max, "PE"));
+
+                sb.Append(RangeToGQuery(DividendYield_Min, DividendYield_Max, "DividendYield"));
+
+                sb.Append(RangeToGQuery(PriceWeekPercChange_Min, PriceWeekPercChange_Max, "PriceWeekPercChange"));
+
+                sb.Append(RangeToGQuery(ForwardPEYear_Min, ForwardPEYear_Max, "ForwardPEYear"));
+
+                sb.Append(RangeToGQuery(QuotePercChange_Min, QuotePercChange_Max, "QuotePercChange"));
+
+                sb.Append(RangeToGQuery(PriceToBook_Min, PriceToBook_Max, "PriceToBook"));
+
+                sb.Append(RangeToGQuery(PriceSales_Min, PriceSales_Max, "PriceSales"));
+
+                sb.Append(RangeToGQuery(QuoteLast_Min, QuoteLast_Max, "QuoteLast"));
+
+                sb.Append(RangeToGQuery(EPS_Min, EPS_Max, "EPS"));
+
+                sb.Append(RangeToGQuery(High52Week_Min, High52Week_Max, "High52Week"));
+
+                sb.Append(RangeToGQuery(Low52Week_Min, Low52Week_Max, "Low52Week"));
+
+                sb.Append(RangeToGQuery(Price50DayAverage_Min, Price50DayAverage_Max, "Price50DayAverage"));
+
+                sb.Append(RangeToGQuery(Price150DayAverage_Min, Price150DayAverage_Max, "Price150DayAverage"));
+
+                sb.Append(RangeToGQuery(Price200DayAverage_Min, Price200DayAverage_Max, "Price200DayAverage"));
+
+                sb.Append(RangeToGQuery(Price13WeekPercChange_Min, Price13WeekPercChange_Max, "Price13WeekPercChange"));
+
+                sb.Append(RangeToGQuery(Price26WeekPercChange_Min, Price26WeekPercChange_Max, "Price26WeekPercChange"));
+
+                sb.Append(RangeToGQuery(DividendRecentQuarter_Min, DividendRecentQuarter_Max, "DividendRecentQuarter"));
+
+                sb.Append(RangeToGQuery(DPSRecentYear_Min, DPSRecentYear_Max, "DPSRecentYear"));
+
+                sb.Append(RangeToGQuery(IAD_Min, IAD_Max, "IAD"));
+
+                sb.Append(RangeToGQuery(DividendPerShare_Min, DividendPerShare_Max, "DividendPerShare"));
+
+                sb.Append(RangeToGQuery(Dividend_Min, Dividend_Max, "Dividend"));
+
+                sb.Append(RangeToGQuery(BookValuePerShareYear_Min, BookValuePerShareYear_Max, "BookValuePerShareYear"));
+
+                sb.Append(RangeToGQuery(CurrentRatioYear_Min, CurrentRatioYear_Max, "CurrentRatioYear"));
+
+                sb.Append(RangeToGQuery(LTDebtToAssetsYear_Min, LTDebtToAssetsYear_Max, "LTDebtToAssetsYear"));
+
+                sb.Append(RangeToGQuery(LTDebtToAssetsQuarter_Min, LTDebtToAssetsQuarter_Max, "LTDebtToAssetsQuarter"));
+
+                sb.Append(RangeToGQuery(TotalDebtToAssetsYear_Min, TotalDebtToAssetsYear_Max, "TotalDebtToAssetsYear"));
+
+                sb.Append(RangeToGQuery(TotalDebtToAssetsQuarter_Min, TotalDebtToAssetsQuarter_Max, "TotalDebtToAssetsQuarter"));
+
+                sb.Append(RangeToGQuery(LTDebtToEquityYear_Min, LTDebtToEquityYear_Max, "LTDebtToEquityYear"));
+
+                sb.Append(RangeToGQuery(LTDebtToEquityQuarter_Min, LTDebtToEquityQuarter_Max, "LTDebtToEquityQuarter"));
+
+                sb.Append(RangeToGQuery(TotalDebtToEquityYear_Min, TotalDebtToEquityYear_Max, "TotalDebtToEquityYear"));
+
+                sb.Append(RangeToGQuery(TotalDebtToEquityQuarter_Min, TotalDebtToEquityQuarter_Max, "TotalDebtToEquityQuarter"));
+
+                sb.Append(RangeToGQuery(AINTCOV_Min, AINTCOV_Max, "AINTCOV"));
+
+                sb.Append(RangeToGQuery(ReturnOnInvestmentTTM_Min, ReturnOnInvestmentTTM_Max, "ReturnOnInvestmentTTM"));
+
+                sb.Append(RangeToGQuery(ReturnOnInvestmentYears_Min, ReturnOnInvestmentYears_Max, "ReturnOnInvestmentYears"));
+
+                sb.Append(RangeToGQuery(ReturnOnInvestmentYear_Min, ReturnOnInvestmentYear_Max, "ReturnOnInvestmentYear"));
+
+                sb.Append(RangeToGQuery(ReturnOnAssetsTTM_Min, ReturnOnAssetsTTM_Max, "ReturnOnAssetsTTM"));
+
+                sb.Append(RangeToGQuery(ReturnOnAssetsYears_Min, ReturnOnAssetsYears_Max, "ReturnOnAssetsYears"));
+
+                sb.Append(RangeToGQuery(ReturnOnAssetsYear_Min, ReturnOnAssetsYear_Max, "ReturnOnAssetsYear"));
+
+                sb.Append(RangeToGQuery(ReturnOnEquityTTM_Min, ReturnOnEquityTTM_Max, "ReturnOnEquityTTM"));
+
+                sb.Append(RangeToGQuery(ReturnOnEquityYears_Min, ReturnOnEquityYears_Max, "ReturnOnEquityYears"));
+
+                sb.Append(RangeToGQuery(ReturnOnEquityYear_Min, ReturnOnEquityYear_Max, "ReturnOnEquityYear"));
+
+                sb.Append(RangeToGQuery(Beta_Min, Beta_Max, "Beta"));
+
+                sb.Append(RangeToGQuery(Float_Min, Float_Max, "Float"));
+
+                sb.Append(RangeToGQuery(Volume_Min, Volume_Max, "Volume"));
+
+                sb.Append(RangeToGQuery(AverageVolume_Min, AverageVolume_Max, "AverageVolume"));
+
+                sb.Append(RangeToGQuery(GrossMargin_Min, GrossMargin_Max, "GrossMargin"));
+
+                sb.Append(RangeToGQuery(EBITDMargin_Min, EBITDMargin_Max, "EBITDMargin"));
+
+                sb.Append(RangeToGQuery(OperatingMargin_Min, OperatingMargin_Max, "OperatingMargin"));
+
+                sb.Append(RangeToGQuery(NetProfitMarginPercent_Min, NetProfitMarginPercent_Max, "NetProfitMarginPercent"));
+
+                sb.Append(RangeToGQuery(NetIncomeGrowthRateYears_Min, NetIncomeGrowthRateYears_Max, "NetIncomeGrowthRateYears"));
+
+                sb.Append(RangeToGQuery(RevenueGrowthRate5Years_Min, RevenueGrowthRate5Years_Max, "RevenueGrowthRate5Years"));
+
+                sb.Append(RangeToGQuery(RevenueGrowthRate10Years_Min, RevenueGrowthRate10Years_Max, "RevenueGrowthRate10Years"));
+
+                sb.Append(RangeToGQuery(EPSGrowthRate5Years_Min, EPSGrowthRate5Years_Max, "EPSGrowthRate5Years"));
+
+                sb.Append(RangeToGQuery(EPSGrowthRate10Years_Min, EPSGrowthRate10Years_Max, "EPSGrowthRate10Years"));
+
+                sb.Remove(sb.ToString().LastIndexOf(" & "), 3);
+
+                sb.Append("]");
+
+                return HttpUtility.UrlEncode(sb.ToString());
+            }
+
+            private string RangeToGQuery(long? min, long? max, string queryVal)
+            {
+                if (min.HasValue && max.HasValue && !string.IsNullOrEmpty(queryVal))
+                {
+                    string retval = "({2} > {0} | {2} = {0}) & ({2} < {1} | {2} = {1}) & ";
+
+                    return string.Format(retval, min.Value, max.Value, queryVal);
+                }
+                return "";
+            }
+            private string RangeToGQuery(double? min, double? max, string queryVal)
+            {
+                if (min.HasValue && max.HasValue && !string.IsNullOrEmpty(queryVal))
+                {
+                    string retval = "({2} > {0} | {2} = {0}) & ({2} < {1} | {2} = {1}) & ";
+
+                    return string.Format(retval, min.Value.ToString(), max.Value.ToString(), queryVal);
+                }
+                return "";
+            }
+        }
         public List<GoogleCompany> searchresults { get; set; }
         public RawGoogle()
         {
-            this.Start = -1;
-            this.num_company_results = -1;
-            this.num_mf_results = -1;
-            this.num_all_results = -1;
-            this.original_query = "";
-            this.query_for_display = "";
-            this.results_type = "";
-            this.results_display_type = "";
             this.searchresults = new List<GoogleCompany>();
         }
         public void Load()
         {
-            //string url = "http://www.google.com/finance?start=0&num=2805&q=%28%28exchange%3ANYSE%29%20OR%20%28exchange%3ANASDAQ%29%20OR%20%28exchange%3AAMEX%29%29%20%5B%28MarketCap%20%3E%209879%20%7C%20MarketCap%20%3D%209879%29%20%26%20%28MarketCap%20%3C%202270000000000%20%7C%20MarketCap%20%3D%202270000000000%29%20%26%20%28PE%20%3E%200.04%20%7C%20PE%20%3D%200.04%29%20%26%20%28PE%20%3C%208263%20%7C%20PE%20%3D%208263%29%20%26%20%28DividendYield%20%3E%200%20%7C%20DividendYield%20%3D%200%29%20%26%20%28DividendYield%20%3C%20478%20%7C%20DividendYield%20%3D%20478%29%20%26%20%28Price52WeekPercChange%20%3E%20-99.83%20%7C%20Price52WeekPercChange%20%3D%20-99.83%29%20%26%20%28Price52WeekPercChange%20%3C%205001%20%7C%20Price52WeekPercChange%20%3D%205001%29%20%26%20%28BookValuePerShareYear%20%3E%20-235%20%7C%20BookValuePerShareYear%20%3D%20-235%29%20%26%20%28BookValuePerShareYear%20%3C%203000000%20%7C%20BookValuePerShareYear%20%3D%203000000%29%20%26%20%28CashPerShareYear%20%3E%200%20%7C%20CashPerShareYear%20%3D%200%29%20%26%20%28CashPerShareYear%20%3C%2069161%20%7C%20CashPerShareYear%20%3D%2069161%29%5D&restype=company&output=json&noIL=1";
-            string url = "http://www.google.com/finance?start=20&num=5000&&q=%28%28exchange%3ANYSE%29%20OR%20%28exchange%3ANASDAQ%29%20OR%20%28exchange%3AAMEX%29%29%20%5B%28PriceSales%20%3E%200%20%7C%20PriceSales%20%3D%200%29%20%26%20%28PriceSales%20%3C%2023600%20%7C%20PriceSales%20%3D%2023600%29%20%26%20%28QuoteLast%20%3E%200%20%7C%20QuoteLast%20%3D%200%29%20%26%20%28QuoteLast%20%3C%2090352%20%7C%20QuoteLast%20%3D%2090352%29%20%26%20%28High52Week%20%3E%200.24%20%7C%20High52Week%20%3D%200.24%29%20%26%20%28High52Week%20%3C%20200000%20%7C%20High52Week%20%3D%20200000%29%20%26%20%28Low52Week%20%3E%200%20%7C%20Low52Week%20%3D%200%29%20%26%20%28Low52Week%20%3C%2070051%20%7C%20Low52Week%20%3D%2070051%29%20%26%20%28PE%20%3E%200.04%20%7C%20PE%20%3D%200.04%29%20%26%20%28PE%20%3C%208238%20%7C%20PE%20%3D%208238%29%20%26%20%28MarketCap%20%3E%209939%20%7C%20MarketCap%20%3D%209939%29%20%26%20%28MarketCap%20%3C%202270000000000%20%7C%20MarketCap%20%3D%202270000000000%29%20%26%20%28DividendRecentQuarter%20%3E%200%20%7C%20DividendRecentQuarter%20%3D%200%29%20%26%20%28DividendRecentQuarter%20%3C%207.01%20%7C%20DividendRecentQuarter%20%3D%207.01%29%20%26%20%28BookValuePerShareYear%20%3E%20-235%20%7C%20BookValuePerShareYear%20%3D%20-235%29%20%26%20%28BookValuePerShareYear%20%3C%203000000%20%7C%20BookValuePerShareYear%20%3D%203000000%29%20%26%20%28Volume%20%3E%200%20%7C%20Volume%20%3D%200%29%20%26%20%28Volume%20%3C%20288270000%20%7C%20Volume%20%3D%20288270000%29%20%26%20%28CurrentRatioYear%20%3E%200.02%20%7C%20CurrentRatioYear%20%3D%200.02%29%20%26%20%28CurrentRatioYear%20%3C%201596%20%7C%20CurrentRatioYear%20%3D%201596%29%5D&restype=company&output=json&noIL=1";
+            Query q = new Query 
+            {
+                Volume_Max = long.MaxValue,
+                Volume_Min = 0,
+                MarketCap_Max = long.MaxValue,
+                MarketCap_Min = 0,
+
+                CurrentRatioYear_Max = 1000000,
+                CurrentRatioYear_Min = 0,
+                DividendRecentQuarter_Max = 1000000,
+                DividendRecentQuarter_Min = 0,
+                High52Week_Max = 1000000,
+                High52Week_Min = 0,
+                Low52Week_Max = 1000000,
+                Low52Week_Min = 0,
+                PE_Max = 1000000,
+                PE_Min = 0,
+                PriceSales_Max = 1000000,
+                PriceSales_Min = 0,
+                QuoteLast_Max = 1000000,
+                QuoteLast_Min = 0,
+                BookValuePerShareYear_Max = 1000000,
+                BookValuePerShareYear_Min = 0,
+                EPS_Max = 1000000,
+                EPS_Min = 0
+            };
+
+            Load(q);
+        }
+        public void Load(Query q)
+        {
+            string url = "http://www.google.com/finance?&gl=us&hl=en&output=json&start=0&num=10000&noIL=1&restype=company&q=" + q.ToString();
             System.Web.Script.Serialization.JavaScriptSerializer jss = new System.Web.Script.Serialization.JavaScriptSerializer();
             jss.MaxJsonLength = 80000000;
             string json = FetchFile(url);
@@ -243,6 +766,7 @@ namespace StockMarket
         public double High52Week { get; set; }
         public double Low52Week { get; set; }
         public double PE { get; set; }
+        public double EPS { get; set; }
         public double PriceSales { get; set; }
         public double LastPrice { get; set; }
         public DateTime CreatedDate { get; set; }
