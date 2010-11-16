@@ -1,1 +1,0 @@
-tinyMCE.addToLang("",{insert_advhr_desc:"Lage/Redigere horisontal linje",insert_advhr_width:"Bredde",insert_advhr_size:"H&oslash;gde",insert_advhr_noshade:"Ingen skugge"});

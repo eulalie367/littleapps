@@ -1,1 +1,0 @@
-var activeDragId="";function expandCollapse(A){var B=document.getElementById("edit"+A);if(B.style.display=="none"){B.style.display="block";document.getElementById("desc"+A).style.display="none"}else{B.style.display="none";document.getElementById("desc"+A).style.display="block"}};

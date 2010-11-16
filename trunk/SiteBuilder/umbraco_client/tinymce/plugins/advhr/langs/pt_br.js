@@ -1,1 +1,0 @@
-tinyMCE.addToLang("",{insert_advhr_desc:"Inserir/editar linha horizontal",insert_advhr_width:"Largura",insert_advhr_size:"Altura",insert_advhr_noshade:"Sem sombra"});

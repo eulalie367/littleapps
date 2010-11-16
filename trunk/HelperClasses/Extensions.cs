@@ -151,6 +151,25 @@ namespace SolutionMatchTool.Data
                 return "";
         }
 
+        public static string GetElementValue(this XmlDocument xDoc, string xpath)
+        {
+            XmlNode node = xDoc.SelectSingleNode(xpath);
+            if (node != null)
+            {
+                return node.Value;
+            }
+            return "";
+        }
+        public static string GetElementValue(this XmlNode xNode, string xpath)
+        {
+            XmlNode node = xNode.SelectSingleNode(xpath);
+            if (node != null)
+            {
+                return node.InnerText;
+            }
+            return "";
+        }
+
         public static void AppendAttribute(this System.Web.UI.HtmlControls.HtmlContainerControl cont, string name, string value)
         {
             string a = cont.Attributes[name];
@@ -160,6 +179,39 @@ namespace SolutionMatchTool.Data
             {
                 cont.Attributes[name] += " " + value;
             }
+        }
+
+        public static string GetResponseString(this HttpWebRequest req)
+        {
+            return GetResponseString(req, "");
+        }
+        public static string GetResponseString(this HttpWebRequest req, string pData)
+        {
+            if (req != null)
+            {
+                req.Method = "POST";
+                if (!string.IsNullOrEmpty(pData))
+                {
+                    using (System.IO.Stream reqStream = req.GetRequestStream())
+                    {
+                        ASCIIEncoding encoding = new ASCIIEncoding();
+                        byte[] data = encoding.GetBytes(pData);
+                        reqStream.Write(data, 0, data.Length);
+                    }
+                }
+                using (HttpWebResponse resp = req.GetResponse() as HttpWebResponse)
+                {
+                    using (System.IO.Stream st = resp.GetResponseStream())
+                    {
+                        using (System.IO.StreamReader sr = new System.IO.StreamReader(st))
+                        {
+                            return sr.ReadToEnd();
+                        }
+                    }
+
+                }
+            }
+            return "";
         }
 
         public static void AddSafely(this AttributeCollection attribs, string key, string value)

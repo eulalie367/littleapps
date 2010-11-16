@@ -1,1 +1,0 @@
-tinyMCE.addToLang("",{insert_advhr_desc:"קו אופקי",insert_advhr_width:"רוחב",insert_advhr_size:"גובה",insert_advhr_noshade:"ללא צל"});

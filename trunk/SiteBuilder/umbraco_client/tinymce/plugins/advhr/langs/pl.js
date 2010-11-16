@@ -1,1 +1,0 @@
-tinyMCE.addToLang("",{insert_advhr_desc:"Wstaw/Edytuj poziomą linię",insert_advhr_width:"Szerokość",insert_advhr_size:"Wysokość",insert_advhr_noshade:"Brak cienia"});

@@ -1,8 +1,0 @@
-﻿<%@ Master Language="C#" MasterPageFile="/masterpages/SiteBuilder.master" AutoEventWireup="true" %>
-
-<%@ Register Src="~/usercontrols/Products.ascx" TagPrefix="Menu" TagName="Side" %>
-<asp:Content ContentPlaceHolderID="headContent" runat="server">
-</asp:Content>
-<asp:Content ContentPlaceHolderID="bodyContent" runat="server">
-    <Menu:Side Depth="1" Node="Self" ID="Menu" runat="server"></Menu:Side>
-</asp:Content>

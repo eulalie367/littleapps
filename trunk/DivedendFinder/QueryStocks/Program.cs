@@ -53,7 +53,7 @@ namespace QueryStocks
                     }
 
                 }
-                string filename = files.OrderBy(f => f.Value).Select(f => f.Key).FirstOrDefault();
+                string filename = files.OrderByDescending(f => f.Value).Select(f => f.Key).FirstOrDefault();
 
                 return filename.DeSerialze_Binary<StockMarket.Company>().ToList();
             }

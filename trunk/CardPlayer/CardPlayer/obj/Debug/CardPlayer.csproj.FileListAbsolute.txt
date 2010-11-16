@@ -1,5 +1,0 @@
-D:\Documents\Development\LittleApps\CardPlayer\CardPlayer\bin\CardPlayer.dll
-D:\Documents\Development\LittleApps\CardPlayer\CardPlayer\bin\CardPlayer.pdb
-D:\Documents\Development\LittleApps\CardPlayer\CardPlayer\obj\Debug\ResolveAssemblyReference.cache
-D:\Documents\Development\LittleApps\CardPlayer\CardPlayer\obj\Debug\CardPlayer.dll
-D:\Documents\Development\LittleApps\CardPlayer\CardPlayer\obj\Debug\CardPlayer.pdb
