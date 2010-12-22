@@ -178,6 +178,7 @@
     <key alias="concierge">Concierge</key>
     <key alias="translation">Translation</key>
     <key alias="installer">Umbraco Configuration Wizard</key>
+    <key alias="products">Products</key>
   </area>
   <area alias="buttons">
     <key alias="save">Save</key>

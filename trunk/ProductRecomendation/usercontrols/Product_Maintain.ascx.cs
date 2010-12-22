@@ -10,14 +10,12 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using System.Collections.Generic;
+using ProductRecomendation.ProductMaintenance;
 
-namespace ProductReomendation.Controls
+namespace ProductRecomendation.Controls
 {
     public partial class Product_Maintain : System.Web.UI.UserControl
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Response.Write("hello");
-        }
     }
 }

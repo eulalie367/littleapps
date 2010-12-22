@@ -1336,9 +1336,10 @@
     <Content Include="umbraco\webservices\TreeDataService.ashx" />
     <Content Include="umbraco\webservices\UltimatePickerAutoCompleteHandler.ashx" />
     <None Include="umbraco_client\CodeMirror\LICENSE" />
+    <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ProductReomendation.csproj">
+    <ProjectReference Include="ProductRecomendation.csproj">
       <Project>{997200EB-693F-40B4-80EA-CA83D34098CF}</Project>
       <Name>ProductReomendation</Name>
     </ProjectReference>
@@ -1347,8 +1348,6 @@
     <Folder Include="App_Browsers\" />
     <Folder Include="App_Data\ClientDependency\" />
     <Folder Include="App_Data\ExamineIndexes\" />
-    <Folder Include="css\" />
-    <Folder Include="masterpages\" />
     <Folder Include="media\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Properties\" />

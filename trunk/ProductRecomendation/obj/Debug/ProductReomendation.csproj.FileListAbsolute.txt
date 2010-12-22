@@ -1,5 +1,0 @@
-C:\LittleApps\ProductRecomendation\obj\Debug\ResolveAssemblyReference.cache
-C:\LittleApps\ProductRecomendation\bin\ProductReomendation.dll
-C:\LittleApps\ProductRecomendation\bin\ProductReomendation.pdb
-C:\LittleApps\ProductRecomendation\obj\Debug\ProductReomendation.dll
-C:\LittleApps\ProductRecomendation\obj\Debug\ProductReomendation.pdb

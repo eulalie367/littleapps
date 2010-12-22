@@ -144,6 +144,22 @@ namespace ProductRecomendation.DAL
 			}
 		}
 		
+		public System.Data.Linq.Table<View_Product> View_Products
+		{
+			get
+			{
+				return this.GetTable<View_Product>();
+			}
+		}
+		
+		public System.Data.Linq.Table<View_ProductAttribute> View_ProductAttributes
+		{
+			get
+			{
+				return this.GetTable<View_ProductAttribute>();
+			}
+		}
+		
 		[Function(Name="dbo.fn_diagramobjects", IsComposable=true)]
 		[return: Parameter(DbType="Int")]
 		public System.Nullable<int> Fn_diagramobjects()
@@ -1749,6 +1765,222 @@ namespace ProductRecomendation.DAL
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[Table(Name="dbo.view_Product")]
+	public partial class View_Product
+	{
+		
+		private int _ProductID;
+		
+		private string _ProductName;
+		
+		private int _ProductTypeID;
+		
+		private string _ProductTypeName;
+		
+		private System.Nullable<int> _ParentProductTypeID;
+		
+		public View_Product()
+		{
+		}
+		
+		[Column(Storage="_ProductID", DbType="Int NOT NULL")]
+		public int ProductID
+		{
+			get
+			{
+				return this._ProductID;
+			}
+			set
+			{
+				if ((this._ProductID != value))
+				{
+					this._ProductID = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_ProductName", DbType="VarChar(100)")]
+		public string ProductName
+		{
+			get
+			{
+				return this._ProductName;
+			}
+			set
+			{
+				if ((this._ProductName != value))
+				{
+					this._ProductName = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_ProductTypeID", DbType="Int NOT NULL")]
+		public int ProductTypeID
+		{
+			get
+			{
+				return this._ProductTypeID;
+			}
+			set
+			{
+				if ((this._ProductTypeID != value))
+				{
+					this._ProductTypeID = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_ProductTypeName", DbType="VarChar(100)")]
+		public string ProductTypeName
+		{
+			get
+			{
+				return this._ProductTypeName;
+			}
+			set
+			{
+				if ((this._ProductTypeName != value))
+				{
+					this._ProductTypeName = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_ParentProductTypeID", DbType="Int")]
+		public System.Nullable<int> ParentProductTypeID
+		{
+			get
+			{
+				return this._ParentProductTypeID;
+			}
+			set
+			{
+				if ((this._ParentProductTypeID != value))
+				{
+					this._ParentProductTypeID = value;
+				}
+			}
+		}
+	}
+	
+	[Table(Name="dbo.view_ProductAttribute")]
+	public partial class View_ProductAttribute
+	{
+		
+		private int _AttributeID;
+		
+		private int _ProductTypeID;
+		
+		private System.Nullable<int> _ParentAttributeID;
+		
+		private string _Name;
+		
+		private string _AttributeTypeName;
+		
+		private int _AttributeTypeID;
+		
+		public View_ProductAttribute()
+		{
+		}
+		
+		[Column(Storage="_AttributeID", DbType="Int NOT NULL")]
+		public int AttributeID
+		{
+			get
+			{
+				return this._AttributeID;
+			}
+			set
+			{
+				if ((this._AttributeID != value))
+				{
+					this._AttributeID = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_ProductTypeID", DbType="Int NOT NULL")]
+		public int ProductTypeID
+		{
+			get
+			{
+				return this._ProductTypeID;
+			}
+			set
+			{
+				if ((this._ProductTypeID != value))
+				{
+					this._ProductTypeID = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_ParentAttributeID", DbType="Int")]
+		public System.Nullable<int> ParentAttributeID
+		{
+			get
+			{
+				return this._ParentAttributeID;
+			}
+			set
+			{
+				if ((this._ParentAttributeID != value))
+				{
+					this._ParentAttributeID = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_Name", DbType="VarChar(100)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_AttributeTypeName", DbType="VarChar(100)")]
+		public string AttributeTypeName
+		{
+			get
+			{
+				return this._AttributeTypeName;
+			}
+			set
+			{
+				if ((this._AttributeTypeName != value))
+				{
+					this._AttributeTypeName = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_AttributeTypeID", DbType="Int NOT NULL")]
+		public int AttributeTypeID
+		{
+			get
+			{
+				return this._AttributeTypeID;
+			}
+			set
+			{
+				if ((this._AttributeTypeID != value))
+				{
+					this._AttributeTypeID = value;
+				}
 			}
 		}
 	}

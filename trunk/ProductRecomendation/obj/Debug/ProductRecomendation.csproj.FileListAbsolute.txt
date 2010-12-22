@@ -1,7 +1,0 @@
-C:\LittleApps\ProductRecomendation\obj\Debug\ResolveAssemblyReference.cache
-C:\LittleApps\ProductRecomendation\bin\ProductRecomendation.dll
-C:\LittleApps\ProductRecomendation\bin\ProductRecomendation.pdb
-C:\LittleApps\ProductRecomendation\bin\Examine.xml
-C:\LittleApps\ProductRecomendation\bin\UmbracoExamine.xml
-C:\LittleApps\ProductRecomendation\obj\Debug\ProductRecomendation.dll
-C:\LittleApps\ProductRecomendation\obj\Debug\ProductRecomendation.pdb

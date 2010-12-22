@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductRecomendation_Umbraco", "ProductRecomendation_Umbraco.csproj", "{56222248-6B74-45EA-8C89-CEAB9602B72A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductReomendation", "ProductReomendation.csproj", "{997200EB-693F-40B4-80EA-CA83D34098CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductRecomendation", "ProductRecomendation.csproj", "{997200EB-693F-40B4-80EA-CA83D34098CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
