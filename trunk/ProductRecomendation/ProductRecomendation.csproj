@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="businesslogic, Version=1.0.3891.20713, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="interfaces, Version=1.0.3883.24900, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />

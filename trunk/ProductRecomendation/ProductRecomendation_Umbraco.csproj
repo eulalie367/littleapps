@@ -1353,6 +1353,7 @@
     <Folder Include="Properties\" />
     <Folder Include="python\" />
     <Folder Include="scripts\" />
+    <Folder Include="UmbracoAddons\" />
     <Folder Include="umbraco\ActionHandlers\" />
     <Folder Include="umbraco\cache\" />
     <Folder Include="umbraco\LiveEditing\Menu\" />

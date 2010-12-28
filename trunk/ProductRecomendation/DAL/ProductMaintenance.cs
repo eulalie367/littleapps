@@ -80,6 +80,14 @@ namespace ProductRecomendation.ProductMaintenance
 
             this.Attributes = SqlHelper.FillEntities<ProductRecomendation.DAL.View_ProductAttribute>("SELECT * FROM view_ProductAttribute WHERE ProductTypeID = @ProductTypeID", new SqlParameter[] { new SqlParameter("@ProductTypeID", this.ProductTypeID) }, CommandType.Text);
         }
+        public static List<ProductRecomendation.ProductMaintenance.Product> GetAll(int productTypeID)
+        {
+            List<ProductRecomendation.ProductMaintenance.Product> p = null;
+
+            p = SqlHelper.FillEntities<Product>("SELECT ProductID, ProductTypeID, Name AS ProductName FROM Product WHERE ProductTypeID = @ProductType", new SqlParameter[] { new SqlParameter("@ProductType", productTypeID) }, CommandType.Text);
+
+            return p;
+        }
     }
 
 }

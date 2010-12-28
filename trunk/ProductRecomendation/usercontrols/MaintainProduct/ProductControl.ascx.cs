@@ -13,6 +13,7 @@ using System.Xml.Linq;
 using ProductRecomendation.ProductMaintenance;
 using System.Collections.Generic;
 using System.Text;
+using umbraco.cms.presentation.Trees;
 
 namespace ProductRecomendation.usercontrols.MaintainProduct
 {
@@ -63,13 +64,24 @@ namespace ProductRecomendation.usercontrols.MaintainProduct
         }
 
     }
-    public class ProductControl_Initializer : umbraco.cms.presentation.Trees.BaseTree
+    public class ProductTypeControl_Initializer : BaseTree
     {
-        public ProductControl_Initializer(string application)
-            : base(application)
-        { }
+        ProductTypeControl_Handler pth = new ProductTypeControl_Handler();
+        public ProductTypeControl_Initializer(string application) : base(application)
+        {
+        }
 
-        protected override void CreateRootNode(ref umbraco.cms.presentation.Trees.XmlTreeNode rootNode)
+        protected override void CreateAllowedActions(ref List<umbraco.interfaces.IAction> actions)
+        {
+            actions.Clear();
+            actions.Add(pth);
+        }
+        protected override void CreateRootNodeActions(ref List<umbraco.interfaces.IAction> actions)
+        {
+            base.CreateRootNodeActions(ref actions);
+        }
+
+        protected override void CreateRootNode(ref XmlTreeNode rootNode)
         {
             rootNode.Icon = FolderIcon;
             rootNode.OpenIcon = FolderIconOpen;
@@ -77,20 +89,62 @@ namespace ProductRecomendation.usercontrols.MaintainProduct
             rootNode.NodeID = "init";
         }
 
-        public override void Render(ref umbraco.cms.presentation.Trees.XmlTree Tree)
+        public override void Render(ref XmlTree Tree)
         {
+            List<ProductType> allTypes = ProductType.GetAll();
             List<ProductType> types = ProductType.GetAll();
 
+            if (this.id == this.StartNodeID)//parent types
+            {
+                types = allTypes.Where(t => !t.ParentProductTypeID.HasValue).OrderBy(t => t.Name).ToList();
+            }
+            else
+            {
+                types = allTypes.Where(t => t.ParentProductTypeID.HasValue && t.ParentProductTypeID.Value == this.id).OrderBy(t => t.Name).ToList();
+            }
+
+            string source = "";
+            List<Product> products = null;
+
+            List<ProductType> children = null;
             foreach (ProductType type in types)
             {
-                var tn = umbraco.cms.presentation.Trees.XmlTreeNode.Create(this);
-                tn.Text = type.Name;
-                tn.Icon = FolderIcon;
-                tn.Source = this.GetTreeServiceUrl();
-                tn.Action = "javascript:openSendNewsletter()";
-                // Add the node to the tree
-                Tree.Add(tn);
+                children = allTypes.Where(t => t.ParentProductTypeID.HasValue && t.ParentProductTypeID.Value == type.ProductTypeID).ToList();
+                products = Product.GetAll(type.ProductTypeID);
+
+                if (products.Count > 0)
+                    source = this.GetTreeServiceUrl(type.ProductTypeID);
+
+                if (children.Count > 0)
+                    source = this.GetTreeServiceUrl(type.ProductTypeID);
+
+                CreateAndAddNode(ref Tree, type.Name, "javascript:void(0)", type.ProductTypeID.ToString(), source);
+
+                source = "";
             }
+
+            source = "";
+            products = Product.GetAll(this.id);
+
+            foreach (Product p in products)
+                CreateAndAddNode(ref Tree, p.ProductName, "javascript:void(0)", p.ProductID.ToString(), source);
+        }
+
+        private void CreateAndAddNode(ref XmlTree Tree, string text, string jsCommand, string nodeId, string source)
+        {
+            XmlTreeNode node = XmlTreeNode.Create(this);
+
+            node.Text = text;
+            node.Action = jsCommand;
+            node.Icon = "doc.gif";
+            node.IconClass = "newComments";
+            node.NodeID = nodeId;
+            node.Source = source;
+
+            OnBeforeNodeRender(ref Tree, ref node, EventArgs.Empty);
+            Tree.Add(node);
+            OnAfterNodeRender(ref Tree, ref node, EventArgs.Empty);
+
         }
 
         public override void RenderJS(ref StringBuilder Javascript)
@@ -106,5 +160,37 @@ namespace ProductRecomendation.usercontrols.MaintainProduct
                     parent.right.document.location.href = 'newsletter/previousNewsletters.aspx';
                 }
 			");
-        }    }
+        }
+    }
+    public class ProductTypeControl_Handler : umbraco.interfaces.IAction
+    {
+        #region IAction Members
+
+        public string Alias
+        { get { return "Test"; } }
+
+        public bool CanBePermissionAssigned
+        { get { return true; } }
+
+        public string Icon
+        { get { return ""; } }
+        
+        public string JsFunctionName
+        { get { return "TestThis();"; } }
+
+        public string JsSource
+        { get { return "function TestThis(){alert('asdf');};"; } }
+
+        public char Letter
+        { get { return 't'; } }
+
+        public bool ShowInNotifier
+        { get { return true; } }
+
+        #endregion
+    }
+
+
+
+
 }
