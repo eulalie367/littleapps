@@ -66,7 +66,6 @@ namespace ProductRecomendation.usercontrols.MaintainProduct
     }
     public class ProductTypeControl_Initializer : BaseTree
     {
-        ProductTypeControl_Handler pth = new ProductTypeControl_Handler();
         public ProductTypeControl_Initializer(string application) : base(application)
         {
         }
@@ -74,7 +73,6 @@ namespace ProductRecomendation.usercontrols.MaintainProduct
         protected override void CreateAllowedActions(ref List<umbraco.interfaces.IAction> actions)
         {
             actions.Clear();
-            actions.Add(pth);
         }
         protected override void CreateRootNodeActions(ref List<umbraco.interfaces.IAction> actions)
         {
@@ -162,35 +160,4 @@ namespace ProductRecomendation.usercontrols.MaintainProduct
 			");
         }
     }
-    public class ProductTypeControl_Handler : umbraco.interfaces.IAction
-    {
-        #region IAction Members
-
-        public string Alias
-        { get { return "Test"; } }
-
-        public bool CanBePermissionAssigned
-        { get { return true; } }
-
-        public string Icon
-        { get { return ""; } }
-        
-        public string JsFunctionName
-        { get { return "TestThis();"; } }
-
-        public string JsSource
-        { get { return "function TestThis(){alert('asdf');};"; } }
-
-        public char Letter
-        { get { return 't'; } }
-
-        public bool ShowInNotifier
-        { get { return true; } }
-
-        #endregion
-    }
-
-
-
-
 }

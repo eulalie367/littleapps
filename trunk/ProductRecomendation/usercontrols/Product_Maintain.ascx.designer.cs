@@ -12,14 +12,5 @@ namespace ProductRecomendation.Controls {
     
     
     public partial class Product_Maintain {
-        
-        /// <summary>
-        /// pt control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::ProductRecomendation.usercontrols.MaintainProduct.ProductControl pt;
     }
 }

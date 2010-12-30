@@ -59,6 +59,28 @@
       <delete assembly="umbraco" type="contentTasks" />
     </tasks>
   </nodeType>
+  <nodeType alias="initcontentProductTypes">
+    <header>Product Type</header>
+    <usercontrol>/../CustomTrees/ProductMaintenance/ProductTypeControl.ascx</usercontrol>
+    <tasks>
+      <create assembly="ProductRecomendation.Controls" type="Product_Maintain" />
+      <delete assembly="ProductRecomendation.Controls" type="Product_Maintain" />
+    </tasks>
+  </nodeType>
+  <nodeType alias="newProductType">
+    <header>Product Type</header>
+    <usercontrol>/../CustomTrees/ProductMaintenance/ProductTypeAdd.ascx</usercontrol>
+    <tasks>
+      <create assembly="ProductRecomendation.CustomTrees.ProductMaintenance" type="ProductTypeAdd" />
+    </tasks>
+  </nodeType>
+  <nodeType alias="newProduct">
+    <header>Product Type</header>
+    <usercontrol>/../CustomTrees/ProductMaintenance/ProductAdd.ascx</usercontrol>
+    <tasks>
+      <create assembly="ProductRecomendation.CustomTrees.ProductMaintenance" type="ProductAdd" />
+    </tasks>
+  </nodeType>
   <nodeType alias="users">
     <header>User</header>
     <usercontrol>/create/simple.ascx</usercontrol>

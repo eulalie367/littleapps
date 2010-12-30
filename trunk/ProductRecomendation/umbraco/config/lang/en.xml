@@ -91,6 +91,8 @@
     <key alias="no">No</key>
     <key alias="ok">OK</key>
     <key alias="update">Update</key>
+    <key alias="newProductType">Add Product Type</key>
+    <key alias="newProduct">Add Product</key>
     <key alias="cancel">Cancel</key>
     <key alias="macro">Macro</key>
     <key alias="insert">Insert</key>
@@ -337,7 +339,7 @@
     <key alias="rights">Permissions</key>
     <key alias="protect">Public access</key>
     <key alias="refreshNode">Reload nodes</key>
-    <key alias="update">Update</key>
+    <key alias="update">Add Product</key>
     <key alias="notify">Notifications</key>
     <key alias="logout">Exit</key>
     <key alias="republish">Republish entire site</key>

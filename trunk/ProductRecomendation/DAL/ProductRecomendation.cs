@@ -42,9 +42,6 @@ namespace ProductRecomendation.DAL
     partial void InsertProduct(Product instance);
     partial void UpdateProduct(Product instance);
     partial void DeleteProduct(Product instance);
-    partial void InsertProductAttributeValue(ProductAttributeValue instance);
-    partial void UpdateProductAttributeValue(ProductAttributeValue instance);
-    partial void DeleteProductAttributeValue(ProductAttributeValue instance);
     partial void InsertProductRating(ProductRating instance);
     partial void UpdateProductRating(ProductRating instance);
     partial void DeleteProductRating(ProductRating instance);
@@ -112,14 +109,6 @@ namespace ProductRecomendation.DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<ProductAttributeValue> ProductAttributeValues
-		{
-			get
-			{
-				return this.GetTable<ProductAttributeValue>();
-			}
-		}
-		
 		public System.Data.Linq.Table<ProductRating> ProductRatings
 		{
 			get
@@ -157,6 +146,14 @@ namespace ProductRecomendation.DAL
 			get
 			{
 				return this.GetTable<View_ProductAttribute>();
+			}
+		}
+		
+		public System.Data.Linq.Table<View_ProductTypeAttribute> View_ProductTypeAttributes
+		{
+			get
+			{
+				return this.GetTable<View_ProductTypeAttribute>();
 			}
 		}
 		
@@ -1074,140 +1071,6 @@ namespace ProductRecomendation.DAL
 		}
 	}
 	
-	[Table(Name="dbo.ProductAttributeValue")]
-	public partial class ProductAttributeValue : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _AttributeTypeValueID;
-		
-		private System.Nullable<int> _AttributeTypeID;
-		
-		private string _Name;
-		
-		private System.Nullable<int> _Value;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnAttributeTypeValueIDChanging(int value);
-    partial void OnAttributeTypeValueIDChanged();
-    partial void OnAttributeTypeIDChanging(System.Nullable<int> value);
-    partial void OnAttributeTypeIDChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnValueChanging(System.Nullable<int> value);
-    partial void OnValueChanged();
-    #endregion
-		
-		public ProductAttributeValue()
-		{
-			OnCreated();
-		}
-		
-		[Column(Storage="_AttributeTypeValueID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int AttributeTypeValueID
-		{
-			get
-			{
-				return this._AttributeTypeValueID;
-			}
-			set
-			{
-				if ((this._AttributeTypeValueID != value))
-				{
-					this.OnAttributeTypeValueIDChanging(value);
-					this.SendPropertyChanging();
-					this._AttributeTypeValueID = value;
-					this.SendPropertyChanged("AttributeTypeValueID");
-					this.OnAttributeTypeValueIDChanged();
-				}
-			}
-		}
-		
-		[Column(Storage="_AttributeTypeID", DbType="Int")]
-		public System.Nullable<int> AttributeTypeID
-		{
-			get
-			{
-				return this._AttributeTypeID;
-			}
-			set
-			{
-				if ((this._AttributeTypeID != value))
-				{
-					this.OnAttributeTypeIDChanging(value);
-					this.SendPropertyChanging();
-					this._AttributeTypeID = value;
-					this.SendPropertyChanged("AttributeTypeID");
-					this.OnAttributeTypeIDChanged();
-				}
-			}
-		}
-		
-		[Column(Storage="_Name", DbType="VarChar(100)")]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this.OnNameChanging(value);
-					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[Column(Storage="_Value", DbType="Int")]
-		public System.Nullable<int> Value
-		{
-			get
-			{
-				return this._Value;
-			}
-			set
-			{
-				if ((this._Value != value))
-				{
-					this.OnValueChanging(value);
-					this.SendPropertyChanging();
-					this._Value = value;
-					this.SendPropertyChanged("Value");
-					this.OnValueChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[Table(Name="dbo.ProductRating")]
 	public partial class ProductRating : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1980,6 +1843,123 @@ namespace ProductRecomendation.DAL
 				if ((this._AttributeTypeID != value))
 				{
 					this._AttributeTypeID = value;
+				}
+			}
+		}
+	}
+	
+	[Table(Name="dbo.view_ProductTypeAttribute")]
+	public partial class View_ProductTypeAttribute
+	{
+		
+		private int _ProductTypeID;
+		
+		private int _AttributeID;
+		
+		private string _Name;
+		
+		private System.Nullable<int> _ParentAttributeID;
+		
+		private System.Nullable<int> _AttributeTypeID;
+		
+		private string _AttributeTypeName;
+		
+		public View_ProductTypeAttribute()
+		{
+		}
+		
+		[Column(Storage="_ProductTypeID", DbType="Int NOT NULL")]
+		public int ProductTypeID
+		{
+			get
+			{
+				return this._ProductTypeID;
+			}
+			set
+			{
+				if ((this._ProductTypeID != value))
+				{
+					this._ProductTypeID = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_AttributeID", DbType="Int NOT NULL")]
+		public int AttributeID
+		{
+			get
+			{
+				return this._AttributeID;
+			}
+			set
+			{
+				if ((this._AttributeID != value))
+				{
+					this._AttributeID = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_Name", DbType="VarChar(100)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_ParentAttributeID", DbType="Int")]
+		public System.Nullable<int> ParentAttributeID
+		{
+			get
+			{
+				return this._ParentAttributeID;
+			}
+			set
+			{
+				if ((this._ParentAttributeID != value))
+				{
+					this._ParentAttributeID = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_AttributeTypeID", DbType="Int")]
+		public System.Nullable<int> AttributeTypeID
+		{
+			get
+			{
+				return this._AttributeTypeID;
+			}
+			set
+			{
+				if ((this._AttributeTypeID != value))
+				{
+					this._AttributeTypeID = value;
+				}
+			}
+		}
+		
+		[Column(Storage="_AttributeTypeName", DbType="VarChar(100)")]
+		public string AttributeTypeName
+		{
+			get
+			{
+				return this._AttributeTypeName;
+			}
+			set
+			{
+				if ((this._AttributeTypeName != value))
+				{
+					this._AttributeTypeName = value;
 				}
 			}
 		}

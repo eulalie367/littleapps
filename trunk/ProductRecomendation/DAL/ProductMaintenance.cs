@@ -57,6 +57,62 @@ namespace ProductRecomendation.ProductMaintenance
             }
         }
     }
+    public class ProductTypeAttribute : ProductRecomendation.DAL.View_ProductTypeAttribute
+    {
+        public ProductTypeAttribute()
+        { }
+        public ProductTypeAttribute(int attributeID) : this()
+        {
+            this.AttributeID = attributeID;
+            Fill();
+        }
+
+        private void Fill()
+        {
+            ProductTypeAttribute tmp = SqlHelper.FillEntity<ProductTypeAttribute>("SELECT * FROM view_ProductTypeAttribute WHERE AttributeID = @AttributeID", new SqlParameter[] { new SqlParameter("@AttributeID", this.AttributeID) }, CommandType.Text);
+            if (tmp != null)
+            {
+                this.AttributeTypeID = tmp.AttributeTypeID;
+                this.AttributeTypeName = tmp.AttributeTypeName;
+                this.Name = tmp.Name;
+                this.ParentAttributeID = tmp.ParentAttributeID;
+                this.ProductTypeID = tmp.ProductTypeID;
+            }
+        }
+
+        public static List<ProductTypeAttribute> GetAll(int productTypeID)
+        {
+            return SqlHelper.FillEntities<ProductTypeAttribute>("SELECT * FROM view_ProductTypeAttribute WHERE ProductTypeID = @ProductTypeID", new SqlParameter[] { new SqlParameter("@ProductTypeID", productTypeID) }, CommandType.Text);
+        }
+
+        internal static List<ProductTypeAttribute> GetAllChildren(int parentAttributeID)
+        {
+            return SqlHelper.FillEntities<ProductTypeAttribute>("SELECT * FROM view_ProductTypeAttribute WHERE ParentAttributeID = @ParentAttributeID", new SqlParameter[] { new SqlParameter("@ParentAttributeID", parentAttributeID) }, CommandType.Text);
+        }
+
+        internal void Save()
+        {
+            if (this.AttributeID > 0 && !string.IsNullOrEmpty(this.Name))
+            {
+                SqlParameter[] p = new SqlParameter[] 
+                {
+                    new SqlParameter("@Name", this.Name),
+                    new SqlParameter("@AttributeTypeID", this.AttributeTypeID),
+                    new SqlParameter("@ParentAttributeID", this.ParentAttributeID),
+                    new SqlParameter("@AttributeID", this.AttributeID),
+                };
+
+                this.AttributeID = SqlHelper.FillEntity<int>("UPDATE Attribute SET Name = @Name, AttributeTypeID = @AttributeTypeID, ParentAttributeID = @ParentAttributeID WHERE AttributeID = @AttributeID SELECT SCOPE_IDENTITY()", p, CommandType.Text);
+            }
+        }
+    }
+    public class AttributeType : ProductRecomendation.DAL.AttributeType
+    {
+        internal static List<AttributeType> Getall()
+        {
+            return SqlHelper.FillEntities<AttributeType>("SELECT * FROM AttributeType");
+        }
+    }
     public class Product : ProductRecomendation.DAL.View_Product
     {
         public List<ProductRecomendation.DAL.View_ProductAttribute> Attributes { get; set; }
@@ -87,6 +143,34 @@ namespace ProductRecomendation.ProductMaintenance
             p = SqlHelper.FillEntities<Product>("SELECT ProductID, ProductTypeID, Name AS ProductName FROM Product WHERE ProductTypeID = @ProductType", new SqlParameter[] { new SqlParameter("@ProductType", productTypeID) }, CommandType.Text);
 
             return p;
+        }
+
+        internal void Save()
+        {
+            if (this.ProductID > 0 && !string.IsNullOrEmpty(this.ProductName))
+            {
+                SqlParameter[] p = new SqlParameter[] 
+                {
+                    new SqlParameter("@ProductID", this.ProductID),
+                    new SqlParameter("@ProductName", this.ProductName)
+                };
+
+                SqlHelper.ExecuteScalar("UPDATE Product SET Name = @ProductName WHERE ProductID = @ProductID SELECT SCOPE_IDENTITY()", p, CommandType.Text);
+            }
+        }
+
+        internal void Add()
+        {
+            if (this.ProductTypeID > 0 && !string.IsNullOrEmpty(this.ProductName))
+            {
+                SqlParameter[] p = new SqlParameter[] 
+                {
+                    new SqlParameter("@ProductTypeID", this.ProductTypeID),
+                    new SqlParameter("@ProductName", this.ProductName)
+                };
+
+                this.ProductID = SqlHelper.FillEntity<int>("INSERT INTO Product (Name, ProductTypeID) VALUES( @ProductName, @ProductTypeID ) SELECT SCOPE_IDENTITY()", p, CommandType.Text);
+            }
         }
     }
 
