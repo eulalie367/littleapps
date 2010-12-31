@@ -83,4 +83,36 @@
       <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\scrollingmenu\javascript.js" />
     </files>
   </item>
+  <item key="L3VtYnJhY29fY2xpZW50L3Njcm9sbGluZ21lbnUvc3R5bGUuY3NzOy91bWJyYWNvX2NsaWVudC9wYW5lbC9zdHlsZS5jc3M7L3VtYnJhY29fY2xpZW50L3Byb3BlcnR5cGFuZS9zdHlsZS5jc3M7L3VtYnJhY29fY2xpZW50L3VpL2RlZmF1bHQuY3NzOy91bWJyYWNvX2NsaWVudC9tb2RhbC9zdHlsZS5jc3M7" file="C:\LittleApps\Umbraco\UmbracoApp\App_Data\TEMP\ClientDependency\1_aaaedf0c1b7b4a60ab757fc73ac599d4.cdC" compression="gzip" version="1">
+    <files>
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\scrollingmenu\style.css" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\panel\style.css" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\propertypane\style.css" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\ui\default.css" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\modal\style.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L3VpL2pxdWVyeS5qczsvdW1icmFjb19jbGllbnQvQXBwbGljYXRpb24vTmFtZXNwYWNlTWFuYWdlci5qczsvdW1icmFjb19jbGllbnQvQXBwbGljYXRpb24valF1ZXJ5L2pxdWVyeS5jb29raWUuanM7L3VtYnJhY29fY2xpZW50L3VpL2pxdWVyeXVpLmpzOy91bWJyYWNvX2NsaWVudC9BcHBsaWNhdGlvbi9VbWJyYWNvVXRpbHMuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29BcHBsaWNhdGlvbkFjdGlvbnMuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29DbGllbnRNYW5hZ2VyLmpzOy91bWJyYWNvX2NsaWVudC91aS9kZWZhdWx0LmpzOy91bWJyYWNvX2NsaWVudC9tb2RhbC9tb2RhbC5qczsvdW1icmFjb19jbGllbnQvcGFuZWwvamF2YXNjcmlwdC5qczsvdW1icmFjb19jbGllbnQvc2Nyb2xsaW5nbWVudS9qYXZhc2NyaXB0LmpzOw==" file="C:\LittleApps\Umbraco\UmbracoApp\App_Data\TEMP\ClientDependency\1_fe0b5e1c4a294f3e950657cf64c0d09c.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\ui\jquery.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\Application\NamespaceManager.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\Application\jQuery\jquery.cookie.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\ui\jqueryui.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\Application\UmbracoUtils.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\Application\UmbracoApplicationActions.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\Application\UmbracoClientManager.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\ui\default.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\modal\modal.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\panel\javascript.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\scrollingmenu\javascript.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L3Njcm9sbGluZ21lbnUvc3R5bGUuY3NzOy91bWJyYWNvX2NsaWVudC9wYW5lbC9zdHlsZS5jc3M7L3VtYnJhY29fY2xpZW50L3VpL2RlZmF1bHQuY3NzOy91bWJyYWNvX2NsaWVudC9tb2RhbC9zdHlsZS5jc3M7" file="C:\LittleApps\Umbraco\UmbracoApp\App_Data\TEMP\ClientDependency\1_5ee2acae79f042b881946a72aa6d2b0f.cdC" compression="gzip" version="1">
+    <files>
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\scrollingmenu\style.css" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\panel\style.css" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\ui\default.css" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\modal\style.css" />
+    </files>
+  </item>
 </map>
