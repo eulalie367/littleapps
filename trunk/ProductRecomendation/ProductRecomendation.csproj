@@ -45,6 +45,7 @@
     <Reference Include="Microsoft.Scripting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Scripting.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Scripting.Debugging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ProlificNotion.Umbraco.AppManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core">
@@ -79,9 +80,6 @@
     <Reference Include="UrlRewritingNet.UrlRewriter, Version=2.0.60829.1, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\Simple_Layout.css" />
-    <Content Include="css\Simple_Style.css" />
-    <Content Include="usercontrols\Product_Maintain.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -133,34 +131,6 @@
     <Compile Include="DAL\ProductMaintenance.cs" />
     <Compile Include="HelperClasses\Extensions.cs" />
     <Compile Include="HelperClasses\SqlHelper.cs" />
-    <Compile Include="usercontrols\MaintainProduct\AttributeListControl.ascx.cs">
-      <DependentUpon>AttributeListControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="usercontrols\MaintainProduct\AttributeListControl.ascx.designer.cs">
-      <DependentUpon>AttributeListControl.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="usercontrols\MaintainProduct\ProductControl.ascx.cs">
-      <DependentUpon>ProductControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="usercontrols\MaintainProduct\ProductControl.ascx.designer.cs">
-      <DependentUpon>ProductControl.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="usercontrols\MaintainProduct\ProductTypeControl.ascx.cs">
-      <DependentUpon>ProductTypeControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="usercontrols\MaintainProduct\ProductTypeControl.ascx.designer.cs">
-      <DependentUpon>ProductTypeControl.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="usercontrols\Product_Maintain.ascx.cs">
-      <DependentUpon>Product_Maintain.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="usercontrols\Product_Maintain.ascx.designer.cs">
-      <DependentUpon>Product_Maintain.ascx</DependentUpon>
-    </Compile>
     <Compile Include="DAL\ProductRecomendation.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -170,17 +140,8 @@
     <Content Include="CustomTrees\ProductMaintenance\ProductTypeAttributeAdd.ascx" />
     <Content Include="CustomTrees\ProductMaintenance\ProductTypeControl.aspx" />
     <Content Include="CustomTrees\ProductMaintenance\ProductTypeAdd.ascx" />
-    <Content Include="masterpages\Base.master" />
-    <Content Include="masterpages\Test.master" />
-    <Content Include="scripts\Simple\MaxHeight.js" />
-    <Content Include="scripts\Simple\RollOver.js" />
-    <Content Include="usercontrols\MaintainProduct\AttributeListControl.ascx" />
-    <Content Include="usercontrols\MaintainProduct\ProductControl.ascx" />
-    <Content Include="usercontrols\MaintainProduct\ProductTypeControl.ascx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Controls\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
