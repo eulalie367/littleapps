@@ -1,0 +1,5 @@
+C:\LittleApps\Umbraco\UmbracoApp\bin\UmbracoApp.dll
+C:\LittleApps\Umbraco\UmbracoApp\bin\UmbracoApp.pdb
+C:\LittleApps\Umbraco\UmbracoApp\obj\Debug\ResolveAssemblyReference.cache
+C:\LittleApps\Umbraco\UmbracoApp\obj\Debug\UmbracoApp.dll
+C:\LittleApps\Umbraco\UmbracoApp\obj\Debug\UmbracoApp.pdb

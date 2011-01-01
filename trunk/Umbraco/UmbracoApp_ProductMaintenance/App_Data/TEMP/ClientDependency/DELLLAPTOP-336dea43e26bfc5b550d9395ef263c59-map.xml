@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<map>
+  <item key="L3VtYnJhY29fY2xpZW50L3Njcm9sbGluZ21lbnUvc3R5bGUuY3NzOy91bWJyYWNvX2NsaWVudC9wYW5lbC9zdHlsZS5jc3M7L2luc3RhbGwvc3R5bGUuY3NzOy91bWJyYWNvX2NsaWVudC9tb2RhbC9zdHlsZS5jc3M7" file="C:\LittleApps\Umbraco\UmbracoApp\App_Data\TEMP\ClientDependency\1_8fed2838f446486faf6c98863888c71e.cdC" compression="gzip" version="1">
+    <files>
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\scrollingmenu\style.css" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\panel\style.css" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\install\style.css" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\modal\style.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL05hbWVzcGFjZU1hbmFnZXIuanM7L3VtYnJhY29fY2xpZW50L3VpL2pxdWVyeS5qczsvdW1icmFjb19jbGllbnQvbW9kYWwvbW9kYWwuanM7L3VtYnJhY29fY2xpZW50L3Bhc3N3b3JkU3RyZW5ndGgvcGFzc3dvcmRzdHJlbmd0aC5qczsvdW1icmFjb19jbGllbnQvcGFuZWwvamF2YXNjcmlwdC5qczsvdW1icmFjb19jbGllbnQvc2Nyb2xsaW5nbWVudS9qYXZhc2NyaXB0LmpzOw==" file="C:\LittleApps\Umbraco\UmbracoApp\App_Data\TEMP\ClientDependency\1_033d678733fd438c9e5995e1b6c9aa4a.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\Application\NamespaceManager.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\ui\jquery.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\modal\modal.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\passwordStrength\passwordstrength.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\panel\javascript.js" />
+      <file name="C:\LittleApps\Umbraco\UmbracoApp\umbraco_client\scrollingmenu\javascript.js" />
+    </files>
+  </item>
+</map>
