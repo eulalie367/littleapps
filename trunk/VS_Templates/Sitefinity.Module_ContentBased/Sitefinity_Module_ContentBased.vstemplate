@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VSTemplate Type="Item" Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Sitefinity Module Content Based</Name>
+		<Description>This will create all files necessary for a Sitefinity Content Based Module.</Description>
+		<Icon></Icon>
+		<ProjectType>CSharp</ProjectType>
+		<DefaultName>ContentBasedModule</DefaultName>
+		<CreateNewFolder>false</CreateNewFolder>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Instructions.txt">
+			Instructions.txt
+		</ProjectItem>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="ConfigurationHelpers\ConfigHelper.cs">
+			ConfigHelper.cs
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="ConfigurationHelpers\GenericContentElement.cs">
+			GenericContentElement.cs
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="ConfigurationHelpers\GenericContentSettingsCollection.cs">
+			GenericContentSettingsCollection.cs
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="ConfigurationHelpers\SectionHandler.cs">
+			SectionHandler.cs
+		</ProjectItem>
+
+		
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Resources\Messages.resx" ItemType="EmbeddedResource">
+			Messages.resx
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Resources\Messages.Designer.cs">
+			Messages.Designer.cs
+		</ProjectItem>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\Edit.ascx" ItemType="EmbeddedResource">
+			Edit.ascx
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\Edit.ascx.cs">
+			Edit.ascx.cs
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\Edit.ascx.designer.cs">
+			Edit.ascx.designer.cs
+		</ProjectItem>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\History.ascx" ItemType="EmbeddedResource">
+			History.ascx
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\History.ascx.cs">
+			History.ascx.cs
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\History.ascx.designer.cs">
+			History.ascx.designer.cs
+		</ProjectItem>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\ItemList.ascx" ItemType="EmbeddedResource">
+			ItemList.ascx
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\ItemList.ascx.cs">
+			ItemList.ascx.cs
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\ItemList.ascx.designer.cs">
+			ItemList.ascx.designer.cs
+		</ProjectItem>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\New.ascx" ItemType="EmbeddedResource">
+			New.ascx
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\New.ascx.cs">
+			New.ascx.cs
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\New.ascx.designer.cs">
+			New.ascx.designer.cs
+		</ProjectItem>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\Preview.ascx" ItemType="EmbeddedResource">
+			Preview.ascx
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\Preview.ascx.cs">
+			Preview.ascx.cs
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ViewControls\Preview.ascx.designer.cs">
+			Preview.ascx.designer.cs
+		</ProjectItem>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\View.cs">
+			View.cs
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Module.cs">
+			Module.cs
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Manager.cs">
+			Manager.cs
+		</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\ControlPanel.cs">
+			ControlPanel.cs
+		</ProjectItem>
+
+	</TemplateContent>
+</VSTemplate>
