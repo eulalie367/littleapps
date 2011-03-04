@@ -16,12 +16,12 @@ namespace MaintainXML
             g.Quotes.Serialze_Binary("Quotes/AllQuotes_" + DateTime.UtcNow.ToString("MM-dd-yyyy"));
             Console.WriteLine("Saved All of today's quotes");
 
-            //foreach (string stock in g.Quotes.Where(q => !string.IsNullOrEmpty(q.Ticker)).Select(q => q.Ticker))
-            //{
-            //    System.Threading.ThreadPool.QueueUserWorkItem(new System.Threading.WaitCallback(SaveQuote), stock);
-            //    threads++;
-            //}
-            //WaitOnThreads();
+            foreach (string stock in g.Quotes.Where(q => !string.IsNullOrEmpty(q.Ticker)).Select(q => q.Ticker))
+            {
+                System.Threading.ThreadPool.QueueUserWorkItem(new System.Threading.WaitCallback(SaveQuote), stock);
+                threads++;
+            }
+            WaitOnThreads();
         }
 
         private static void WaitOnThreads()

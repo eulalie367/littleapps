@@ -125,6 +125,7 @@ namespace StockMarket
 
         #endregion
     }
+    [Serializable]
     public class HistoricalQuote
     {
         public string Ticker { get; set; }
