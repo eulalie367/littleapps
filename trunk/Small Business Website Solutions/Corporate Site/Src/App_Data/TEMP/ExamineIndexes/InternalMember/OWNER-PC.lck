@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-16"?>
+<dictionary>
+  <item>
+    <key>
+      <LCKFields>Name</LCKFields>
+    </key>
+    <value><![CDATA[OWNER-PC]]></value>
+  </item>
+  <item>
+    <key>
+      <LCKFields>Created</LCKFields>
+    </key>
+    <value><![CDATA[2011-04-02 20:54:40.796]]></value>
+  </item>
+  <item>
+    <key>
+      <LCKFields>Updated</LCKFields>
+    </key>
+    <value><![CDATA[2011-04-02 21:01:21.400]]></value>
+  </item>
+</dictionary>
