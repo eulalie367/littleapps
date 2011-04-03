@@ -51,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\" />
-    <Folder Include="masterpages\" />
     <Folder Include="media\" />
     <Folder Include="Properties\" />
     <Folder Include="scripts\" />
@@ -76,11 +75,21 @@
     <Content Include="config\zipUpload.config" />
     <None Include="data\vistadb\_placeholder" />
     <Content Include="web.config" />
+    <Content Include="masterpages\CorporateSite_Base.Master" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\splashes\booting.aspx" />
     <Content Include="config\splashes\noNodes.aspx" />
     <Content Include="default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="masterpages\CorporateSite_Base.Master.cs">
+      <DependentUpon>CorporateSite_Base.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masterpages\CorporateSite_Base.Master.designer.cs">
+      <DependentUpon>CorporateSite_Base.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

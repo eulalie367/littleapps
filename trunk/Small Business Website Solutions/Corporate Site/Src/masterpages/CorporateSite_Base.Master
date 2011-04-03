@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CorporateSite_Base.master.cs"
+    Inherits="SBWS.masterpages.CorporateSite_Base" MasterPageFile="~/umbraco/masterpages/default.master" %>
+
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
+    <!doctype html public "-//w3c//dtd xhtml 1.0 strict//en" "dtd/xhtml1-strict.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>Small Business Website Solutoins of Kansas City</title>
+        <link type="text/css" rel="Stylesheet" href="/templates/SBWS/fonts/Merriweather/stylesheet.css" />
+        <link type="text/css" rel="Stylesheet" href="/templates/SBWS/fonts/England/stylesheet.css" />
+        <link type="text/css" rel="Stylesheet" href="/templates/SBWS/fonts/Josefin/stylesheet.css" />
+        <link type="text/css" rel="Stylesheet" href="/templates/SBWS/css/style.css" />
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <div class="page">
+            <div class="logo">
+                <div class="text">
+                    <div class="callToAction">
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li class="spacer">|</li>
+                            <li><a href="#">Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="smallBusiness">
+                        Small Business</div>
+                    <div class="websiteSolutions">
+                        Website Solutions</div>
+                    <div class="ofKansasCity">
+                        0f Kansas City</div>
+                </div>
+                <img width="940px;" src="/templates/SBWS/images/Small-Business-Website-Solutions-Logo.png" alt="Small Business Website Solutions of Kansas City" />
+            </div>
+            <div class="content">
+                <div class="menu-main clearfix">
+                    <ul>
+                        <li><a href="#" class="selected">Home</a></li>
+                        <li class="spacer">|</li>
+                        <li><a href="#">Services</a></li>
+                        <li class="spacer">|</li>
+                        <li><a href="#">Get A Quote</a></li>
+                        <li class="spacer">|</li>
+                        <li><a href="#">About</a></li>
+                        <li class="spacer">|</li>
+                        <li><a href="#">Reffer</a></li>
+                    </ul>
+                </div>
+                <div class="mainContent clearfix">
+                    <asp:contentplaceholder id="BaseContent" runat="server"></asp:contentplaceholder>
+                    <div class="singleColumn">
+                        <div class="sectionTitle">
+                            Main Section</div>
+                        <div class="sectionContent">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
+                            risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
+                            eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
+                            Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
+                            ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed
+                            aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum,
+                            elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas
+                            velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
+                        </div>
+                    </div>
+                    <div class="threeColumn col-1">
+                        <div class="sectionContent">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
+                            risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
+                            eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
+                            Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
+                            ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed
+                            aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum,
+                            elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas
+                            velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
+                        </div>
+                    </div>
+                    <div class="threeColumn col-2">
+                        <div class="sectionContent">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
+                            risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
+                            eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
+                            Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
+                            ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed
+                            aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum,
+                            elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas
+                            velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
+                        </div>
+                    </div>
+                    <div class="threeColumn col-3">
+                        <div class="sectionContent">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
+                            risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
+                            eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
+                            Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
+                            ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed
+                            aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum,
+                            elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas
+                            velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+</asp:Content>
