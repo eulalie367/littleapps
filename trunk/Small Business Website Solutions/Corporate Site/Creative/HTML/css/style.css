@@ -53,9 +53,9 @@ html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, the
 }
 body
 {
-    background: white;
+    background-color: #fff;
     line-height: 1;
-    color: black;
+    color: #000;
 }
 ol, ul
 {
@@ -117,12 +117,19 @@ html[xmlns] .clearfix
 
 div.page
 {
-    width:940px;
+    width:943px;
     margin:0 auto;
-    background:#fff url('../images/Small-Business-Website-Solutions-Background.jpg') repeat-x 0 0;
-    border:10px solid #3F3890;
+    border:3px solid #3F3890;
     font-family:'MerriweatherRegular';
     font-size:12px;
+    border-radius:3px;
+}
+div.page div.wrapper
+{
+    background:#fff url('../images/Small-Business-Website-Solutions-Background.jpg') repeat-x 0 0;
+    margin:1px;
+    border:1px solid #3F3890;
+    border-radius:1px;
 }
 div.page div.content
 {
@@ -265,9 +272,9 @@ div.page div.content div.mainContent div.col-3
 {
     margin-right:0px;
 }
-div.page div.content div.mainContent .sectionTitle
+div.page div.content div.mainContent h2.sectionTitle
 {
-    background:url('../images/bar_splice.png') repeat-x 0px -45px;
+    background:url('../images/bar_splice.png') repeat-x 0px -40px;
     background-color:transparent;
     font-size:16px;
     padding:5px;
@@ -277,6 +284,7 @@ div.page div.content div.mainContent .sectionTitle
     -moz-border-radius: 5px;
     border-radius: 5px;
     color:#ddd;
+    font-size:19px;
 }
 div.page div.content div.mainContent div.sectionContent 
 {
@@ -297,7 +305,10 @@ div.page div.content div.mainContent div.singleColumn div.sectionContent
     border-top-left-radius: 0px;
     border-top:none;
 }
-
+div.page div.content div.mainContent div.threeColumn div.sectionContent
+{
+    height:200px;
+}
 /*
 --------------------------------------------------------------------  END MAIN CONTENT  -------------------------------------------------------------------
 */
