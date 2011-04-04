@@ -7,45 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SBWS.masterpages {
+namespace SBWS.usercontrols.Global {
     
     
-    public partial class CorporateSite_Base {
+    public partial class Menu {
         
         /// <summary>
-        /// head control.
+        /// liHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liHome;
         
         /// <summary>
-        /// BaseContent control.
+        /// aHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder BaseContent;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor aHome;
         
         /// <summary>
-        /// Item1 control.
+        /// menuItems control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::umbraco.presentation.templateControls.Item Item1;
-        
-        /// <summary>
-        /// Item2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::umbraco.presentation.templateControls.Item Item2;
+        protected global::System.Web.UI.WebControls.Repeater menuItems;
     }
 }

@@ -32,6 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="businesslogic, Version=1.0.4029.25828, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\businesslogic.dll</HintPath>
+    </Reference>
+    <Reference Include="cms, Version=1.0.4029.25830, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\cms.dll</HintPath>
+    </Reference>
+    <Reference Include="interfaces, Version=1.0.4029.25827, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\interfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -48,13 +60,16 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="umbraco, Version=1.0.4029.25836, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\umbraco.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\" />
     <Folder Include="media\" />
     <Folder Include="Properties\" />
     <Folder Include="scripts\" />
-    <Folder Include="usercontrols\" />
     <Folder Include="xslt\" />
   </ItemGroup>
   <ItemGroup>
@@ -73,9 +88,68 @@
     <Content Include="config\UrlRewriting.config" />
     <Content Include="config\xsltExtensions.config" />
     <Content Include="config\zipUpload.config" />
+    <Content Include="templates\SBWS\css\style.css" />
+    <Content Include="templates\SBWS\fonts\England\Freeware License.txt" />
+    <Content Include="templates\SBWS\fonts\England\stylesheet.css" />
+    <Content Include="templates\SBWS\fonts\Josefin\SIL Open Font License 1.1.txt" />
+    <Content Include="templates\SBWS\fonts\Josefin\stylesheet.css" />
+    <Content Include="templates\SBWS\fonts\Merriweather\SIL Open Font License 1.1.txt" />
+    <Content Include="templates\SBWS\fonts\Merriweather\stylesheet.css" />
+    <Content Include="templates\SBWS\images\bar_splice.png" />
+    <Content Include="templates\SBWS\images\Small-Business-Website-Solutions-Background.jpg" />
+    <Content Include="templates\SBWS\images\Small-Business-Website-Solutions-Logo.png" />
+    <Content Include="usercontrols\Global\Menu.ascx" />
     <None Include="data\vistadb\_placeholder" />
     <Content Include="web.config" />
     <Content Include="masterpages\CorporateSite_Base.Master" />
+    <None Include="templates\SBWS\fonts\England\england-webfont.eot" />
+    <None Include="templates\SBWS\fonts\England\england-webfont.svg" />
+    <None Include="templates\SBWS\fonts\England\england-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\England\england-webfont.woff" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Bold-webfont.eot" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Bold-webfont.svg" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Bold-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Bold-webfont.woff" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-BoldItalic-webfont.eot" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-BoldItalic-webfont.svg" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-BoldItalic-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-BoldItalic-webfont.woff" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Italic-webfont.eot" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Italic-webfont.svg" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Italic-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Italic-webfont.woff" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Light-webfont.eot" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Light-webfont.svg" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Light-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Light-webfont.woff" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-LightItalic-webfont.eot" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-LightItalic-webfont.svg" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-LightItalic-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-LightItalic-webfont.woff" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Regular-webfont.eot" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Regular-webfont.svg" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Regular-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Regular-webfont.woff" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-SemiBold-webfont.eot" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-SemiBold-webfont.svg" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-SemiBold-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-SemiBold-webfont.woff" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-SemiBoldItalic-webfont.eot" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-SemiBoldItalic-webfont.svg" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-SemiBoldItalic-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-SemiBoldItalic-webfont.woff" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Thin-webfont.eot" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Thin-webfont.svg" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Thin-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-Thin-webfont.woff" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-ThinItalic-webfont.eot" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-ThinItalic-webfont.svg" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-ThinItalic-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\Josefin\JosefinSlab-ThinItalic-webfont.woff" />
+    <None Include="templates\SBWS\fonts\Merriweather\Merriweather-webfont.eot" />
+    <None Include="templates\SBWS\fonts\Merriweather\Merriweather-webfont.svg" />
+    <None Include="templates\SBWS\fonts\Merriweather\Merriweather-webfont.ttf" />
+    <None Include="templates\SBWS\fonts\Merriweather\Merriweather-webfont.woff" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\splashes\booting.aspx" />
@@ -83,12 +157,20 @@
     <Content Include="default.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="masterpages\CorporateSite_Base.Master.cs">
       <DependentUpon>CorporateSite_Base.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="masterpages\CorporateSite_Base.Master.designer.cs">
       <DependentUpon>CorporateSite_Base.Master</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\Global\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrols\Global\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

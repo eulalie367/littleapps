@@ -1,5 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CorporateSite_Base.master.cs"
-    Inherits="SBWS.masterpages.CorporateSite_Base" MasterPageFile="~/umbraco/masterpages/default.master" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CorporateSite_Base.master.cs" Inherits="SBWS.masterpages.CorporateSite_Base" MasterPageFile="~/umbraco/masterpages/default.master" %>
+<%@ Register Src="~/usercontrols/Global/Menu.ascx" TagPrefix="Base" TagName="Menu" %>
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
     <!doctype html public "-//w3c//dtd xhtml 1.0 strict//en" "dtd/xhtml1-strict.dtd">
@@ -15,88 +15,66 @@
     </head>
     <body>
         <div class="page">
-            <div class="logo">
-                <div class="text">
-                    <div class="callToAction">
-                        <ul>
-                            <li><a href="#">Contact Us</a></li>
-                            <li class="spacer">|</li>
-                            <li><a href="#">Login</a></li>
-                        </ul>
+            <div class="wrapper clearfix">
+                <div class="logo">
+                    <div class="text">
+                        <div class="callToAction">
+                            <ul>
+                                <li><a href="#">Contact Us</a></li>
+                                <li class="spacer">|</li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </div>
+                        <div class="smallBusiness">
+                            Small Business</div>
+                        <div class="websiteSolutions">
+                            Website Solutions</div>
+                        <div class="ofKansasCity">
+                            0f Kansas City</div>
                     </div>
-                    <div class="smallBusiness">
-                        Small Business</div>
-                    <div class="websiteSolutions">
-                        Website Solutions</div>
-                    <div class="ofKansasCity">
-                        0f Kansas City</div>
+                    <img src="/templates/SBWS/images/Small-Business-Website-Solutions-Logo.png" alt="Small Business Website Solutions of Kansas City" />
                 </div>
-                <img width="940px;" src="/templates/SBWS/images/Small-Business-Website-Solutions-Logo.png" alt="Small Business Website Solutions of Kansas City" />
-            </div>
-            <div class="content">
-                <div class="menu-main clearfix">
-                    <ul>
-                        <li><a href="#" class="selected">Home</a></li>
-                        <li class="spacer">|</li>
-                        <li><a href="#">Services</a></li>
-                        <li class="spacer">|</li>
-                        <li><a href="#">Get A Quote</a></li>
-                        <li class="spacer">|</li>
-                        <li><a href="#">About</a></li>
-                        <li class="spacer">|</li>
-                        <li><a href="#">Reffer</a></li>
-                    </ul>
-                </div>
-                <div class="mainContent clearfix">
-                    <asp:contentplaceholder id="BaseContent" runat="server"></asp:contentplaceholder>
-                    <div class="singleColumn">
-                        <div class="sectionTitle">
-                            Main Section</div>
-                        <div class="sectionContent">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
-                            risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
-                            eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
-                            Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
-                            ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed
-                            aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum,
-                            elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas
-                            velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
-                        </div>
+                <div class="content">
+                    <div class="menu-main clearfix">
+                        <Base:Menu runat="server" />
                     </div>
-                    <div class="threeColumn col-1">
-                        <div class="sectionContent">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
-                            risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
-                            eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
-                            Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
-                            ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed
-                            aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum,
-                            elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas
-                            velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
+                    <div class="mainContent clearfix">
+                        <asp:contentplaceholder id="BaseContent" runat="server"></asp:contentplaceholder>
+                        <div class="singleColumn">
+                            <h2 class="sectionTitle">
+                                <umbraco:Item ID="Item1" field="pageTitle" useIfEmpty="pageName" stripParagraph="true" runat="server" />
+                            </h2>
+                            <div class="sectionContent">
+                                <umbraco:Item ID="Item2" field="pageSummary" useIfEmpty="pageName" stripParagraph="true" runat="server" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="threeColumn col-2">
-                        <div class="sectionContent">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
-                            risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
-                            eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
-                            Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
-                            ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed
-                            aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum,
-                            elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas
-                            velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
+                        <div class="threeColumn col-1">
+                            <div class="sectionContent">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
+                                risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
+                                eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
+                                Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
+                                ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. 
+                            </div>
                         </div>
-                    </div>
-                    <div class="threeColumn col-3">
-                        <div class="sectionContent">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
-                            risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
-                            eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
-                            Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
-                            ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed
-                            aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum,
-                            elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas
-                            velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
+                        <div class="threeColumn col-2">
+                            <div class="sectionContent">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
+                                risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
+                                eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
+                            </div>
+                        </div>
+                        <div class="threeColumn col-3">
+                            <div class="sectionContent">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
+                                risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
+                                eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
+                                Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
+                                ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed
+                                aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum,
+                                elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas
+                                velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
+                            </div>
                         </div>
                     </div>
                 </div>
