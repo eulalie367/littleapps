@@ -114,9 +114,13 @@ html[xmlns] .clearfix
 /*
 --------------------------------------------------------------------  BEGIN BASE LAYOUT  -------------------------------------------------------------------
 */
-
+body
+{
+    background:#aaa url('../images/bar_splice.png') repeat-x 0px -605px;
+}
 div.page
 {
+    background:#fff;
     width:943px;
     margin:0 auto;
     border:3px solid #3F3890;
@@ -126,7 +130,6 @@ div.page
 }
 div.page div.wrapper
 {
-    background:#fff url('../images/bar_splice.png') repeat-x 0px -460px;
     margin:1px;
     border:1px solid #3F3890;
     border-radius:1px;
@@ -134,7 +137,7 @@ div.page div.wrapper
 div.page div.content
 {
     min-height:705px;
-    margin-top:-20px;
+    margin-top:-190px;
     padding:0px;
     padding-left:20px;
     padding-right:20px;
@@ -285,6 +288,8 @@ div.page div.content div.mainContent h2.sectionTitle
     border-radius: 5px;
     color:#ddd;
     font-size:19px;
+    position:relative;
+    z-index:100;
 }
 div.page div.content div.mainContent div.sectionContent 
 {
@@ -294,6 +299,8 @@ div.page div.content div.mainContent div.sectionContent
     color:#333;
     -moz-border-radius:10px;
     border-radius:10px;
+    position:relative;
+    z-index:100;
 }
 div.page div.content div.mainContent div.singleColumn div.sectionContent
 {
