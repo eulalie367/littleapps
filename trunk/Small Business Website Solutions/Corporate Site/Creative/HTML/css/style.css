@@ -116,33 +116,26 @@ html[xmlns] .clearfix
 */
 body
 {
-    background:#aaa url('../images/bar_splice.png') repeat-x 0px -605px;
 }
 div.page
 {
-    background:url('../images/background_clear.png') repeat 0px 0px;
-    width:943px;
+    background:#fff;
+    width:960px;
     margin:0 auto;
-    border:3px solid #3F3890;
+    border:3px solid #ab8d73;
     font-family:'MerriweatherRegular';
     font-size:12px;
 }
 div.page div.wrapper
 {
-    margin:1px;
-    border:1px solid #3F3890;
+    margin:2px;
+    border:2px solid #ab8d73;
 }
 div.page div.content
 {
-    min-height:705px;
-    margin-top:-200px;
-    padding:0px;
-    padding-left:20px;
-    padding-right:20px;
-}
-a.selected
-{
-    border-bottom:1px solid #ddd;
+    position:relative;
+    margin-top:235px;
+    z-index:100;
 }
 
 /*
@@ -153,61 +146,55 @@ a.selected
 /*
 --------------------------------------------------------------------  BEGIN LOGO  -------------------------------------------------------------------------
 */
-
+div.page div.logo
+{
+    position:relative;
+}
+div.page div.logo img
+{
+    position:absolute;
+    z-index:1;
+    margin:0px;
+}
 div.page div.logo div.text
 {
     position:absolute;
     z-index:100;
-    padding-top:20px;
-    color:#ddd;
+    font:normal 42px/42px 'MerriweatherRegular';
+    padding-top:10px;
     padding-left:20px;
-    width:920px;
-    font-family:'JosefinSlabBold';
-    font-size:14px;
-    color:#ddd;
 }
-div.page div.logo div.text a
+div.page div.logo div.text span.websiteSolutions
 {
-    font-family:'JosefinSlabBold';
-    font-size:14px;
-    color:#ddd;
+    display:block;
 }
-div.page div.logo div.text div.smallBusiness
+div.page div.logo div.text span.ofKansasCity
 {
-    font-family:'MerriweatherRegular';
-    font-size:45px;
+    display:block;
+    font:normal 36px/36px 'EnglandHandDBRegular';
+    margin-left:70px;
 }
-div.page div.logo div.text div.websiteSolutions
+div.page div.logo div.callToAction
 {
-    font-family:'MerriweatherRegular';
-    font-size:35px;
+    position:absolute;
+    z-index:100;
+    margin-top:10px;
+    width:100%;
 }
-div.page div.logo div.text div.ofKansasCity
+div.page div.logo div.callToAction ul
 {
-    font-family:'EnglandHandDBRegular';
-    font-size:24px;
-    margin-left:165px;
-}
-div.page div.logo div.text div.callToAction
-{
-    padding-right:20px;
     float:right;
-}
-div.page div.logo div.text div.callToAction ul li
-{
-    text-transform:uppercase;
-    float:left;
-}
-div.page div.logo div.text div.callToAction ul li.spacer
-{
-    margin-left:10px;
     margin-right:10px;
-    margin-top:-1px;
 }
-div.page div.logo img
+div.page div.logo div.callToAction ul li
 {
-    position:relative;
-    z-index:1;
+    float:left;
+    margin-right:10px;
+}
+div.page div.logo div.callToAction ul li span
+{
+    font:normal 18px/18px 'JosefinSlabBold';
+    color:#74797f;
 }
 
 /*
@@ -218,23 +205,19 @@ div.page div.logo img
 /*
 --------------------------------------------------------------------  BEGIN MAIN MENU  ---------------------------------------------------------------------
 */
-
 div.page div.content div.menu-main
 {
+    position:relative;
+    z-index:100;
     width:100%;
-    color:#ddd;
-    font-family:'JosefinSlabBold';
-    font-size:14px;
-    margin-bottom:30px;
-}
-div.page div.content div.menu-main a
-{
-    color:#ddd;
-    font-family:'JosefinSlabBold';
+    height:40px;
+    background:url('../images/bar_splice_50px.png') repeat-x 0px 0px;
 }
 div.page div.content div.menu-main ul
 {
     float:right;
+    margin-right:20px;
+    margin-top:11px;
 }
 div.page div.content div.menu-main ul li
 {
@@ -242,6 +225,11 @@ div.page div.content div.menu-main ul li
     z-index:100;
     text-transform:uppercase;
     float:left;
+}
+div.page div.content div.menu-main span
+{
+    font:normal 18px/18px 'JosefinSlabBold';
+    color:#efe0c6;
 }
 div.page div.content div.menu-main ul li.spacer
 {
@@ -261,57 +249,89 @@ div.page div.content div.menu-main ul li.spacer
 
 div.page div.content div.mainContent div.singleColumn
 {
+    margin:10px;
+    margin-bottom:0px;
+    margin-top:20px;
+}
+div.page div.content div.mainContent div.homePrimary
+{
+    border:1px solid #ab8d73;
     margin-bottom:20px;
+}
+div.page div.content div.mainContent div.homePrimary .menu
+{
+    border-right:1px solid #ab8d73;
+    float:left;
+    width:249px;
+}
+div.page div.content div.mainContent div.homePrimary .sectionContent
+{
+    border-right:1px solid #ab8d73;
+    float:left;
+    width:412px;
+    height:300px;
+}
+div.page div.content div.mainContent div.homePrimary .menu li
+{
+    border-bottom:1px solid #000;
+}
+div.page div.content div.mainContent div.homePrimary .menu li.last
+{
+    border-bottom:none;
+}
+div.page div.content div.mainContent div.homePrimary .menu a
+{
+    height:49px;
+    background:url('../images/primary-button.png') no-repeat 0px -50px;
+}
+div.page div.content div.mainContent div.homePrimary .menu li.last a
+{
+    height:50px;
+}
+div.page div.content div.mainContent div.homePrimary .menu a span
+{
+    font:normal 18px/18px 'MerriweatherRegular';
+    color:#74797f;
+    display:block;
+    margin-left:40px;
+    padding-top:17px;
+}
+div.page div.content div.mainContent div.homePrimary .sectionContent
+{
+    background:#ccc;
+}
+div.page div.content div.mainContent div.homePrimary .callToAction li
+{
+    height:99px;
+    background:#d9d9d9;
+    border-bottom:1px solid #000;
+}
+div.page div.content div.mainContent div.homePrimary .callToAction li.last
+{
+    height:100px;
+    border-bottom:none;
+}
+div.page div.content div.mainContent div.homePrimary .callToAction a
+{
+    font:normal 18px/18px 'MerriweatherRegular';
+    color:#74797f;
+    padding-top:40px;
+    padding-left:100px;
 }
 div.page div.content div.mainContent div.threeColumn
 {
     float:left;
-    width:275px;
-    margin-right:20px;
-}
-div.page div.content div.mainContent div.col-3
-{
-    margin-right:0px;
-}
-div.page div.content div.mainContent h2.sectionTitle
-{
-    background:url('../images/bar_splice.png') repeat-x 0px -45px;
-    background-color:transparent;
-    font-size:16px;
-    padding:5px;
-    padding-left:15px;
-    font-family:'MerriweatherRegular';
-    font-weight:bold;
-    color:#ddd;
-    font-size:19px;
-    position:relative;
-    z-index:100;
-    border:1px solid #3F3890;
-}
-div.page div.content div.mainContent div.sectionContent,
-div.page div.content div.mainContent div.singleColumn div.threeColumn div.sectionContent 
-{
-    background:url('../images/background_clear.png') repeat 0px 0px;
+    width:282px;
+    border:1px solid #ab8d73;
     padding:10px;
-    border:1px solid #3F3890;
-    color:#333;
-    position:relative;
-    z-index:100;
-    margin-left:0px;
-    margin-right:0px;
+    margin-bottom:20px;
 }
-div.page div.content div.mainContent div.singleColumn div.sectionContent
+div.page div.content div.mainContent div.col-2
 {
-    border:1px solid #3F3890;
-    margin-left:5px;
-    margin-right:5px;
-    border-top:none;
-    height:auto;
+    margin-right:10px;
+    margin-left:10px;
 }
-div.page div.content div.mainContent div.threeColumn div.sectionContent
-{
-    height:200px;
-}
+
 /*
 --------------------------------------------------------------------  END MAIN CONTENT  -------------------------------------------------------------------
 */
@@ -320,6 +340,7 @@ div.page div.content div.mainContent div.threeColumn div.sectionContent
 /*
 --------------------------------------------------------------------  BEGIN HOME PRIMARY  -----------------------------------------------------------------
 */
+/*
 
 div.page div.content div.mainContent div.singleColumn div.sectionContent div.homePrimary
 {
