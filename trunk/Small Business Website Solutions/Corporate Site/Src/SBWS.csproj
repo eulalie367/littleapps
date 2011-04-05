@@ -158,7 +158,9 @@
     <Content Include="templates\SBWS\images\Small-Business-Website-Solutions-Logo.png" />
     <Content Include="usercontrols\Global\Menu.ascx" />
     <None Include="data\vistadb\_placeholder" />
-    <Content Include="web.config" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="masterpages\CorporateSite_Base.Master" />
     <Content Include="masterpages\Base.Master" />
     <Content Include="masterpages\ModernStormSolutions_Base.master" />
