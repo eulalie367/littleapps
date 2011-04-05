@@ -328,19 +328,19 @@ div.page div.content div.mainContent div.singleColumn div.sectionContent div.hom
 }
 div.page div.content div.mainContent div.singleColumn div.sectionContent div.homePrimary ul.menu
 {
-    width:198px;
+    width:186px;
     border-right:1px solid #3F3890;
     float:left;
 }
 div.page div.content div.mainContent div.singleColumn div.sectionContent div.homePrimary div.sectionContent
 {
-    width:465px;
+    width:491px;
     float:left;
     margin:0px;
     padding:0px;
     border:none;
     background:red;
-    height:246px;
+    height:240px;
 }
 div.page div.content div.mainContent div.singleColumn div.sectionContent div.homePrimary div.sectionContent span
 {
@@ -348,13 +348,13 @@ div.page div.content div.mainContent div.singleColumn div.sectionContent div.hom
 }
 div.page div.content div.mainContent div.singleColumn div.sectionContent div.homePrimary ul.callToAction
 {
-    width:198px;
+    width:186px;
     border-left:1px solid #3F3890;
     float:left;
 }
 div.page div.content div.mainContent div.singleColumn div.sectionContent div.homePrimary li a
 {
-    color:#3F3890;
+    color:inherit;
     font-size:14px;
     padding-top:13px;
     padding-left:30px;
@@ -362,15 +362,20 @@ div.page div.content div.mainContent div.singleColumn div.sectionContent div.hom
 }
 div.page div.content div.mainContent div.singleColumn div.sectionContent div.homePrimary ul.menu li
 {
+    color:#3F3890;
     height:40px;
-    background:url('../images/bar_splice.png') repeat-x 0px -38px;
-    margin-top:1px;
+    background:url('../images/primary-button.png') no-repeat 0px -9px;
+}
+div.page div.content div.mainContent div.singleColumn div.sectionContent div.homePrimary ul.menu li:hover
+{
+    color:#ccc;
+    background:url('../images/primary-button.png') no-repeat 0px -65px;
 }
 div.page div.content div.mainContent div.singleColumn div.sectionContent div.homePrimary ul.callToAction li
 {
-    height:81px;
+    color:#3F3890;
+    height:80px;
     background:url('../images/bar_splice.png') repeat-x 0px -38px;
-    margin-top:1px;
 }
 
 /*
