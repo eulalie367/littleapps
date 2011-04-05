@@ -102,7 +102,8 @@ div .menu ul{
 	list-style:none;
 	text-align:center;	
 }
-div .menu ul li a div{
+div .menu ul li a span{
+    display:block;
 	margin-left:10px;
 	margin-right:10px;
 	margin-top:10px;
