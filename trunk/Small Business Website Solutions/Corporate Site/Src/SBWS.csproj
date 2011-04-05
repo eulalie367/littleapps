@@ -70,6 +70,36 @@
     <Folder Include="media\" />
     <Folder Include="Properties\" />
     <Folder Include="scripts\" />
+    <Folder Include="templates\ModernStormSolutions\css\.svn\prop-base\" />
+    <Folder Include="templates\ModernStormSolutions\css\.svn\props\" />
+    <Folder Include="templates\ModernStormSolutions\css\.svn\tmp\prop-base\" />
+    <Folder Include="templates\ModernStormSolutions\css\.svn\tmp\props\" />
+    <Folder Include="templates\ModernStormSolutions\css\.svn\tmp\text-base\" />
+    <Folder Include="templates\ModernStormSolutions\images\.svn\props\" />
+    <Folder Include="templates\ModernStormSolutions\images\.svn\tmp\prop-base\" />
+    <Folder Include="templates\ModernStormSolutions\images\.svn\tmp\props\" />
+    <Folder Include="templates\ModernStormSolutions\images\.svn\tmp\text-base\" />
+    <Folder Include="templates\ModernStormSolutions\images\Gutters\.svn\props\" />
+    <Folder Include="templates\ModernStormSolutions\images\Gutters\.svn\tmp\prop-base\" />
+    <Folder Include="templates\ModernStormSolutions\images\Gutters\.svn\tmp\props\" />
+    <Folder Include="templates\ModernStormSolutions\images\Gutters\.svn\tmp\text-base\" />
+    <Folder Include="templates\ModernStormSolutions\images\Hail\.svn\props\" />
+    <Folder Include="templates\ModernStormSolutions\images\Hail\.svn\tmp\prop-base\" />
+    <Folder Include="templates\ModernStormSolutions\images\Hail\.svn\tmp\props\" />
+    <Folder Include="templates\ModernStormSolutions\images\Hail\.svn\tmp\text-base\" />
+    <Folder Include="templates\ModernStormSolutions\images\Houses\.svn\props\" />
+    <Folder Include="templates\ModernStormSolutions\images\Houses\.svn\tmp\prop-base\" />
+    <Folder Include="templates\ModernStormSolutions\images\Houses\.svn\tmp\props\" />
+    <Folder Include="templates\ModernStormSolutions\images\Houses\.svn\tmp\text-base\" />
+    <Folder Include="templates\ModernStormSolutions\images\Siding\.svn\props\" />
+    <Folder Include="templates\ModernStormSolutions\images\Siding\.svn\tmp\prop-base\" />
+    <Folder Include="templates\ModernStormSolutions\images\Siding\.svn\tmp\props\" />
+    <Folder Include="templates\ModernStormSolutions\images\Siding\.svn\tmp\text-base\" />
+    <Folder Include="templates\ModernStormSolutions\script\.svn\prop-base\" />
+    <Folder Include="templates\ModernStormSolutions\script\.svn\props\" />
+    <Folder Include="templates\ModernStormSolutions\script\.svn\tmp\prop-base\" />
+    <Folder Include="templates\ModernStormSolutions\script\.svn\tmp\props\" />
+    <Folder Include="templates\ModernStormSolutions\script\.svn\tmp\text-base\" />
     <Folder Include="xslt\" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +118,34 @@
     <Content Include="config\UrlRewriting.config" />
     <Content Include="config\xsltExtensions.config" />
     <Content Include="config\zipUpload.config" />
+    <Content Include="templates\ModernStormSolutions\css\style.css" />
+    <Content Include="templates\ModernStormSolutions\images\gradient.png" />
+    <Content Include="templates\ModernStormSolutions\images\gradient_bar.png" />
+    <Content Include="templates\ModernStormSolutions\images\Gutters\colors.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Gutters\gutters.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Gutters\install.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Hail\1.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Hail\2.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Hail\3.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Hail\4.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\house.png" />
+    <Content Include="templates\ModernStormSolutions\images\Houses\1.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Houses\2.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Houses\3.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Houses\4.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Houses\5.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Logo1.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Logo1.png" />
+    <Content Include="templates\ModernStormSolutions\images\Logo2.png" />
+    <Content Include="templates\ModernStormSolutions\images\MSS.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Siding\1.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Siding\2.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Siding\3.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Siding\4.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Siding\5.jpg" />
+    <Content Include="templates\ModernStormSolutions\images\Siding\diagram.gif" />
+    <Content Include="templates\ModernStormSolutions\images\trustmss.jpg" />
+    <Content Include="templates\ModernStormSolutions\script\jqueryCycle.js" />
     <Content Include="templates\SBWS\css\style.css" />
     <Content Include="templates\SBWS\fonts\England\Freeware License.txt" />
     <Content Include="templates\SBWS\fonts\England\stylesheet.css" />
@@ -102,6 +160,87 @@
     <None Include="data\vistadb\_placeholder" />
     <Content Include="web.config" />
     <Content Include="masterpages\CorporateSite_Base.Master" />
+    <Content Include="masterpages\Base.Master" />
+    <Content Include="masterpages\ModernStormSolutions_Base.master" />
+    <None Include="templates\ModernStormSolutions\css\.svn\all-wcprops" />
+    <None Include="templates\ModernStormSolutions\css\.svn\entries" />
+    <None Include="templates\ModernStormSolutions\css\.svn\text-base\style.css.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\all-wcprops" />
+    <None Include="templates\ModernStormSolutions\images\.svn\entries" />
+    <None Include="templates\ModernStormSolutions\images\.svn\prop-base\CloudsOriginal.psd.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\prop-base\gradient.png.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\prop-base\gradient_bar.png.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\prop-base\gradient_bar.psd.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\prop-base\house.png.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\prop-base\House.psd.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\prop-base\Logo1.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\prop-base\Logo1.png.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\prop-base\Logo2.png.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\prop-base\MSS.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\prop-base\trustmss.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\text-base\CloudsOriginal.psd.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\text-base\gradient.png.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\text-base\gradient_bar.png.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\text-base\gradient_bar.psd.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\text-base\house.png.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\text-base\House.psd.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\text-base\Logo1.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\text-base\Logo1.png.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\text-base\Logo2.png.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\text-base\MSS.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\.svn\text-base\trustmss.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\CloudsOriginal.psd" />
+    <None Include="templates\ModernStormSolutions\images\gradient_bar.psd" />
+    <None Include="templates\ModernStormSolutions\images\Gutters\.svn\all-wcprops" />
+    <None Include="templates\ModernStormSolutions\images\Gutters\.svn\entries" />
+    <None Include="templates\ModernStormSolutions\images\Gutters\.svn\prop-base\colors.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Gutters\.svn\prop-base\gutters.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Gutters\.svn\prop-base\install.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Gutters\.svn\text-base\colors.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Gutters\.svn\text-base\gutters.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Gutters\.svn\text-base\install.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Hail\.svn\all-wcprops" />
+    <None Include="templates\ModernStormSolutions\images\Hail\.svn\entries" />
+    <None Include="templates\ModernStormSolutions\images\Hail\.svn\prop-base\1.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Hail\.svn\prop-base\2.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Hail\.svn\prop-base\3.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Hail\.svn\prop-base\4.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Hail\.svn\text-base\1.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Hail\.svn\text-base\2.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Hail\.svn\text-base\3.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Hail\.svn\text-base\4.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\House.psd" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\all-wcprops" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\entries" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\prop-base\1.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\prop-base\2.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\prop-base\3.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\prop-base\4.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\prop-base\5.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\text-base\1.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\text-base\2.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\text-base\3.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\text-base\4.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Houses\.svn\text-base\5.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\all-wcprops" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\entries" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\prop-base\1.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\prop-base\2.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\prop-base\3.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\prop-base\4.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\prop-base\5.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\prop-base\diagram.gif.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\text-base\1.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\text-base\2.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\text-base\3.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\text-base\4.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\text-base\5.jpg.svn-base" />
+    <None Include="templates\ModernStormSolutions\images\Siding\.svn\text-base\diagram.gif.svn-base" />
+    <None Include="templates\ModernStormSolutions\script\.svn\all-wcprops" />
+    <None Include="templates\ModernStormSolutions\script\.svn\entries" />
+    <None Include="templates\ModernStormSolutions\script\.svn\text-base\JQuery Cycle Plugin.URL.svn-base" />
+    <None Include="templates\ModernStormSolutions\script\.svn\text-base\jqueryCycle.js.svn-base" />
+    <None Include="templates\ModernStormSolutions\script\JQuery Cycle Plugin.URL" />
     <None Include="templates\SBWS\fonts\England\england-webfont.eot" />
     <None Include="templates\SBWS\fonts\England\england-webfont.svg" />
     <None Include="templates\SBWS\fonts\England\england-webfont.ttf" />
@@ -158,12 +297,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\Extensions.cs" />
+    <Compile Include="masterpages\Base.Master.cs">
+      <DependentUpon>Base.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masterpages\Base.Master.designer.cs">
+      <DependentUpon>Base.Master</DependentUpon>
+    </Compile>
     <Compile Include="masterpages\CorporateSite_Base.Master.cs">
       <DependentUpon>CorporateSite_Base.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="masterpages\CorporateSite_Base.Master.designer.cs">
       <DependentUpon>CorporateSite_Base.Master</DependentUpon>
+    </Compile>
+    <Compile Include="masterpages\ModernStormSolutions_Base.master.cs">
+      <DependentUpon>ModernStormSolutions_Base.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masterpages\ModernStormSolutions_Base.master.designer.cs">
+      <DependentUpon>ModernStormSolutions_Base.master</DependentUpon>
     </Compile>
     <Compile Include="usercontrols\Global\Menu.ascx.cs">
       <DependentUpon>Menu.ascx</DependentUpon>

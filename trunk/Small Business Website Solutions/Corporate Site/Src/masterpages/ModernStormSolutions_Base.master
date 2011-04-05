@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Base.Master" AutoEventWireup="true"
+    CodeBehind="ModernStormSolutions_Base.master.cs" Inherits="SBWS.masterpages.ModernStormSolutions_Base" %>
+<%@ Register Src="~/usercontrols/Global/Menu.ascx" TagPrefix="Base" TagName="Menu" %>
+
+<asp:Content ContentPlaceHolderID="head" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="kansas city roofing, roofing in kansas city, roofing kansas city, roofer in kansas city, roofing in kc, roofing missouri, roofing kansas" />
+    <title>Modern Storm Solutions | Kansas City Storm Repair</title>
+    <link href="/templates/ModernStormSolutions/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/templates/ModernStormSolutions/script/jqueryCycle.js"> </script>
+    <script type="text/javascript">
+        $(document).ready(
+                function () {
+                    if (document.all)
+                        $("td").height($(window).height());
+                    $('.rotator').cycle({ fx: 'fade' });
+                }
+            );
+    </script>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="BaseContent" runat="server">
+    <table align="center" cellpadding="0px" cellspacing="0px">
+        <tr>
+            <td>
+                <div class="main">
+                    <div class="dvLogo">
+                        <div class="phone">
+                            1-877-677-6137</div>
+                        <div class="name">
+                            <span><span class="acronym">M</span>odern</span> <span><span class="acronym">S</span>torm</span>
+                            <span><span class="acronym">S</span>olutions</span>
+                        </div>
+                        <div class="about">
+                            <ul>
+                                <li>Roofing&nbsp;-&nbsp;</li>
+                                <li>Siding&nbsp;-&nbsp;</li>
+                                <li>Guttering&nbsp;-&nbsp;</li>
+                                <li>Windows&nbsp;-&nbsp;</li>
+                                <li>Decks</li>
+                            </ul>
+                        </div>
+                        <img class="logoHouse" src="/templates/ModernStormSolutions/images/house.png" width="300px" />
+                    </div>
+                    <div class="background">
+                        <div class="menu">
+                            <Base:Menu runat="server" SiteName="ModernStormSolutions" />
+                        </div>
+                        <div class="content">
+                            <div>
+                                <h1>
+                                    <umbraco:Item Field="pageTitle" runat="server" />
+                                </h1>
+                                <div class="main">
+                                    <umbraco:Item Field="pageContent" runat="server" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

@@ -10,16 +10,16 @@
 namespace SBWS.masterpages {
     
     
-    public partial class CorporateSite_Base {
+    public partial class Base {
         
         /// <summary>
-        /// Menu1 control.
+        /// head control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SBWS.usercontrols.Global.Menu Menu1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
         /// BaseContent control.
@@ -29,23 +29,5 @@ namespace SBWS.masterpages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder BaseContent;
-        
-        /// <summary>
-        /// Item1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::umbraco.presentation.templateControls.Item Item1;
-        
-        /// <summary>
-        /// Item2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::umbraco.presentation.templateControls.Item Item2;
     }
 }

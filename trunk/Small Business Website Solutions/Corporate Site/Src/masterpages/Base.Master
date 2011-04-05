@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base.master.cs" Inherits="SBWS.masterpages.Base" MasterPageFile="~/umbraco/masterpages/default.master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
+    <!doctype html public "-//w3c//dtd xhtml 1.0 strict//en" "dtd/xhtml1-strict.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <asp:contentplaceholder id="BaseContent" runat="server"></asp:contentplaceholder>
+    </body>
+    </html>
+</asp:Content>

@@ -19,6 +19,7 @@ namespace SBWS.usercontrols.Global
         public string RootName { get; set; }
         public string SelectedClass { get; set; }
         public string SiteName { get; set; }
+        public string Seperator { get; set; }
         
         private Node _currentNode;
         private Node currentNode
@@ -37,6 +38,7 @@ namespace SBWS.usercontrols.Global
             this.RootName = "Home";
             this.SelectedClass = "selected";
             this.SiteName = "CorporateSite";
+            this.Seperator = "";
         }
         private Node node;
         protected void Page_Load(object sender, EventArgs e)
@@ -61,7 +63,7 @@ namespace SBWS.usercontrols.Global
         private void LoadHome(Node node)
         {
             liHome.Visible = true;
-            aHome.InnerText = RootName;
+            spHome.InnerText = RootName;
             aHome.HRef = node.Url;
             if (currentNode.Id == node.Id)
                 aHome.Attributes.AddSafely("class", SelectedClass);
@@ -88,9 +90,9 @@ namespace SBWS.usercontrols.Global
         }
         public string seperator(RepeaterItem container)
         {
-            if (node.Children.Count - 1 != container.ItemIndex)
+            if (!string.IsNullOrEmpty(this.Seperator) && node.Children.Count - 1 != container.ItemIndex)
             {
-                return "<li class=\"spacer\">|</li>";
+                return "<li class=\"spacer\">" + this.Seperator + "</li>";
             }
             return "";
         }

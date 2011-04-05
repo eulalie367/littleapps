@@ -31,6 +31,15 @@ namespace SBWS.usercontrols.Global {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor aHome;
         
         /// <summary>
+        /// spHome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spHome;
+        
+        /// <summary>
         /// menuItems control.
         /// </summary>
         /// <remarks>
