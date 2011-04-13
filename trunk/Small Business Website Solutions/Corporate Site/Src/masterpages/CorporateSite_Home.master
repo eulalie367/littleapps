@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/CorporateSite_Base.Master" AutoEventWireup="true" CodeBehind="CorporateSite_Home.master.cs" Inherits="SBWS.masterpages.CorporateSite_Home" %>
+
+<asp:Content ContentPlaceHolderID="MainContent" runat="server">
+                        <div class="singleColumn">
+                            <div class="sectionContent">
+                                <div class="homePrimary clearfix">
+                                    <ul class="menu">
+                                        <li class="first">
+                                            <a class="clearfix" href="#" title="Discover how to get the most out of your small business website."><span>Website Consultation</span></a>
+                                        </li>
+                                        <li>
+                                            <a class="clearfix" href="#" title="Choose one of three design packages created specifically for your small business."><span>Website Design</span></a>
+                                        </li>
+                                        <li>
+                                            <a class="clearfix" href="#" title="Create your website with either content you provide or content provided by our team of copy writers."><span>Create Website</span></a>
+                                        </li>
+                                        <li>
+                                            <a class="clearfix" href="#" title="Use Search Engine Optimization specific to your small business to attract more leads."><span>Small Business SEO</span></a>
+                                        </li>
+                                        <li>
+                                            <a class="clearfix" href="#" title="Track website leads and website traffic to show the effects of your investment."><span>Lead Tracking</span></a>
+                                        </li>
+                                        <li class="last">
+                                            <a class="clearfix" href="#" title="Continual maintenance keeps your small business website fresh."><span>Website Maintenance</span></a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="sectionContent">
+                                        <span>a photo rotator</span>
+                                    </div>
+
+                                    <ul class="callToAction">
+                                        <li>
+                                            <a href="#">Callout 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Callout 2</a>
+                                        </li>
+                                        <li class="last">
+                                            <a href="#">Callout 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="clearfix">
+                                    <div class="threeColumn col-1">
+                                        <div class="sectionContent">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis, eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem. Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum, elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
+                                        </div>
+                                    </div>
+                                    <div class="threeColumn col-2">
+                                        <div class="sectionContent">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis, eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem. Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum, elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
+                                        </div>
+                                    </div>
+                                    <div class="threeColumn col-3">
+                                        <div class="sectionContent">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis, eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem. Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum, elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+</asp:Content>
