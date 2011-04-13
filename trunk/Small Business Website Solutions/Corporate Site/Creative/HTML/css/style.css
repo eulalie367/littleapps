@@ -393,40 +393,40 @@ div.page div.content div.mainContent div.homePrimary .callToAction a
 --------------------------------------------------------------------  BEGIN INTERIOR MENU  ----------------------------------------------------------------
 */
 
-div.page div.content div.mainContent
+div.page div.content div.interior
 {
     height:auto !important;
     height:300px;
     min-height:300px;
 }
-div.page div.content div.mainContent div.menu
+div.page div.content div.interior div.menu
 {
     padding-top:10px;
     padding-left:20px;
     width:200px;
     float:left;
 }
-div.page div.content div.mainContent div.menu ul
+div.page div.content div.interior div.menu ul
 {
     border-bottom:1px #ab8d73 dashed;
 }
-div.page div.content div.mainContent div.menu li
+div.page div.content div.interior div.menu li
 {
     padding-bottom:10px;
     padding-top:10px;
     border-top:1px #ab8d73 dashed;
 }
-div.page div.content div.mainContent div.menu a
+div.page div.content div.interior div.menu a
 {
     margin-left:10px;
     font:normal 18px/18px 'MerriweatherRegular';
     color:#74797f;
 }
-div.page div.content div.mainContent div.menu a:hover
+div.page div.content div.interior div.menu a:hover
 {
     border-bottom:1px solid #74797f;
 }
-div.page div.content div.mainContent div.sectionContent
+div.page div.content div.interior div.sectionContent
 {
     font:normal 12px/18px 'MerriweatherRegular';
     margin:20px;
@@ -434,7 +434,7 @@ div.page div.content div.mainContent div.sectionContent
     float:left;
     text-align:justify;
 }
-div.page div.content div.mainContent div.featured
+div.page div.content div.interior div.featured
 {
     padding-top:10px;
     padding-right:20px;
@@ -442,14 +442,14 @@ div.page div.content div.mainContent div.featured
     float:left;
     color:#74797f;
 }
-div.page div.content div.mainContent div.featured ul li.testimonial
+div.page div.content div.interior div.featured ul li.testimonial
 {
     font:normal 18px/18px 'MerriweatherRegular';
     margin-bottom:20px;
     padding-bottom:10px;
     border-bottom:1px #ab8d73 dashed;
 }
-div.page div.content div.mainContent div.featured ul li.testimonial span.signature
+div.page div.content div.interior div.featured ul li.testimonial span.signature
 {
     display:block;
     font:normal 18px/18px 'JosefinSlabItalic';    
@@ -464,7 +464,7 @@ div.page div.content div.mainContent div.featured ul li.testimonial span.signatu
 --------------------------------------------------------------------  BEGIN INTERIOR ----------------------------------------------------------------------
 */
 
-div.page div.content div.mainContent div.interiorSectionContent
+div.page div.content div.interior div.interiorSectionContent
 {
     font:normal 12px/18px 'MerriweatherRegular';
     color:#74797f;
