@@ -143,7 +143,9 @@ div.page div.bar
     z-index:100;
     width:100%;
     height:40px;
-    background:url('../images/bar_splice_50px.png') repeat-x 0px 0px;
+    background:url('../images/background_clear.png') repeat 0px 0px;
+    border-top:1px solid #ab8d73;
+    border-bottom:1px solid #ab8d73;
 }
 
 /*
@@ -232,7 +234,7 @@ div.page div.content div.menu-main ul li
 div.page div.content div.menu-main span
 {
     font:normal 18px/18px 'JosefinSlabBold';
-    color:#efe0c6;
+    color:#74797f;
 }
 div.page div.content div.menu-main ul li.spacer
 {
@@ -286,6 +288,7 @@ div.page div.content div.mainContent div.col-2
 div.page div.sitemap ul.sectionContent
 {
     background:#eee;
+    border-top:1px solid #ab8d73;
 }
 div.page div.sitemap ul.sectionContent li
 {
@@ -390,44 +393,68 @@ div.page div.content div.mainContent div.homePrimary .callToAction a
 --------------------------------------------------------------------  BEGIN INTERIOR MENU  ----------------------------------------------------------------
 */
 
+div.page div.content div.mainContent
+{
+    height:auto !important;
+    height:300px;
+    min-height:300px;
+}
 div.page div.content div.mainContent div.menu
 {
-    border:1px solid #74797f;
-    margin:20px;
-    margin-right:10px;
-    width:148px;
-    height:400px;
-    float:left;
     padding-top:10px;
-    background:url('../images/bar_splice_v_148px.png') repeat-y 0px 0px;
+    padding-left:20px;
+    width:200px;
+    float:left;
+}
+div.page div.content div.mainContent div.menu ul
+{
+    border-bottom:1px #ab8d73 dashed;
 }
 div.page div.content div.mainContent div.menu li
 {
     padding-bottom:10px;
+    padding-top:10px;
+    border-top:1px #ab8d73 dashed;
 }
 div.page div.content div.mainContent div.menu a
 {
     margin-left:10px;
-    margin-right:10px;
     font:normal 18px/18px 'MerriweatherRegular';
-    color:#efe0c6;
+    color:#74797f;
 }
 div.page div.content div.mainContent div.menu a:hover
 {
-    font:normal 18px/18px 'MerriweatherRegular';
-    color:#74797f;
     border-bottom:1px solid #74797f;
 }
 div.page div.content div.mainContent div.sectionContent
 {
     font:normal 12px/18px 'MerriweatherRegular';
-    color:#74797f;
-    margin-right:20px;
-    margin-top:20px;
-    width:750px;
+    margin:20px;
+    width:470px;
     float:left;
+    text-align:justify;
 }
-
+div.page div.content div.mainContent div.featured
+{
+    padding-top:10px;
+    padding-right:20px;
+    width:200px;
+    float:left;
+    color:#74797f;
+}
+div.page div.content div.mainContent div.featured ul li.testimonial
+{
+    font:normal 18px/18px 'MerriweatherRegular';
+    margin-bottom:20px;
+    padding-bottom:10px;
+    border-bottom:1px #ab8d73 dashed;
+}
+div.page div.content div.mainContent div.featured ul li.testimonial span.signature
+{
+    display:block;
+    font:normal 18px/18px 'JosefinSlabItalic';    
+    text-align:right;
+}
 /*
 --------------------------------------------------------------------  END INTERIOR MENU  ------------------------------------------------------------------
 */
