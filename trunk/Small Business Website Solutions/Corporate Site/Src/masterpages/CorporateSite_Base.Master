@@ -3,7 +3,9 @@
 
 <%@ Register Src="~/usercontrols/Global/Menu.ascx" TagPrefix="Base" TagName="Menu" %>
 <asp:Content ContentPlaceHolderID="head" runat="server">
-    <title>Small Business Website Solutoins of Kansas City</title>
+    <title>
+        <umbraco:Item field="pageTitle" textIfEmpty="Small Business Website Solutions of Kansas City" runat="server"></umbraco:Item>
+    </title>
     <link type="text/css" rel="Stylesheet" href="/templates/SBWS/fonts/Merriweather/stylesheet.css" />
     <link type="text/css" rel="Stylesheet" href="/templates/SBWS/fonts/England/stylesheet.css" />
     <link type="text/css" rel="Stylesheet" href="/templates/SBWS/fonts/Josefin/stylesheet.css" />
