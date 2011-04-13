@@ -92,7 +92,7 @@ namespace SBWS.usercontrols.Global
         {
             if (!string.IsNullOrEmpty(this.Seperator) && node.Children.Count - 1 != container.ItemIndex)
             {
-                return "<li class=\"spacer\">" + this.Seperator + "</li>";
+                return "<li class=\"spacer\"><span>" + this.Seperator + "</span></li>";
             }
             return "";
         }

@@ -2,7 +2,7 @@
 <ul>
     <li runat="server" id="liHome" visible="false"><a runat="server" id="aHome"><span id="spHome" runat="server"></span></a></li>
     <% if(!string.IsNullOrEmpty(this.Seperator)){ %>
-    <li class="spacer"><%= this.Seperator %></li>
+    <li class="spacer"><span><%= this.Seperator %></span></li>
     <% } %>
     <asp:Repeater ID="menuItems" runat="server">
         <ItemTemplate>

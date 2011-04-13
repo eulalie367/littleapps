@@ -164,6 +164,8 @@
     <Content Include="masterpages\CorporateSite_Base.Master" />
     <Content Include="masterpages\Base.Master" />
     <Content Include="masterpages\ModernStormSolutions_Base.master" />
+    <Content Include="masterpages\CorporateSite_Home.master" />
+    <Content Include="masterpages\CorporateSite_Interior.master" />
     <None Include="templates\ModernStormSolutions\css\.svn\all-wcprops" />
     <None Include="templates\ModernStormSolutions\css\.svn\entries" />
     <None Include="templates\ModernStormSolutions\css\.svn\text-base\style.css.svn-base" />
@@ -312,6 +314,20 @@
     </Compile>
     <Compile Include="masterpages\CorporateSite_Base.Master.designer.cs">
       <DependentUpon>CorporateSite_Base.Master</DependentUpon>
+    </Compile>
+    <Compile Include="masterpages\CorporateSite_Home.master.cs">
+      <DependentUpon>CorporateSite_Home.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masterpages\CorporateSite_Home.master.designer.cs">
+      <DependentUpon>CorporateSite_Home.master</DependentUpon>
+    </Compile>
+    <Compile Include="masterpages\CorporateSite_Interior.master.cs">
+      <DependentUpon>CorporateSite_Interior.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masterpages\CorporateSite_Interior.master.designer.cs">
+      <DependentUpon>CorporateSite_Interior.master</DependentUpon>
     </Compile>
     <Compile Include="masterpages\ModernStormSolutions_Base.master.cs">
       <DependentUpon>ModernStormSolutions_Base.master</DependentUpon>

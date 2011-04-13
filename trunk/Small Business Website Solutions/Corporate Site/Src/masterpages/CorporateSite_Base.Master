@@ -10,72 +10,89 @@
     <link type="text/css" rel="Stylesheet" href="/templates/SBWS/css/style.css" />
 </asp:Content>
 <asp:Content ContentPlaceHolderID="BaseContent" runat="server">
-    <div class="page">
-        <div class="wrapper clearfix">
-            <div class="logo">
-                <div class="text">
-                    <div class="callToAction">
-                        <ul>
-                            <li><a href="#">Contact Us</a></li>
-                            <li class="spacer">|</li>
-                            <li><a href="#">Login</a></li>
-                        </ul>
+        <div class="page">
+            <div class="wrapper clearfix">
+                <div class="logo">
+                    <div class="clearfix">
+                        <img src="/templates/SBWS/images/Small-Business-Website-Solutions-Logo.jpg" width="950px" alt="Small Business Website Solutions of Kansas City" />
+
+                        <div class="text">
+                            <span class="smallBusiness">Small Business</span>
+                            <span class="websiteSolutions">Website Solutions</span>
+                            <span class="ofKansasCity">0f Kansas City</span>
+                        </div>
+
+                        <div class="callToAction">
+                            <ul>
+                                <li><a href="#"><span>Schedule Consultation</span></a></li>
+                                <li class="spacer"><span>|</span></li>
+                                <li><a href="#"><span>Login</span></a></li>
+                            </ul>
+                        </div>
+
                     </div>
-                    <div class="smallBusiness">
-                        Small Business</div>
-                    <div class="websiteSolutions">
-                        Website Solutions</div>
-                    <div class="ofKansasCity">
-                        0f Kansas City</div>
                 </div>
-                <img src="/templates/SBWS/images/Small-Business-Website-Solutions-Logo.png" alt="Small Business Website Solutions of Kansas City" />
-            </div>
-            <div class="content">
-                <div class="menu-main clearfix">
-                    <Base:Menu ID="Menu1" runat="server" Seperator="|" />
+                <div class="content">
+                        <div class="menu-main bar">
+                            <Base:Menu ID="Menu1" runat="server" Seperator="|" />
+                        </div>
+                    <div class="mainContent clearfix">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                    </div>
                 </div>
-                <div class="mainContent clearfix">
-                    <asp:contentplaceholder id="BaseContent" runat="server"></asp:contentplaceholder>
-                    <div class="singleColumn">
-                        <h2 class="sectionTitle">
-                            <umbraco:Item ID="Item1" Field="pageTitle" useIfEmpty="pageName" stripParagraph="true"
-                                runat="server" />
-                        </h2>
-                        <div class="sectionContent">
-                            <umbraco:Item ID="Item2" Field="pageSummary" useIfEmpty="pageName" stripParagraph="true"
-                                runat="server" />
-                        </div>
-                    </div>
-                    <div class="threeColumn col-1">
-                        <div class="sectionContent">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
-                            risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
-                            eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
-                            Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
-                            ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur.
-                        </div>
-                    </div>
-                    <div class="threeColumn col-2">
-                        <div class="sectionContent">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
-                            risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
-                            eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
-                        </div>
-                    </div>
-                    <div class="threeColumn col-3">
-                        <div class="sectionContent">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim auctor
-                            risus, in sodales urna convallis eget. Etiam sagittis, eros vel bibendum convallis,
-                            eros libero suscipit ante, quis consequat orci purus ac tortor. Sed ac gravida lorem.
-                            Proin eu lorem mi, vitae pretium velit. Morbi ullamcorper magna ac purus feugiat
-                            ut accumsan nulla malesuada. Morbi lobortis iaculis sapien vitae consectetur. Sed
-                            aliquam ligula quis odio ullamcorper rhoncus. Morbi rhoncus, mauris a congue elementum,
-                            elit diam ultrices tellus, porta fringilla lorem odio sit amet risus. Quisque egestas
-                            velit et arcu faucibus semper. Praesent fermentum cursus eleifend.
-                        </div>
-                    </div>
+                <div class="sitemap">
+                    <ul class="sectionContent clearfix">
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="#"><span>Link 1</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>Link 2</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="#"><span>Link 1</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>Link 2</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>Link 3</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="#"><span>Link 1</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>Link 2</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="#"><span>Link 1</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>Link 2</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>Link 3</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>Link 4</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
 </asp:Content>
