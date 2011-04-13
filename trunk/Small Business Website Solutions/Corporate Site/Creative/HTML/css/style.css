@@ -55,7 +55,7 @@ body
 {
     background-color: #fff;
     line-height: 1;
-    color: #000;
+    color: #4e5c63;
 }
 ol, ul
 {
@@ -395,8 +395,6 @@ div.page div.content div.mainContent div.homePrimary .callToAction a
 
 div.page div.content div.interior
 {
-    height:auto !important;
-    height:300px;
     min-height:300px;
 }
 div.page div.content div.interior div.menu
@@ -406,15 +404,11 @@ div.page div.content div.interior div.menu
     width:200px;
     float:left;
 }
-div.page div.content div.interior div.menu ul
-{
-    border-bottom:1px #ab8d73 dashed;
-}
 div.page div.content div.interior div.menu li
 {
     padding-bottom:10px;
     padding-top:10px;
-    border-top:1px #ab8d73 dashed;
+    border-bottom:1px #ab8d73 dashed;
 }
 div.page div.content div.interior div.menu a
 {
@@ -434,6 +428,30 @@ div.page div.content div.interior div.sectionContent
     float:left;
     text-align:justify;
 }
+div.page div.content div.interior div.sectionContent h1
+{
+    font:normal 24px/30px 'MerriweatherRegular';
+    color:#58ade1;
+}
+div.page div.content div.interior div.sectionContent h2
+{
+    font:normal 15px/18px 'MerriweatherRegular';
+    color:#58ade1;
+}
+div.page div.content div.interior div.sectionContent p
+{
+    margin-bottom:10px;
+}
+div.page div.content div.interior div.sectionContent ul li
+{
+    margin-top:10px;
+}
+div.page div.content div.interior div.sectionContent ul ul li
+{
+    list-style:disc;
+    margin:0px;
+    margin-left:20px;
+}
 div.page div.content div.interior div.featured
 {
     padding-top:10px;
@@ -442,12 +460,18 @@ div.page div.content div.interior div.featured
     float:left;
     color:#74797f;
 }
+div.page div.content div.interior div.featured ul li.callToAction
+{
+    background:#ccc;
+    height:100px;
+    margin-bottom:20px;
+}
 div.page div.content div.interior div.featured ul li.testimonial
 {
     font:normal 18px/18px 'MerriweatherRegular';
-    margin-bottom:20px;
-    padding-bottom:10px;
-    border-bottom:1px #ab8d73 dashed;
+    margin-top:20px;
+    padding-top:10px;
+    border-top:1px #ab8d73 dashed;
 }
 div.page div.content div.interior div.featured ul li.testimonial span.signature
 {
