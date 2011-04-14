@@ -1,18 +1,14 @@
-﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/CorporateSite_Base.Master"
-    AutoEventWireup="true" CodeBehind="CorporateSite_Interior.master.cs" Inherits="SBWS.masterpages.CorporateSite_Interior" %>
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/CorporateSite_Base.Master" AutoEventWireup="true" CodeBehind="CorporateSite_Interior.master.cs" Inherits="SBWS.masterpages.CorporateSite_Interior" %>
+
+<%@ Register Src="~/usercontrols/Global/Menu.ascx" TagPrefix="Base" TagName="Menu" %>
 
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <div class="interior">
         <div class="menu">
-            <ul>
-                <li><a href="#"><span>Web Design</span></a> </li>
-                <li><a href="#"><span>SEO</span></a> </li>
-                <li><a href="#"><span>Copy Writing</span></a> </li>
-            </ul>
+            <Base:Menu ID="Menu1" runat="server" ParentNodeID="1073" Type="Single_Level_FromSpecific" />
         </div>
         <div class="sectionContent">
-            <umbraco:Item ID="Item1" Field="mainContent" TextIfEmpty="Please Add Content Before publishing this page!"
-                runat="server"></umbraco:Item>
+            <umbraco:Item ID="Item1" Field="mainContent" TextIfEmpty="Please Add Content Before publishing this page!" runat="server"></umbraco:Item>
         </div>
         <div class="featured">
             <ul>

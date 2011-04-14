@@ -301,6 +301,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\Extensions.cs" />
+    <Compile Include="Helpers\UmbracoExtensions.cs" />
     <Compile Include="masterpages\Base.Master.cs">
       <DependentUpon>Base.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
