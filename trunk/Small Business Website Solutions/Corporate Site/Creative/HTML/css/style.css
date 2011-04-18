@@ -500,3 +500,63 @@ div.page div.content div.interior div.interiorSectionContent
 /*
 --------------------------------------------------------------------  END INTERIOR ------------------------------------------------------------------------
 */
+
+/*
+--------------------------------------------------------------------  BEGIN PRICING ----------------------------------------------------------------------
+*/
+
+div.page div.content div.interior div.sectionContent .pricing table
+{
+    width:100%;
+}
+div.page div.content div.interior div.sectionContent .pricing table tr
+{
+    background:#eee;
+}
+div.page div.content div.interior div.sectionContent .pricing table tr.odd
+{
+    background:transparent;
+}
+div.page div.content div.interior div.sectionContent .pricing table tr.final td
+{
+    background:green;
+    color:#fff;
+}
+div.page div.content div.interior div.sectionContent .pricing table tr.final,
+div.page div.content div.interior div.sectionContent .pricing table tr.final td.feature
+{
+    background:transparent;
+}
+div.page div.content div.interior div.sectionContent .pricing table th
+{    
+    text-align:center;
+    font:normal 14px/18px 'MerriweatherRegular';
+    background:#ccc;
+}
+div.page div.content div.interior div.sectionContent .pricing table th.feature
+{    
+    background:transparent;
+    padding:10px;
+}
+div.page div.content div.interior div.sectionContent .pricing table th.template
+{    
+    background:#aaa;
+}
+div.page div.content div.interior div.sectionContent .pricing table td
+{    
+    text-align:center;
+}
+div.page div.content div.interior div.sectionContent .pricing table td.feature
+{    
+    text-align:left;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+div.page div.content div.interior div.sectionContent .pricing table .template
+{    
+    background:#aaa;
+}
+
+/*
+--------------------------------------------------------------------  END PRICING ------------------------------------------------------------------------
+*/
