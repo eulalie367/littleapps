@@ -5,7 +5,7 @@
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <div class="interior">
         <div class="menu">
-            <Base:Menu ID="Menu1" runat="server" ParentNodeID="1073" Type="Single_Level_FromSpecific" />
+            <Base:Menu ID="Menu1" runat="server" Type="Single_Level_FromSpecific" />
         </div>
         <div class="sectionContent">
             <umbraco:Item ID="Item1" Field="mainContent" TextIfEmpty="Please Add Content Before publishing this page!" runat="server"></umbraco:Item>
