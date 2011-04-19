@@ -33,6 +33,23 @@ namespace System
             return retVal;
         }
         /// <summary>
+        /// Parses a request string and returns it's nullable float value
+        /// </summary>
+        public static float? ToFloat(this HttpRequest req, string key)
+        {
+            float? retVal = null;
+            try
+            {
+                float tmp = 0;
+                if (req[key] != null && !string.IsNullOrEmpty(req[key]))
+                    if (float.TryParse(req[key], out tmp))
+                        retVal = tmp;
+            }
+            catch
+            { }
+            return retVal;
+        }
+        /// <summary>
         /// Parses a string and returns it's nullable int value
         /// </summary>
         public static int? ToInt(this string str)
@@ -43,6 +60,23 @@ namespace System
                 int tmp = -1;
                 if (!string.IsNullOrEmpty(str))
                     if (int.TryParse(str, out tmp))
+                        retVal = tmp;
+            }
+            catch
+            { }
+            return retVal;
+        }
+        /// <summary>
+        /// Parses a string and returns it's nullable float value
+        /// </summary>
+        public static float? ToFloat(this string str)
+        {
+            float? retVal = null;
+            try
+            {
+                float tmp = -1;
+                if (!string.IsNullOrEmpty(str))
+                    if (float.TryParse(str, out tmp))
                         retVal = tmp;
             }
             catch
