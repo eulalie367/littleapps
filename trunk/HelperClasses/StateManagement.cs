@@ -6,7 +6,7 @@ using System.Text;
 using System.Web;
 using System.Web.Caching;
 
-namespace SolutionMatchTool.Data
+namespace System
 {
     public class StateManagement
     {
@@ -18,7 +18,7 @@ namespace SolutionMatchTool.Data
                 //add for current request, inproc
                 context.Items.Remove(key);
                 context.Items.Add(key, value);
-                
+
                 //add for session
                 if (context.Session != null)
                 {
@@ -31,6 +31,31 @@ namespace SolutionMatchTool.Data
                 {
                     context.Cache.Remove(key);
                     context.Cache.Add(key, value, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, minutes, 0), CacheItemPriority.Normal, null);
+                }
+            }
+        }
+       
+        public static void Add(string key, object value, int minutes, System.Data.SqlClient.SqlCommand command)
+        {
+            HttpContext context = HttpContext.Current;
+            if (context != null)
+            {
+                //add for current request, inproc
+                context.Items.Remove(key);
+                context.Items.Add(key, value);
+
+                //add for session
+                if (context.Session != null)
+                {
+                    context.Session.Remove(key);
+                    context.Session.Add(key, value);
+                }
+
+                //add globally
+                if (context.Cache != null)
+                {
+                    context.Cache.Remove(key);
+                    context.Cache.Add(key, value, new SqlCacheDependency(command), Cache.NoAbsoluteExpiration, new TimeSpan(0, minutes, 0), CacheItemPriority.Normal, null);
                 }
             }
         }
