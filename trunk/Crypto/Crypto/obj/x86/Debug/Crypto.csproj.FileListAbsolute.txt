@@ -1,0 +1,5 @@
+C:\littleapps\Crypto\Crypto\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\littleapps\Crypto\Crypto\bin\Debug\Crypto.exe
+C:\littleapps\Crypto\Crypto\bin\Debug\Crypto.pdb
+C:\littleapps\Crypto\Crypto\obj\x86\Debug\Crypto.exe
+C:\littleapps\Crypto\Crypto\obj\x86\Debug\Crypto.pdb
