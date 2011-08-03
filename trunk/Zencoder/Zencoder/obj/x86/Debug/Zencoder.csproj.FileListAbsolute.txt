@@ -1,0 +1,6 @@
+C:\littleapps\Zencoder\Zencoder\bin\Debug\Zencoder.exe
+C:\littleapps\Zencoder\Zencoder\bin\Debug\Zencoder.pdb
+C:\littleapps\Zencoder\Zencoder\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\littleapps\Zencoder\Zencoder\obj\x86\Debug\Zencoder.exe
+C:\littleapps\Zencoder\Zencoder\obj\x86\Debug\Zencoder.pdb
+C:\littleapps\Zencoder\Zencoder\bin\Debug\Zencoder.exe.config
