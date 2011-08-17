@@ -55,7 +55,7 @@ namespace Zencoder
 
             Console.WriteLine("What is the name of the source video?");
             fileName = Console.ReadLine();
-            fileName = string.IsNullOrEmpty(fileName) ? "Manifesto_60_FINAL.wmv" : fileName;
+            fileName = string.IsNullOrEmpty(fileName) ? "Whole_Life_v13.mov" : fileName;
 
             Console.WriteLine("What would you like to name the encoded files?");
             baseName = Console.ReadLine();
@@ -66,7 +66,7 @@ namespace Zencoder
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendFormat(@"{{
-              ""test"": {0},
+              ""test"": {0}
               ""api_key"": ""278c7feb047beed12562cad627b5592c"",
               ""input"": ""{1}"",
               ""region"": ""us"",
