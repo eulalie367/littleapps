@@ -9,8 +9,9 @@ using System.Web.UI.HtmlControls;
 using System.Xml;
 using System.Xml.Linq;
 using System.Web.UI;
+using System.Net;
 
-namespace SolutionMatchTool.Data
+namespace System
 {
     public static class Extensions
     {
