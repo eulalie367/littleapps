@@ -250,5 +250,13 @@ namespace System
         {
             return TruncateWholeWordBetweenTags(s, length, "");
         }
+
+        public static string RemoveQuerystringParam(this Uri u, string key)
+        {
+            string baseQstring = u.Query.Replace('?', '&');
+            System.Text.RegularExpressions.Regex r = new System.Text.RegularExpressions.Regex("&" + key + "=[^&]+");
+            baseQstring = r.Replace(baseQstring, "");
+            return "?" + baseQstring.Remove(0, 1);
+        }
     }
 }
