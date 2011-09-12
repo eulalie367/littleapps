@@ -253,10 +253,21 @@ namespace System
 
         public static string RemoveQuerystringParam(this Uri u, string key)
         {
-            string baseQstring = u.Query.Replace('?', '&');
-            System.Text.RegularExpressions.Regex r = new System.Text.RegularExpressions.Regex("&" + key + "=[^&]+");
-            baseQstring = r.Replace(baseQstring, "");
-            return "?" + baseQstring.Remove(0, 1);
+            if (!string.IsNullOrEmpty(u.Query))
+            {
+                string baseQstring = u.Query.Replace('?', '&');
+                System.Text.RegularExpressions.Regex r = new System.Text.RegularExpressions.Regex("&" + key + "=[^&]+");
+                baseQstring = r.Replace(baseQstring, "");
+                if (!string.IsNullOrEmpty(baseQstring))
+                    return "?" + baseQstring.Remove(0, 1);
+            }
+
+            return "?";
+        }
+        public static string AppendQuerystringParam(this Uri u, string key, string value)
+        {
+            string baseQuery = u.RemoveQuerystringParam(key);
+            return string.Format("{0}{1}{2}={3}", baseQuery, (baseQuery == "?" ? "" : "&"), key, value);
         }
     }
 }
