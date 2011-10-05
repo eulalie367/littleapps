@@ -6,9 +6,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Reflection;
-using SolutionMatchTool.DAL;
 
-namespace SolutionMatchTool.Data
+using Telerik.Sitefinity.Configuration;
+using Telerik.Sitefinity.Data.Configuration;
+
+namespace System.Data
 {
     public class SqlHelper
     {
@@ -22,7 +24,7 @@ namespace SolutionMatchTool.Data
             get
             {
                 if (string.IsNullOrEmpty(connString))
-                    connString = ConfigurationManager.ConnectionStrings["SAP_BOBJ"].ConnectionString;
+                    connString = Config.Get<DataConfig>().ConnectionStrings["Sitefinity"].ConnectionString;
                 return connString;
             }
         }
@@ -87,6 +89,7 @@ namespace SolutionMatchTool.Data
             catch (SqlException e)
             {
                 //TODO:add error handling
+                throw new Exception(e.Message);
             }
 
             return retVal;

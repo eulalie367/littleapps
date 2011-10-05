@@ -70,21 +70,24 @@ namespace System
             {
                 object o = null;
 
-                o = context.Items[key];
+                if (!context.Request["NoCache"].ToBool().HasValue)
+                {
+                    o = context.Items[key];
 
-                if (o == null && context.Session != null)
-                    o = context.Session[key];
+                    if (o == null && context.Session != null)
+                        o = context.Session[key];
 
-                if (o == null && context.Cache != null)
-                    o = context.Cache[key];
+                    if (o == null && context.Cache != null)
+                        o = context.Cache[key];
 
-                if (o != null)
-                    try
-                    {
-                        retval = (t)o;
-                    }
-                    catch//really don't care if it doesn't cast right, we'll just return empty
-                    { }
+                    if (o != null)
+                        try
+                        {
+                            retval = (t)o;
+                        }
+                        catch//really don't care if it doesn't cast right, we'll just return empty
+                        { }
+                }
             }
 
             return retval;

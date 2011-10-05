@@ -49,6 +49,27 @@ namespace System
             { }
             return retVal;
         }
+        public static double ? ToDouble(this string str)
+        {
+            double? retVal = null;
+            try
+            {
+                double tmp = -1;
+                if (!string.IsNullOrEmpty(str))
+                    if (double.TryParse(str, out tmp))
+                        retVal = tmp;
+            }
+            catch
+            { }
+            return retVal;
+        }
+        public static int RoundUp(this double d)
+        {
+            int retval = (int) d;
+            if(retval < d)
+               retval++;
+            return retval;
+        }
         /// <summary>
         /// Parses a string and returns it's nullable datetime value
         /// </summary>
@@ -108,11 +129,11 @@ namespace System
         /// <param name="nameCol">The parameterName to use for the DataTextField when filling the select</param>
         /// <param name="valCol">The parameterName to use for the DataValueField when filling the select</param>
         /// <param name="index0">The text to display as the first option in the select</param>
-        public static void FillSelect<t>(this DropDownList select, t source, string nameCol, string valCol, string index0) where t : IEnumerable
+        public static void FillSelect<t>(this DropDownList select, t source, string nameCol, string valCol, string index0, string index0Value) where t : IEnumerable
         {
             if (!string.IsNullOrEmpty(index0))
             {
-                select.Items.Add(new ListItem(index0, ""));
+                select.Items.Add(new ListItem(index0, index0Value));
                 select.AppendDataBoundItems = true;
             }
             select.DataSource = source;
@@ -235,20 +256,20 @@ namespace System
             return dt.ToString("ddd, dd MMM yyyy HH:mm:ss G\\MT");
         }
 
-        public static string TruncateWholeWordBetweenTags(this string s, int length, string closingTag)
+        public static string TruncateWholeString(this string s, int length, string trailingString)
         {
             if (s.Length >= length)
             {
-                s = s.Substring(0, 250);
+                s = s.Substring(0, length);
                 s = s.Substring(0, s.LastIndexOf(' '));
-                if (!string.IsNullOrEmpty(closingTag))
-                    s += closingTag;
+                if (!string.IsNullOrEmpty(trailingString))
+                    s += trailingString;
             }
             return s;
         }
-        public static string TruncateWholeWord(this string s, int length)
+        public static string TruncateWholeString(this string s, int length)
         {
-            return TruncateWholeWordBetweenTags(s, length, "");
+            return TruncateWholeString(s, length, "");
         }
 
         public static string RemoveQuerystringParam(this Uri u, string key)
