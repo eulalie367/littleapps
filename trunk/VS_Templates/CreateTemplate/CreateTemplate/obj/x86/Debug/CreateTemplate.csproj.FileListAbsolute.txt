@@ -1,0 +1,5 @@
+C:\littleapps\VS_Templates\CreateTemplate\CreateTemplate\bin\Debug\CreateTemplate.exe
+C:\littleapps\VS_Templates\CreateTemplate\CreateTemplate\bin\Debug\CreateTemplate.pdb
+C:\littleapps\VS_Templates\CreateTemplate\CreateTemplate\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\littleapps\VS_Templates\CreateTemplate\CreateTemplate\obj\x86\Debug\CreateTemplate.exe
+C:\littleapps\VS_Templates\CreateTemplate\CreateTemplate\obj\x86\Debug\CreateTemplate.pdb

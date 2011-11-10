@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VSTemplate Type="Item" Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Sitefinity Content Based Module</Name>
+		<Description>This will create all files necessary for a Sitefinity Content Based Module.</Description>
+		<Icon></Icon>
+		<ProjectType>CSharp</ProjectType>
+		<DefaultName>ContentBasedModule</DefaultName>
+		<CreateNewFolder>false</CreateNewFolder>
+	</TemplateData>
+	<TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Instructions.txt">
+      Instructions.txt
+    </ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Module.cs">
+      Module.cs
+    </ProjectItem>
+
+
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Configuration\Config.cs">
+      Config.cs
+    </ProjectItem>
+
+
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Data\Manager.cs">
+      Manager.cs
+    </ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Data\OpenAccess\FluentMapping.cs">
+      FluentMapping.cs
+    </ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Data\OpenAccess\FluentMetaDataSource.cs">
+      FluentMetaDataSource.cs
+    </ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Data\OpenAccess\OpenAccessDataProvider.cs">
+      OpenAccessDataProvider.cs
+    </ProjectItem>
+
+
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Model\Item.cs">
+      Item.cs
+    </ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Model\ItemUrlData.cs">
+      ItemUrlData.cs
+    </ProjectItem>
+
+
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Web\Services\BackendService.cs">
+      BackendService.cs
+    </ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Web\Services\Data\ItemViewModel.cs">
+      ItemViewModel.cs
+    </ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Web\UI\Definitions.cs">
+      Definitions.cs
+    </ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Web\UI\Public\DetailsView.cs">
+      DetailsView.cs
+    </ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Web\UI\Public\$fileinputname$View.cs">
+      View.cs
+    </ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Web\UI\Public\MasterListView.cs">
+      MasterListView.cs
+    </ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Web\UI\Public\Designers\ViewDesigner.cs">
+      ViewDesigner.cs
+    </ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Web\UI\Public\Resources\DetailsView.ascx" ItemType="EmbeddedResource">
+      DetailsView.ascx
+    </ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Web\UI\Public\Resources\MasterListView.ascx" ItemType="EmbeddedResource">
+      MasterListView.cs
+    </ProjectItem>
+	</TemplateContent>
+</VSTemplate>

@@ -1,0 +1,7 @@
+C:\littleapps\SearchSpider\SearchSpider\bin\Debug\SearchSpider.exe
+C:\littleapps\SearchSpider\SearchSpider\bin\Debug\SearchSpider.pdb
+C:\littleapps\SearchSpider\SearchSpider\bin\Debug\Lucene.Net.dll
+C:\littleapps\SearchSpider\SearchSpider\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\littleapps\SearchSpider\SearchSpider\obj\x86\Debug\SearchSpider.exe
+C:\littleapps\SearchSpider\SearchSpider\obj\x86\Debug\SearchSpider.pdb
+C:\littleapps\SearchSpider\SearchSpider\bin\Debug\NCrawler.dll
