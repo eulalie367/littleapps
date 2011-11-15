@@ -16,14 +16,14 @@ namespace SearchSpider
         const string indexDir = "C:\\Index";
         const int threads = 1;
         const string url = "http://dev.bv.com";
-        const string fromUrl = "http://dev.bv.com/Home/projects";
+        const string fromUrl = "http://dev.bv.com/projects";
         const string tagName = "";
         static void Main(string[] args)
         {
-            SpiderThread();
+            //SpiderThread();
 
 
-            SearchProjects("water");
+            SearchProjects("westar");
         }
         public static void SpiderThread()
         {
@@ -46,11 +46,11 @@ namespace SearchSpider
                     (
                         new Dictionary<string, string>
 						{
-							{"<article", "</article>"}
+							{"<!--BeginTextFiler-->", "<!--EndTextFiler-->"}
 						},
                         new Dictionary<string, string>
 						{
-							{"<head", "</head>"}
+							{"<head", "</head>"}//skip any links in the head
 						}
                     ), 
                     new DumperStep(indexWriter)
@@ -101,7 +101,11 @@ namespace SearchSpider
             int i = 0;
             public void Process(Crawler crawler, PropertyBag propertyBag)
             {
-                if (!string.IsNullOrEmpty(propertyBag.Text))
+                if (propertyBag.Step.Uri.PathAndQuery.ToLower().Contains("project"))
+                {
+                    string a = "";
+                }
+                if (!string.IsNullOrEmpty(propertyBag.Text) && !PreviouslyIndexed(propertyBag.Step.Uri.ToString()))
                 {
 
                     Lucene.Net.Documents.Document doc = new
@@ -121,6 +125,28 @@ namespace SearchSpider
             }
 
             #endregion
+        }
+
+        public static bool PreviouslyIndexed(string url)
+        {
+
+            string indexFileLocation = indexDir;
+            Lucene.Net.Store.Directory dir = Lucene.Net.Store.FSDirectory.GetDirectory(indexFileLocation, false);
+            Lucene.Net.Search.IndexSearcher searcher = new Lucene.Net.Search.IndexSearcher(dir);
+            Lucene.Net.Search.Hits hits = null;
+            try
+            {
+                Lucene.Net.Search.Query query = new Lucene.Net.Search.TermQuery(new Lucene.Net.Index.Term("url", url));
+
+                hits = searcher.Search(query);
+
+            }
+            catch { }
+            finally
+            {
+                searcher.Close();
+            }
+            return hits.Length() > 0;
         }
 
         public static List<IndexedItem> SearchProjects(string s)
@@ -150,13 +176,13 @@ namespace SearchSpider
                     string title = doc.Get("title");
                     string url = doc.Get("url");
                     retVal.Add(new IndexedItem { Article = article, Href = url, Title = title });
-                    foreach (IndexedItem ind in retVal)
-                    {
-                        Console.WriteLine(ind.Title);
-                        Console.WriteLine(ind.Href);
-                        Console.WriteLine("\n\n\n\n\n\n");
-                    }
                 }
+                foreach (IndexedItem ind in retVal)
+                {
+                    Console.WriteLine(ind.Href);
+                }
+
+                retVal = retVal.Distinct().ToList();
             }
             catch { }
             finally
