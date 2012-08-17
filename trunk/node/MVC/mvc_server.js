@@ -8,9 +8,10 @@ var libpath = require("path"),
    controllers = requireindex("./Controllers");
    
 //move to config file.
-var port = 8080;
+var port = 80;
 var debug = true;
 var excludes = "mvc_server.js|node_modules|Controllers|Models|Views";
+var defaultPath = "hello";//use ./ for /index.html
 
 
 var path = ".";
@@ -33,7 +34,12 @@ http.createServer(function (req, res)
 	var extname = libpath.extname(filename);
 	if(ext.isNullOrEmpty(extname)) //path
 	{
-		serveMVC();
+	console.log(filename);
+		if(filename == "./")
+		{
+			filename = defaultPath;
+		}
+		serveMVC(filename);
 	}
 	else //file
 	{
@@ -43,10 +49,10 @@ http.createServer(function (req, res)
 }).listen(port);
 
 
-function serveMVC()
+function serveMVC(filename)
 {
 		//should we look for index.html?
-		 var defaultDoc = filename + "/index.html";
+		 var defaultDoc = filename + "index.html";
 		 libpath.exists(defaultDoc, function (exists)
 		 {
 			if(exists)//possibly a static file
