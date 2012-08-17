@@ -34,7 +34,6 @@ http.createServer(function (req, res)
 	var extname = libpath.extname(filename);
 	if(ext.isNullOrEmpty(extname)) //path
 	{
-	console.log(filename);
 		if(filename == "./")
 		{
 			filename = defaultPath;
