@@ -7,7 +7,7 @@ exports.index = function(request, response, filename, callback)
 		 return 2 + 4;
 	  }
 	};
-	callback(model, filename, response);
+	callback(model, filename, response, ".mu");
 }
 
 exports.test = function()
