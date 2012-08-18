@@ -1,4 +1,5 @@
 var Master = require("./master.js");
+var requireindex = require('requireindex');
 var controllers = requireindex("./Controllers");
 
 
@@ -20,12 +21,17 @@ module.exports = function()
 	m.menu = new function()
 	{
 		var retVal = "";
-		foreach(p in controllers)
-		{
-			console.log(p);
-			console.log(controllers[p]);
-		}
+		fetchMenu(controllers);
 	}
 	
 	return m;
+}
+
+function fetchMenu(object)
+{
+	for(var p in object)
+	{
+		console.log(p);
+		fetchMenu(object[p]);
+	}
 }
