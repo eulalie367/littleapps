@@ -34,8 +34,7 @@ hello.test.test = function(request, response, filename, callback)
 
 
 
-
-
-
-//make sure to export the main method; it should be named the same as the file
 module.exports = hello;
+exports.test = hello.test;
+exports.test.test = hello.test.test;
+

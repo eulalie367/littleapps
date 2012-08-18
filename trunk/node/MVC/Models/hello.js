@@ -21,17 +21,24 @@ module.exports = function()
 	m.menu = new function()
 	{
 		var retVal = "";
-		fetchMenu(controllers);
+		console.log(fetchMenu(controllers, { path: "/" }));
 	}
 	
 	return m;
 }
 
 //this is only getting the modules for some reason
-function fetchMenu(object)
+function fetchMenu(object, map)
 {
+	var hasChildren = false;
 	for(var p in object)
 	{
-		fetchMenu(object[p]);
+		hasChildren = true;
+		map = 
+		{
+			path: map.path + p,
+			children: fetchMenu(object[p], map)
+		};
 	}
+	return hasChildren ? map : null;
 }
