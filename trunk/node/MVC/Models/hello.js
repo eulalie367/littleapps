@@ -27,11 +27,11 @@ module.exports = function()
 	return m;
 }
 
+//this is only getting the modules for some reason
 function fetchMenu(object)
 {
 	for(var p in object)
 	{
-		console.log(p);
 		fetchMenu(object[p]);
 	}
 }
