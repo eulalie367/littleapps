@@ -9,7 +9,38 @@
 
 
 
-
+header
+{
+	nav
+	{
+		ul
+		{
+			.clearfix();
+			position:relative;
+			li
+			{
+				.clearfix();
+				position:relative;
+				a
+				{
+					float:left;
+					margin:5px, 0px;
+					&:hover
+					{
+						a
+						{
+							display:block;
+						}
+					}
+				}
+				ul
+				{
+					display:none; /* the point isn't to demonstrate a mega-menu, so I don't care to get this to work at the moment. */
+				}
+			}
+		}
+	}
+}
 
 
 

@@ -4,7 +4,7 @@ var templates = function(request, response, templates, callback)
 {
 
 	var m = new Model();
-	m.Title = "Home";
+	m.Title = "Templates";
 	templates[1] = "home/index";
 	callback(m, response);
 	
