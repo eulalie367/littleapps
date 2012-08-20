@@ -7,5 +7,8 @@ mvc.server.excludes += "|server.js";
 mvc.server.defaultPath = "home";
 
 mvc.view.templateExtension = ".mu";
+mvc.view.templates.push("shared/initilizr");
 
 mvc.server.start();
+
+
