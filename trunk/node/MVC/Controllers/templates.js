@@ -1,31 +1,34 @@
 var Model = require("../Models/page.js");
 
-var templates = function(request, response, filename, callback)
+var templates = function(request, response, templates, callback)
 {
 
 	var m = new Model();
 	m.Title = "Home";
-	callback(m, "home", response);
+	templates[1] = "home/index";
+	callback(m, response);
 	
 	return this;
 }
 
-templates.test = function(request, response, filename, callback)
+templates.test = function(request, response, templates, callback)
 {
 	var m = new Model();
 	m.Title = "Jame's Home";
+	templates.pop();
 	//callback(model, filename, response, ".mu");
-	callback(m, "home", response);
+	callback(m, response);
 
 	return this;
 }
 
 
-templates.test.test = function(request, response, filename, callback)
+templates.test.test = function(request, response, templates, callback)
 {
 	var m = new Model();
 	m.Title = "/Hello/Test/Test";
-	callback(m, "home", response);
+	templates[1] = "home/index";
+	callback(m, response);
 
 	return this;
 }
