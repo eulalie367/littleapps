@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<ArrayOfReplaceMent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ReplaceMent>
+    <Find>\W</Find>
+    <Replace> </Replace>
+    <UseRegeEx>true</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>  </Find>
+    <Replace> </Replace>
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find> dvdrip </Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>xvid</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>avi</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>emu</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>universalabsurdity</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>rhd</Find>
+    <Replace />
+    <UseRegeEx>true</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>dvdscr</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>1337x x </Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>1337x</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>maxspeed</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>www</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>torentz</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>3xforum</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>axxo</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>imbt</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>lkrg</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>noir</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>ika</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>ruby</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>limited</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>amiable</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>divxfactory</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>xclusive</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>eng</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+  <ReplaceMent>
+    <Find>fxm</Find>
+    <Replace />
+    <UseRegeEx>false</UseRegeEx>
+  </ReplaceMent>
+</ArrayOfReplaceMent>

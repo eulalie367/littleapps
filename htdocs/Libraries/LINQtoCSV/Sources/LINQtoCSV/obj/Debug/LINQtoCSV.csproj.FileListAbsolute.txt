@@ -1,0 +1,5 @@
+C:\LittleApps\Libraries\LINQtoCSV\Sources\LINQtoCSV\bin\Debug\LINQtoCSV.dll
+C:\LittleApps\Libraries\LINQtoCSV\Sources\LINQtoCSV\bin\Debug\LINQtoCSV.pdb
+C:\LittleApps\Libraries\LINQtoCSV\Sources\LINQtoCSV\obj\Debug\ResolveAssemblyReference.cache
+C:\LittleApps\Libraries\LINQtoCSV\Sources\LINQtoCSV\obj\Debug\LINQtoCSV.dll
+C:\LittleApps\Libraries\LINQtoCSV\Sources\LINQtoCSV\obj\Debug\LINQtoCSV.pdb

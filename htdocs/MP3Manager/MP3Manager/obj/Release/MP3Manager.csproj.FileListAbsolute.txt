@@ -1,0 +1,11 @@
+D:\Documents\Development\LittleApps\MP3Manager\MP3Manager\bin\Release\MP3Manager.exe
+D:\Documents\Development\LittleApps\MP3Manager\MP3Manager\bin\Release\MP3Manager.pdb
+D:\Documents\Development\LittleApps\MP3Manager\MP3Manager\bin\Release\Id3.Net.dll
+D:\Documents\Development\LittleApps\MP3Manager\MP3Manager\bin\Release\Id3.Net.Info.dll
+D:\Documents\Development\LittleApps\MP3Manager\MP3Manager\bin\Release\HtmlAgilityPack.dll
+D:\Documents\Development\LittleApps\MP3Manager\MP3Manager\bin\Release\Interop.WMPLib.dll
+D:\Documents\Development\LittleApps\MP3Manager\MP3Manager\bin\Release\Id3.Net.Info.pdb
+D:\Documents\Development\LittleApps\MP3Manager\MP3Manager\bin\Release\Id3.Net.pdb
+D:\Documents\Development\LittleApps\MP3Manager\MP3Manager\obj\Release\ResolveAssemblyReference.cache
+D:\Documents\Development\LittleApps\MP3Manager\MP3Manager\obj\Release\MP3Manager.exe
+D:\Documents\Development\LittleApps\MP3Manager\MP3Manager\obj\Release\MP3Manager.pdb

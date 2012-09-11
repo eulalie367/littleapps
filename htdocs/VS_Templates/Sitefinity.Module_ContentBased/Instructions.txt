@@ -1,0 +1,80 @@
+Include the following references in your project
+-----------------------------------------------------------
+
+Telerik.Cms.Engine
+Telerik.Cms.Web.UI
+Telerik.Framework
+Telerik.Localization
+Telerik.Security
+Telerik.Versioning
+Telerik.Web.UI
+Telerik.Workflow
+
+-----------------------------------------------------------
+
+
+
+
+
+Add the following to the Web.config
+-----------------------------------------------------------
+
+<!-----  Adds The Module  -------->
+<configSections>
+	<sectionGroup name="telerik">
+		<section name="$fileinputname$" type="$rootnamespace$.ConfigurationHelpers.SectionHandler, $rootnamespace$" requirePermission="false" />
+	</sectionGroup>
+</configSections>
+
+
+<!-----  Adds The Module  -------->
+<telerik>
+	<framework>
+		<modules>
+			<add type="$rootnamespace$.$fileinputname$.$fileinputname$Module, $rootnamespace$" />
+		</modules>
+	</framework>
+</telerik>
+
+
+<!-----  Creates the Default Provider for the module. -------->
+<telerik>
+	<$fileinputname$ defaultGenericProvider="$fileinputname$">
+		<genericContentProviders>
+			<add providerName="$fileinputname$" urlRewriteFormat="[Name].aspx" urlWhitespaceChar="_" />
+		</genericContentProviders>
+	</$fileinputname$>
+</telerik>
+
+
+<!-----  Creates a pointer to the Default Provider for the module. -------->
+<!-----  To span the data across multiple modules keep the attribute "applicationName" the same. -------->
+<telerik>
+	<cmsEngine defaultProvider="Generic_Content">
+		<providers>
+			<add name="$fileinputname$" urlRewriteFormat="[Name].aspx" urlWhitespaceChar="_" visible="False" defaultMetaField="Name" securityProviderName="" allowVersioning="True" applicationName="/$fileinputname$" versioningProviderName="" allowComments="false" commentsModeration="true" connectionStringName="GenericContentConnection" type="Telerik.Cms.Engine.Data.Providers.DefaultProvider, Telerik.Cms.Engine.Data"></add>
+		</providers>
+	</cmsEngine>
+</telerik>
+
+
+<!-----  Creates the custom fields to use within the module. -------->
+<!-----  Add fields here, but make sure to expose them in the ViewControls. -------->
+<telerik>
+	<cmsEngine defaultProvider="Generic_Content">
+		<metaFields>
+			<add key="$fileinputname$.Name" valueType="ShortText" visible="True" searchable="True" sortable="True" defaultValue="Name this item" mandatory="True" />
+		</metaFields>
+	</cmsEngine>
+</telerik>
+
+
+-----------------------------------------------------------
+
+
+
+More Information:
+http://www.sitefinity.com/blogs.aspx?BlogCatID=Module%20development
+http://sitefinity.wordpress.com/category/building-a-pluggable-module/
+http://www.sitefinity.com/help/developer-manual/products-module-simple-implementation.html
+

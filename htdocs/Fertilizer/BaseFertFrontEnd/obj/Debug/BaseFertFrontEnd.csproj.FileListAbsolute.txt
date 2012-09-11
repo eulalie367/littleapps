@@ -1,0 +1,5 @@
+C:\LittleApps\Fertilizer\BaseFertFrontEnd\bin\BaseFertFrontEnd.dll
+C:\LittleApps\Fertilizer\BaseFertFrontEnd\bin\BaseFertFrontEnd.pdb
+C:\LittleApps\Fertilizer\BaseFertFrontEnd\obj\Debug\ResolveAssemblyReference.cache
+C:\LittleApps\Fertilizer\BaseFertFrontEnd\obj\Debug\BaseFertFrontEnd.dll
+C:\LittleApps\Fertilizer\BaseFertFrontEnd\obj\Debug\BaseFertFrontEnd.pdb

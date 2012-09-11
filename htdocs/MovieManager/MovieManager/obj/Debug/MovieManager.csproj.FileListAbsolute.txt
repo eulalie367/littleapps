@@ -1,0 +1,16 @@
+C:\LittleApps\MovieManager\MovieManager\bin\Debug\MovieManager.exe
+C:\LittleApps\MovieManager\MovieManager\bin\Debug\MovieManager.pdb
+C:\LittleApps\MovieManager\MovieManager\obj\Debug\ResolveAssemblyReference.cache
+C:\LittleApps\MovieManager\MovieManager\obj\Debug\MovieManager.Form1.resources
+C:\LittleApps\MovieManager\MovieManager\obj\Debug\MovieManager.Properties.Resources.resources
+C:\LittleApps\MovieManager\MovieManager\obj\Debug\MovieManager.csproj.GenerateResource.Cache
+C:\LittleApps\MovieManager\MovieManager\obj\Debug\MovieManager.exe
+C:\LittleApps\MovieManager\MovieManager\obj\Debug\MovieManager.pdb
+C:\Little Apps\MovieManager\MovieManager\obj\Debug\MovieManager.exe
+C:\Little Apps\MovieManager\MovieManager\obj\Debug\MovieManager.pdb
+C:\Little Apps\MovieManager\MovieManager\bin\Debug\MovieManager.exe
+C:\Little Apps\MovieManager\MovieManager\bin\Debug\MovieManager.pdb
+C:\Little Apps\MovieManager\MovieManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Little Apps\MovieManager\MovieManager\obj\Debug\MovieManager.Form1.resources
+C:\Little Apps\MovieManager\MovieManager\obj\Debug\MovieManager.Properties.Resources.resources
+C:\Little Apps\MovieManager\MovieManager\obj\Debug\MovieManager.csproj.GenerateResource.Cache
