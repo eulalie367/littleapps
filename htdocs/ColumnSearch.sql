@@ -9,6 +9,7 @@ c.name + ' '
 	+ t.name 
 	+ case t.name 
 		WHEN 'varchar'then ' (' + CONVERT(varchar,c.max_length) + ')' 
+		WHEN 'nvarchar'then ' (' + CONVERT(varchar,c.max_length) + ')' 
 		WHEN 'char'then ' (' + CONVERT(varchar,c.max_length) + ')'
 		else ''
 	  end
@@ -19,16 +20,28 @@ c.name + ' '
 	  end
 	+ ','
 as createStatement,
+'@' + c.name + ' '
+	+ UPPER(t.name 
+	+ case t.name 
+		WHEN 'varchar'then ' (' + CONVERT(varchar,c.max_length) + ')' 
+		WHEN 'nvarchar'then ' (' + CONVERT(varchar,c.max_length) + ')' 
+		WHEN 'char'then ' (' + CONVERT(varchar,c.max_length) + ')'
+		else ''
+	  end
+	+ '= NULL,')
+as vars,
+c.name + '= ISNULL(@' + c.name + ', ' + c.name + '),'
+as updateStatement,
 c.name + ',' columnList,
+'@' + c.name + ',' insertValues,
 c.name + ' = st.' + c.name + ',' LinqSelect
 
 FROM sys.objects o
 inner join sys.columns c on c.object_id = o.object_id 
-	and o.name like '%historical%'
+	and o.name like 'query'
 	and c.name like '%%'
 inner join sys.types t on t.user_type_id = c.user_type_id 
 left join sys.default_constraints dc on dc.object_id = c.default_object_id
 	and c.is_nullable = 0
-
 
 
